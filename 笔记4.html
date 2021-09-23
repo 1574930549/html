@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+        <title>笔记4</title>
+</head>
+
+<body>
+    <!--<section> 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。-->
+    <section>
+        <h1>标题</h1>
+        <p>正文</p>
+    </section>
+    <!--<article> 标签定义独立的内容。.-->
+    <article>
+        <h1>标题</h1>
+        <p>正文</p>
+    </article>
+    <!--<nav> 元素用于定义页面的导航链接部分区域，但是，不是所有的链接都需要包含在 <nav> 元素中!-->
+    <nav>
+        <a href="img/01.jpg" target="_blank">01</a>
+        <a href="img/02.jpg" target="_blank">02</a>
+        <a href="img/03.jpg" target="_blank">03</a>
+        <a href="img/04.jpg" target="_blank">04</a>
+    </nav>
+    <!--<aside> 标签定义页面主区域内容之外的内容（比如侧边栏）。-->
+    <aside>
+        <h4>标题</h4>
+        <p>正文</p>
+    </aside>
+    <!--<header>元素主要用于定义内容的介绍展示区域.
+        在页面中你可以使用多个<header> 元素.
+        以下实例定义了文章的头部:-->
+    <article>
+        <header>
+            <h1>标题</h1>
+            <p><time pubdate datetime="2011-03-15"></time></p>
+        </header>
+        <p>正文</p>
+    </article>
+    <!--<footer> 元素应该包含它的包含元素
+        一个页脚通常包含文档的作者，著作权信息，链接的使用条款，联系信息等
+        文档中你可以使用多个 <footer>元素.-->
+    <footer>
+        <p>正文</p>
+        <p><time pubdate datetime="2020-03-25"></time></p>
+    </footer>
+    <!--<figure>标签规定独立的流内容（图像、图表、照片、代码等等）。
+        <figure> 元素的内容应该与主内容相关，但如果被删除，则不应对文档流产生影响。
+        <figcaption> 标签定义 <figure> 元素的标题.
+        <figcaption>元素应该被置于 "figure" 元素的第一个或最后一个子元素的位置。-->
+    <figure>
+        <img src="img/01.jpg" alt="The Pulpit Rock" width="304" height="228">
+        <figcaption>figure元素的标题</figcaption>
+    </figure>
+    <!--localStorage 对象存储的数据没有时间限制。第二天、第二周或下一年之后，数据依然可用。-->
+    <!--保存数据：localStorage.setItem(key,value);
+        读取数据：localStorage.getItem(key);
+        删除单个数据：localStorage.removeItem(key);
+        删除所有数据：localStorage.clear();
+        得到某个索引的key：localStorage.key(index);-->
+    <div id="result"></div>
+    <script>
+        if (typeof(Storage) !== "undefined") {
+            localStorage.sitename = "站点名称";
+            document.getElementById("result").innerHTML = "网站名：" + localStorage.sitename;
+        } else {
+            document.getElementById("result").innerHTML = "对不起，您的浏览器不支持 web 存储。";
+        }
+    </script>
+    <script>
+        function clickCounter() {
+            if (typeof(Storage) !== "undefined") {
+                if (sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+                    //localStorage计数器将继续计数(不是重置)
+                    //sessionStorage计数器将重置
+                } else {
+                    sessionStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML = " 你已经点击了按钮 " + sessionStorage.clickcount + " 次 ";
+            } else {
+                document.getElementById("result").innerHTML = "对不起，您的浏览器不支持 web 存储。";
+            }
+        }
+
+        function del(name) {
+            sessionStorage.removeItem("clickcount");
+            alert("删除成功!");
+            loadAll();
+        }
+    </script>
+    <button onclick="clickCounter()" type="button">计数</button>
+    <button onclick="del(result)" type="button">删除</button>
+    <div id="result"></div>
+</body>
+
+</html>

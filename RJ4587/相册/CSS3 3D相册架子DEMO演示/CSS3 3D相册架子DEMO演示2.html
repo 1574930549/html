@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 3D相册架子DEMO演示</title>
+    <link href='https://fonts.googleapis.com/css?family=Englebert' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <ul class="nav">
+            <li><a href="/" id="view-top-shelf">Shelf 1</a></li>
+            <li><a href="/" id="view-middle-shelf">Shelf 2</a></li>
+            <li><a href="/" id="view-bottom-shelf">Shelf 3</a></li>
+        </ul>
+    </div>
+    <div class="scene">
+        <!-- camera -->
+        <div class="roll-camera">
+            <div class="move-camera">
+                <div class="wallpaper"></div>
+                <!-- shelf -->
+                <div class="shelf top">
+                    <div class="face top"></div>
+                    <div class="face front">
+
+                        <a href="#" data-img-url="../photos/1.jpg" class="photocard">
+                            <img src="img/01.jpg" alt="">
+                        </a>
+                        <a href="#" class="photocard">
+                            <img src="img/02.jpg" alt="">
+                        </a>
+                        <a href="#" class="photocard">
+                            <img src="img/03.jpg" alt="">
+                        </a>
+
+                    </div>
+                    <div class="face back"></div>
+                    <div class="face left"></div>
+                    <div class="face bottom"></div>
+                </div>
+                <!-- /shelf -->
+
+                <!-- shelf -->
+                <div class="shelf middle">
+                    <div class="face top"></div>
+                    <div class="face front">
+
+                        <a href="#" data-img-url="../photos/1.jpg" class="photocard">
+                            <img src="img/04.jpg" alt="">
+                        </a>
+                        <a href="#" class="photocard">
+                            <img src="img/05.jpg" alt="">
+                        </a>
+                        <a href="#" class="photocard">
+                            <img src="img/06.jpg" alt="">
+                        </a>
+
+                    </div>
+                    <div class="face back"></div>
+                    <div class="face left"></div>
+                    <div class="face bottom"></div>
+                </div>
+                <!-- /shelf -->
+
+                <!-- shelf -->
+                <div class="shelf bottom">
+                    <div class="face top"></div>
+                    <div class="face front">
+
+                        <a href="#" data-img-url="../photos/1.jpg" class="photocard">
+                            <img src="img/07.jpg" alt="">
+                        </a>
+                        <a href="#" class="photocard">
+                            <img src="img/08.jpg" alt="">
+                        </a>
+                        <a href="#" class="photocard">
+                            <img src="img/09.jpg" alt="">
+                        </a>
+
+                    </div>
+                    <div class="face back"></div>
+                    <div class="face left"></div>
+                    <div class="face bottom"></div>
+                </div>
+                <!-- /shelf -->
+            </div>
+            <!-- /camera -->
+        </div>
+    </div>
+    <script src='js/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

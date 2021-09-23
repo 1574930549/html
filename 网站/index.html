@@ -1,0 +1,140 @@
+﻿﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="js/jquery.min.js"></script>
+    <script>    
+        $(function() {
+            (function() {
+                var ua = navigator.userAgent;
+                  // pc与移动判断
+                if(/AppleWebKit.*Mobile/i.test(ua) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(ua))){
+                  if(/Android|webOS|iPhone|iPod|BlackBerry|iPad/i.test(ua)){
+                        var h =$(window).height();
+                        $("body").css("height",h+300)
+
+                        setTimeout(function() {
+                            var scrollTop = $("#ding").offset().top;
+                                console.log(scrollTop)
+                            $("html,body").scrollTop(scrollTop);
+                        }, 100);
+
+                  }
+                }
+            })();
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <title>在线咨询</title>
+    <link href="css/style_1.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/bdorderwx.js"></script>
+</head>    
+    
+<body style>
+
+<div style="text-align:center"><span style="font-size:10px"><span style="font-size:10px"><span style="font-size:10px">广州七友网络科技有限公司 </span></span></span></div>
+    <section class="ly-section1">
+        <div class="talk" id="messbox">
+            <div class="nav">
+           <ul>
+        <li>首 页</li>
+             <li>产品中心</li>
+            <li>公司简介</li>
+            <li>联系我们</li>
+            </ul>
+
+            </div>
+            <div>
+                
+                <div style="text-align:center"><img src="images/101.png" style="width: 45%;" id="ding"> </div>               
+            
+
+            </div>
+            <div>
+                
+            </div>
+                <div class="line ly-hide">
+                    <div class="left">
+                        <img src="images/bing.png" width="40px">
+                        <div> <i></i>您好，系统已为您分配皮肤在线老师，一对一为您服务！</div>
+                    </div>
+                    <div class="ly-clear"></div>
+                </div>
+                <div class="line ly-hide line_zizhi">
+                    <div class="left">
+                      </div>
+                        <div class="ly-clear"></div>
+                    </div>
+                    <div class="line ly-hide line_wx">
+                        <div class="left"> <img src="images/bing.png" width="40px">
+                            <div> <i></i> 您好，我是皮肤在线老师，非常高兴为您服务！ </div>
+                        </div>
+                        <div class="ly-clear"></div>
+                    </div>
+                </div>
+        </section>
+        <div class="select_botton" style="display: none" id="option_1">
+            <a href="javascript:" wtindex="1" data-w="1" style="width: 40%;">18岁以下</a>
+            <a href="javascript:" wtindex="1" data-w="2" style="width: 40%;">18-30岁</a>
+            <a href="javascript:" wtindex="1" data-w="3" style="width: 40%;">30岁以上</a>
+            <a href="javascript:" wtindex="1" data-w="4" style="width: 40%;">50岁以上 </a>
+          <p></p>
+        </div>
+        <div class="select_botton" style="display:none;" id="option_2">
+            <a href="javascript:" wtindex="2" style="width: 40%;">30天以内  </a>  
+            <a href="javascript:" wtindex="2" style="width: 40%;">1-3年</a>
+            <a href="javascript:" wtindex="2" style="width: 40%;">3-5年</a>
+            <a href="javascript:" wtindex="2" style="width: 40%;">5年以上</a>
+          <p></p>
+           
+        </div>
+        <div class="select_botton" style="display:none;" id="option_3">
+            <a href="javascript:" wtindex="3" style="width: 40%;">头面部</a>
+            <a href="javascript:" wtindex="3" style="width: 40%;">躯干四肢</a>
+            <a href="javascript:" wtindex="3" style="width: 40%;">私处</a>
+            <a href="javascript:" wtindex="3" style="width: 40%;">全身</a>
+          <p></p>
+            
+        </div>
+        <div class="select_botton" style="display:none;" id="option_4">
+            <a href="javascript:" wtindex="4" style="width: 45%;">有过</a>
+            <a href="javascript:" wtindex="4" style="width: 45%;">没有</a>
+          <p></p>
+           
+        </div>
+        <div class="select_botton" style="display:none;" id="option_5">
+            <a href="javascript:" wtindex="5" style="width: 45%;">脱皮/发红</a>
+            <a href="javascript:" wtindex="5" style="width: 45%;">红疹/红斑</a>
+            <a href="javascript:" wtindex="5" style="width: 45%;">非红丘疹</a>
+            <a href="javascript:" wtindex="5" style="width: 45%;">斑状疹</a>
+          <p></p>
+            
+        </div>
+        <div class="select_botton" style="display:none;" id="option_6">
+            <a href="javascript:" wtindex="6" index="0" style="width: 45%;">有</a>
+            <a href="javascript:" wtindex="6" index="0" style="width: 45%;">没有</a>
+          <p></p>
+            
+        </div>
+        <div class="select_botton" style="display:none;" id="option_7">
+            <a href="javascript:" wtindex="7" index="1" style="width: 45%;">获取京东链接</a>
+            <a href="javascript:" wtindex="7" index="2" style="width: 45%;">获取天猫链接</a>
+          <p></p>
+            
+        </div>
+        <script type="text/javascript" src="js/js.js"></script>
+		
+        <script>
+        $(function() {
+            $(document).on("copy", ".wxnum", copyHandle);
+
+            function copyHandle() {
+                window.location.href = 'weixin://';
+            }
+        });
+
+        </script>
+
+</body>
+
+</html>

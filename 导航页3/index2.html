@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!--禁止缓存-->
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="0" />
+    <!--站点名称-->
+    <title>SoWanVFX-影视领域创作者便捷搜索</title>
+    <meta name="author" content="wanvfx.com" />
+    <meta name="description" content="影视领域创作者导航,专为影视领域创作者提供便捷搜索。" />
+    <meta name="keywords" content="便捷导航,影视领域,创作者导航,搜索" />
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    <link rel="icon" href="img/search.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="img/search.png" />
+    <meta name="msapplication-TileImage" content="img/search.png" />
+    <link rel="shortcut icon" href="img/search.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="full-screen" content="yes" />
+    <!--预加载博客页面资源-->
+    <link rel="prefetch" href="https://wanvfx.com/home/" />
+    <link rel="prerender" href="https://wanvfx.com/home/" />
+    <!--UC强制全屏-->
+    <meta name="browsermode" content="application" />
+    <!--UC应用模式-->
+    <meta name="x5-fullscreen" content="true" />
+    <!--QQ强制全屏-->
+    <meta name="x5-page-mode" content="app" />
+    <!--QQ应用模式-->
+    <link href="font/embed.css" rel="stylesheet" />
+    <link href="css/style.min.css" rel="stylesheet" />
+    <!--阿里图标库-->
+    <script src="//at.alicdn.com/t/font_2480100_9eodtq19y0p.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="js/sou.min.js"></script>
+    <link rel="shortcut icon" href="img/logo.ico" />
+    <link rel="stylesheet" href="css/search.min.css" />
+</head>
+
+<body ontouchstart="">
+    <div id="menu">
+        <i></i>
+    </div>
+    <div class="list closed">
+        <ul>
+        </ul>
+        <!-- 侧边栏底 -->
+        <p class="cediceng">联系邮件：shixiao001@wanvfx.com</p>
+    </div>
+    <div id="content">
+        <div class="con">
+            <div class="shlogo">
+                <div class="logo-text embed">
+                    SoWanvfx
+                </div>
+            </div>
+            <!-- 站点副标题 -->
+            <div class="fubaioti">
+                <p>专为影视领域创作者提供便捷搜索</p>
+            </div>
+            <section class="sousuo">
+                <div class="search">
+                    <div class="search-box">
+                        <svg class="icon" id="search-icon" aria-hidden="true"> 
+        <use xlink:href="#icon-baidu"></use> 
+       </svg>
+                        <input type="text" id="txt" class="search-input" autocomplete="off" autofocus="autofocus" placeholder="百度搜索" />
+                        <svg class="icon" aria-hidden="true" id="search-clear" style="display: none;"> 
+        <use xlink:href="#icon-shanchu"></use> 
+       </svg>
+                        <svg class="icon" aria-hidden="true" id="search-enter"> 
+        <use xlink:href="#icon-enter"></use> 
+       </svg>
+                    </div>
+                    <!-- 搜索热词 -->
+                    <div class="box search-hot-text" id="box" style="display: none;">
+                        <ul></ul>
+                    </div>
+                    <!-- 搜索引擎 -->
+                    <div class="search-engine" style="display: none;">
+                        <div class="search-engine-head">
+                            <strong class="search-engine-tit">指定搜索站点内容：</strong>
+                            <div class="search-engine-tool">
+                                热词联想：
+                                <label class="switch"> <input id="hot-btn" type="checkbox" /> 
+          <div class="slider round"></div> </label>
+                            </div>
+                        </div>
+                        <ul class="search-engine-list"></ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 夜间模式 -->
+            <div class="heiye">
+                <a href="JavaScript:void(0);" id="black1" style="color: #88a">夜间模式</a>
+            </div>
+            <script>
+                document.querySelector("#black1").onclick = function() {
+                    var s = this.innerText;
+                    if (s == "夜间模式") {
+                        document.body.style.cssText = "background-color:black;opacity:0.8;";
+                        this.innerText = "白天模式";
+                    } else {
+                        document.body.style.cssText = "background-color:white;opacity:1;";
+                        this.innerText = "夜间模式";
+                    }
+                };
+            </script>
+            <div class="footer">
+                <div class="center-footer">
+                    <p class="banquan"> 冀ICP备15021811号 冀公网安备13060202000886号 Copyright WANVFX.COM All Rights Reserved. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 强制更新js -->
+    <script>
+        document.write(`<script src=" ./js/search.min.js?t=${Math.random()}"><\/script>`)
+    </script>
+    <script>
+        document.write(`<script src=" ./js/jsonload.js?t=${Math.random()}"><\/script>`)
+    </script>
+    <!-- 底部菜单 -->
+    <div class="caidan">
+        <nav class="nav">
+            <input type="checkbox" class="nav__cb" id="menu-cb" />
+            <div class="nav__content">
+                <ul class="nav__items">
+                    <a href="https://www.wanvfx.com/" target="_self">
+                        <li class="nav__item"><span class="nav__item-text"> 首页 </span></li>
+                    </a>
+                    <a href="https://www.wanvfx.com/home/" target="_self">
+                        <li class="nav__item"><span class="nav__item-text"> 博客 </span></li>
+                    </a>
+                    <a href="https://wanvfx.com/home/index.php/1715.html" target="_self">
+                        <li class="nav__item"><span class="nav__item-text"> 时光 </span></li>
+                    </a>
+                    <a href="https://wanvfx.com/home/index.php/archives/17/" target="_self">
+                        <li class="nav__item"><span class="nav__item-text"> 关于我 </span></li>
+                    </a>
+                </ul>
+            </div>
+            <label class="nav__btn" for="menu-cb"></label>
+            <script src='./js/nav.js'></script>
+        </nav>
+    </div>
+</body>
+
+</html>

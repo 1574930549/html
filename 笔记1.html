@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>笔记1</title>
+</head>
+
+<body>
+    <h1 style="background-color:red;font-family:verdana;text-align:center;">这是1号标题</h1>
+    <p style="font-family:arial;color:red;font-size:20px;">一个段落。</p>
+    <font size="6">这是6号字体文本</font>
+    <h2 style="font-family:verdana;">这是2号标题</h2>
+    <font size="5">这是5号字体文本</font>
+    <h3 style="text-align:center;">这是3号标题</h3>
+    <font size="4">这是4号字体文本</font>
+    <h4>这是4号标题</h4>
+    <font size="3">这是3号字体文本</font>
+    <h5>这是5号标题</h5>
+    <font size="2">这是2号字体文本</font>
+    <h6>这是6号标题</h6>
+    <font size="1">这是1号字体文本</font>
+    <p>我的第一个段落。</p>
+    <hr>
+    <p>这是另<br>外一个段落。</p>
+    <b>这个文本是加粗的</b><br />
+    <strong>这个文本是加粗的</strong><br />
+    <big>这个文本字体放大</big><br />
+    <em>这个文本是斜体的</em><br />
+    <i>这个文本是斜体的</i><br />
+    <small>这个文本是缩小的</small>
+    <br /> 这个文本包含
+    <sub>下标</sub>
+    <br /> 这个文本包含
+    <sup>上标</sup>
+    <code>计算机输出</code><br />
+    <kbd>键盘输入</kbd><br />
+    <tt>打字机文本</tt><br />
+    <samp>计算机代码样本</samp><br />
+    <var>计算机变量</var><br />
+    <a href="img/01.jpg" target="_blank" rel="noopener noreferrer">这是一个链接</a><br>
+    <!--"_blank", 链接将在新窗口打开。-->
+    <!--1、“_blank”的意思：浏览器总在一个新打开、未命名的窗口中载入目标文档。
+        2、“_parent”的意思：这个目标使得文档载入父窗口或者包含来超链接引用的框架的框架集。如果这个引用是在窗口或者在顶级框架中，那么它与目标 _self 等效。
+        3、“_self”的意思：这个目标的值对所有没有指定目标的 <a> 标签是默认目标，它使得目标文档载入并显示在相同的框架或者窗口中作为源文档。这个目标是多余且不必要的，除非和文档标题 <base> 标签中的 target 属性一起使用。
+        4、“_top”的意思：这个目标使得文档载入包含这个超链接的窗口，用 _top 目标将会清除所有被包含的框架并将文档载入整个浏览器窗口。-->
+    <img src="img/01.jpg" width="100" height="100" /><br>
+    <a href="img/02.jpg" target="_blank">
+        <img border="0" src="img/02.jpg" alt="图片" width="32" height="32"></a><br>
+    <!-- 这是一个注释 -->
+    <abbr title="注释">缩写</abbr><br />
+    <acronym title="注释">缩写</acronym>
+    <p>该段落文字从左到右显示。</p>
+    <p><bdo dir="rtl">该段落文字从右到左显示。</bdo></p>
+    <del>删除</del> <ins>下划线</ins><br/>
+    <a href="#1">跳转到指定位置</a><br/>
+    <a id="1">指定位置</a><br/>
+    <!--表格-->
+    <table border="1">
+        <tr>
+            <td>row 1, cell 1</td>
+            <td>row 1, cell 2</td>
+        </tr>
+        <tr>
+            <td>row 2, cell 1</td>
+            <td>row 2, cell 2</td>
+        </tr>
+    </table>
+    <table border="1" cellpadding="10" cellspacing="10">
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Telephone</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Bill Gates</td>
+            <td>555 77 854</td>
+            <td>555 77 855</td>
+        </tr>
+        <tr>
+            <th>555 77 854</th>
+            <td>555 77 854</td>
+        </tr>
+    </table>
+    <!--无序列表-->
+    <ul style="list-style-type:disc">
+        <!--圆圈列表style="list-style-type:circle"-->
+        <!--圆点列表style="list-style-type:disc"-->
+        <!--正方形列表style="list-style-type:square"-->
+        <li>列表1</li>
+        <ul>
+            <li>列表2</li>
+            <li>列表2</li>
+        </ul>
+        <li>列表1</li>
+    </ul>
+    <!--有序列表-->
+    <ol start="50">
+        <li>列表3</li>
+        <li>列表3</li>
+        <li>列表3</li>
+    </ol>
+    <!--表单-->
+    <form>
+        文本输入: <input type="text" name="文本输入"><br>密码输入: <input type="password" name="密码输入"><br>
+        <input type="radio" name="文本输入2" value="选项">选项<br>
+        <input type="radio" name="文本输入2" value="选项">选项<br>
+        <input type="checkbox" name="勾选1" value="勾选">勾选<br>
+        <input type="checkbox" name="勾选2" value="勾选">勾选<br>
+        <!--value：提交数据到服务器的值（后台程序PHP使用）
+            name：为控件命名，以备后台程序 ASP、PHP 使用
+            checked：当设置 checked="checked" 时，该选项被默认选2-->
+    </form>
+    <form name="输入1" action="提交页面" method="get">
+        输入: <input type="text" name="输入2" value="输入">
+        <input type="reset" value="重置" />
+        <input type="submit" value="提交">
+    </form>
+    <form action="">
+        <input type="button" value="点击"><br>
+        <input type="image" src="img/01.jpg" alt="01" width="20" height="20" />
+    </form>
+    <form action="">
+        <select name="下拉选项">
+        <option value="下拉选项1">下拉选项1</option>
+        <option value="下拉选项2">下拉选项2</option>
+        <option value="下拉选项3">下拉选项3</option>
+        <option value="下拉选项4">下拉选项4</option>
+        </select>
+    </form>
+    <textarea rows="10" cols="30">
+        我是一个文本框。
+        </textarea><br>
+    <!--框架-->
+    <iframe src="img/01.jpg" width="400" height="400" frameborder="0"></iframe><br>
+    <iframe src="img/01.jpg" width="400" height="400" name="链接"></iframe>
+    <p><a href="img/02.jpg" target="lianjie">链接</a></p><br>
+    <!--脚本-->
+    <script>
+        //&nbsp;空格
+        document.write("H&nbsp;e&nbsp;l&nbsp;l&nbsp;o World!")
+    </script>
+    <noscript>抱歉，你的浏览器不支持 JavaScript!</noscript>
+</body>
+
+</html>

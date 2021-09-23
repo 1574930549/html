@@ -1,0 +1,343 @@
+<html><head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>哈尔滨龙卷风</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="lib/favicon.ico" rel="shortcut icon">
+	<script src="https://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+	<link href="https://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+	<script src="https://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+	<style>
+		@font-face {
+			font-family:firstFont;
+			src:url(lib/COMIC.TTF);
+		}
+		@font-face {
+			font-family:secondFont;
+			src:url(lib/STENCIL.TTF);
+		}
+		html, body {
+			height:100%;
+		}
+		body {
+			color:black;
+			background-color:#0d202b;
+		}
+		div.loading {
+			text-align:center;
+			font-size:30px;
+			font-weight:bold;
+			width:100%;
+			height:100%;
+			color:white;
+			position:relative;
+		}
+		div.loading-inner {
+			position:absolute;
+			display:table-cell;
+			vertical-align:middle;
+			top:50%;
+			left:50%;
+			height:40px;
+			width:100%;
+			margin:-20px 0 0 -50%;
+		}
+		nav {
+			background-color:black;
+			height:75px;
+			width:100%;
+			padding:0px 150px;
+			min-width:1052px;
+			color:white;
+		}
+		div.nav-logo {
+			line-height:75px;
+			float:left;
+			font-family:firstFont;
+			font-size:20px;
+			text-decoration:none;
+			cursor:pointer;
+			margin-right:100px;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10+ and Edge */
+			user-select: none; /* Standard syntax */
+		}
+		div.nav-logo span {
+			font-size:46px;
+			font-weight:bold;
+			color:gold;
+			text-shadow:0px 0px 15px;
+		}
+		div.nav-logo:hover span {
+			color:gold !important;
+		}
+		div.nav-item {
+			position:relative;
+			float:left;
+			line-height:75px;
+			width:100px;
+			font-size:18px;
+			margin-right:20px;
+			text-align:center;
+			cursor:pointer;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10+ and Edge */
+			user-select: none; /* Standard syntax */
+		}
+		div.animate-div {
+			position:absolute;
+			left:50px;
+			border-bottom:4px solid gold;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10+ and Edge */
+			user-select: none; /* Standard syntax */
+		}
+		div.nav-end {
+			float:right;
+			line-height:75px;
+		}
+		div.welcome {
+			width:1052px;
+			margin:100px auto;
+			text-align:center;
+		}
+		div.welcome-title {
+			font-size:100px;
+			font-family:secondFont;
+			color:#6287a7;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10+ and Edge */
+			user-select: none; /* Standard syntax */
+		}
+		div.welcome div.profile {
+			color:white;
+			font-size:16px;
+			padding:20px 80px;
+		}
+		div.yitushangzuan {
+			width:1052px;
+			margin:100px auto;
+			white-space:pre-wrap;
+			color:white;
+			font-size:18px;
+			text-align:center;
+		}
+		div.yishouxinde {
+			width:1052px;
+			margin:100px auto;
+			white-space:pre-wrap;
+			color:white;
+			font-size:18px;
+		}
+	</style>
+	<script>
+		$(function() {
+			
+			$("div.content").hide();
+			point1();
+			
+		});
+		
+		function point1() {
+			
+			$("span#point1").hide();
+			$("span#point2").hide();
+			$("span#point3").hide();
+			$("span#point1").show(1000);
+			setTimeout(point2, 1000);
+			
+		}
+		
+		function point2() {
+			
+			$("span#point2").show(1000);
+			setTimeout(point3, 1000);
+			
+		}
+		
+		function point3() {
+			
+			$("span#point3").show(1000);
+			setTimeout(point1, 1000);
+			
+		}
+		
+		$(window).load(function() {
+			
+			$("div.loading").hide();
+			$("div.content").show();
+			
+			$("div.nav-item").mouseenter(function() {
+				if($(this).css("color") == "rgb(255, 255, 255)") {
+					if($("div.animate-div").is(":animated") && !$(this).find("div.animate-div").is(":animated")) {
+						$("div.animate-div").stop();
+						$("div.animate-div").css({left:"50px", width:"0px"});
+					}
+					$(this).find("div.animate-div").stop();
+					$(this).find("div.animate-div").animate({left:"0px", width:"100px"}, 300);
+				}
+			});
+			
+			$("div.nav-item").mouseleave(function() {
+				if($(this).css("color") == "rgb(255, 255, 255)") {
+					$(this).find("div.animate-div").stop();
+					$(this).find("div.animate-div").animate({left:"50px", width:"0px"}, 300);
+				}
+			});
+			
+			$("div.nav-logo").click(function() {
+				
+				$("div.yishouxinde").hide();
+				$("div.yitushangzuan").hide();
+				$("div.welcome").fadeIn(200);
+				$("div#yishouxinde").find("div.animate-div").css({left:"50px", width:"0px"});
+				$("div#yishouxinde").css("color", "white");
+				$("div#yitushangzuan").find("div.animate-div").css({left:"50px", width:"0px"});
+				$("div#yitushangzuan").css("color", "white");
+				$("div.nav-logo span").css({"text-shadow":"0px 0px 15px", color:"gold"});
+			});
+			
+			$("div#yitushangzuan").click(function() {
+				$("div.yitushangzuan").find("img").each(function() {
+					$(this).attr("src", $(this).attr("data-src"));
+				});
+				
+				$(this).find("div.animate-div").stop();
+				$("div.welcome").hide();
+				$("div.yishouxinde").hide();
+				$("div.yitushangzuan").fadeIn(200);
+				$("div#yishouxinde").find("div.animate-div").css({left:"50px", width:"0px"});
+				$("div#yishouxinde").css("color", "white");
+				$("div#yitushangzuan").find("div.animate-div").css({left:"0px", width:"100px"});
+				$("div#yitushangzuan").css("color", "gold");
+				$("div.nav-logo span").css({"text-shadow":"0px 0px 0px", color:"white"});
+			});
+			
+			$("div#yishouxinde").click(function() {
+				$("div.yishouxinde").find("img").each(function() {
+					$(this).attr("src", $(this).attr("data-src"));
+				});
+				
+				$(this).find("div.animate-div").stop();
+				$("div.welcome").hide();
+				$("div.yitushangzuan").hide();
+				$("div.yishouxinde").fadeIn(200);
+				$("div#yitushangzuan").find("div.animate-div").css({left:"50px", width:"0px"});
+				$("div#yitushangzuan").css("color", "white");
+				$("div#yishouxinde").find("div.animate-div").css({left:"0px", width:"100px"});
+				$("div#yishouxinde").css("color", "gold");
+				$("div.nav-logo span").css({"text-shadow":"0px 0px 0px", color:"white"});
+			});
+			
+		});
+	</script>
+<style id="tsbrowser_video_independent_player_style" type="text/css">
+  [tsbrowser_force_max_size] {
+	width: 100% !important;
+	height: 100% !important;
+	left: 0px !important;
+	top: 0px !important;
+	margin: 0px !important;
+	padding: 0px !important;
+	transform: none !important;
+  }
+  [tsbrowser_force_fixed] {
+	position: fixed !important;
+	z-index: 9999 !important;
+	background: black !important;
+  }
+  [tsbrowser_force_hidden] {
+	opacity: 0 !important;
+	z-index: 0 !important;
+  }
+  [tsbrowser_hide_scrollbar] {
+	overflow: hidden !important;
+  }
+  [tsbrowser_display_none] {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+  }
+  [tsbrowser_force_show] {
+	display: black !important;
+	visibility: visible !important;
+	opacity: 0;
+  }</style></head>
+<body style="">
+	<div class="loading" style="display: none;">
+		<div class="loading-inner">
+			L o a d i n g
+			<span id="point1" style="display: inline;">.</span>
+			<span id="point2" style="display: inline; overflow: hidden; height: 0.407853px; padding: 0px; margin: 0px; width: 0.407853px; opacity: 0.592147;">.</span>
+			<span id="point3" style="display: none;">.</span>
+		</div>
+	</div>
+	<div class="content" style="display: block;">
+		<nav>
+			<div class="nav-logo">
+				<span>M</span>ordekaiser
+			</div>
+			<div id="yitushangzuan" class="nav-item">
+				<div class="animate-div" style="left: 50px; width: 0px;"></div>
+				弈图上钻
+			</div>
+			<div id="yishouxinde" class="nav-item">
+				<div class="animate-div" style="left: 50px; width: 0px;"></div>
+				弈手心得
+			</div>
+			<div class="nav-end">
+				<div>系统测试阶段，暂不开放登录功能</div>
+			</div>
+		</nav>
+		<div style="clear:both"></div>
+		<div class="welcome">
+			<div class="welcome-title">W E L C O M E</div>
+			<div class="profile">
+				这里是本人转发强势阵容，分享云顶之弈心得的网页。<br><br>
+				也是本人的前端练手小项目，主要依赖html/css/js和jquery框架进行实现，偶尔用了一点bootstrap的东西。<br><br>
+				这里用到的前端技术较为简单，主要是为了练习在Tomcat服务器上部署项目。
+			</div>
+		</div>
+		<div class="yitushangzuan" style="display:none">
+<img src="" data-src="https://www.hualigs.cn/image/60b781d67f449.jpg" width="700px">
+		</div>
+		<div class="yishouxinde" style="display:none">
+更新时间：2021-06-02
+
+美服下棋数据统计网站：<a href="https://tftactics.gg/meta-report" target="_blank">tftactics.gg</a>
+
+<span style="color:red"><strong>11.11运营思路：</strong></span>
+（1）提速流：开局装备来的全，成型阵容不依赖完美装备，开局打工质量足够。
+2-1升4，压人口，如果前期钱掉的多，可以考虑d一下完善质量。
+2-2或2-3升5，压人口，一般情况前期掉的钱多，可以考虑2-2升5，这样2-3能有概率嫖4费卡。
+3-1升6，压人口，可以小d压质量。
+根据连胜情况选择3-3，3-5，4-1升7。
+根据连胜情况选择4-3，4-5，5-1升8。
+（2）利息流：开局装备一般，成型阵容过度依赖完美装备。
+前期不升人口，保利息，并且打精致连败。
+如果前期保利息和连败做的好，3-2可以靠利息升6。
+3-2升6，大d一些d出较高强度打工阵容或4费主c锁血。
+4-1升7，一般来讲3-2d的多只能4-1升7。
+提速升8或者5-1升8，完全看3-2d的如何。
+（3）上述两种思路均可以速6或者速8，不过，会的阵容够多，就能够按照开局装备选择最适合的阵容方向打连胜，就不需要过分要求某个体系的完美装备了，这样保血更适合上分。
+
+<span style="color:green"><strong>小技巧：</strong></span>
+（1）在热键的设置中，在玩家移动中的移动点击中设置2多设定一个按键，开局对好装备的位置，然后同时狂按鼠标右键和键盘设置按键，能先人一步。（本人开连发抢，比一般人手速快）。
+（2）在游戏的设置中，开启移动预测。
+（3）河灵，鼹鼠，银翼等小小英雄可以实现卡身位，体型要偏小。
+（4）对位技巧，首先按住主c或者灵风牌，然后通过默认q，r或1，2键查看下一家的对手，如果需要换位，就在最后一秒，按空格回到自己的界面，手一放就可以了。
+	
+<span style="color:lightskyblue"><strong>版本日志：</strong></span>
+（1）国服6人口概率似乎有bug，建议还是7人口赌某些2费阵容，或者干脆别玩赌狗。
+（2）基于黑装备的吃分思路（基于2-2必出黑装备的前提决定阵容）：
+1、黑电刀 --&gt; 小恶魔
+2、黑泰坦，黑离子 --&gt; 重骑法
+3、黑鸟盾 --&gt; 天使
+4、黑蓝buff --&gt; 魔女刺妖姬
+5、黑基克 --&gt; 赌韦鲁斯，秘术4游侠，复生刺梦魇
+6、黑破甲弓 --&gt; 秘术4游侠
+（3）通过（2）中总结的黑装备序列能总结出，开局攻速 &gt; 眼泪，锁子甲，大棒 &gt; 大剑，腰带，拳套，魔抗
+<img src="" data-src="https://www.hualigs.cn/image/60af58936c3f9.jpg" width="1000px" style="margin:20px 26px;">
+		</div>
+	</div>
+ 
+</body></html>

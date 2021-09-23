@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>笔记3</title>
+
+</head>
+
+<body>
+    <!--拖动-->
+    <style type="text/css">
+        #div1,
+        #div2 {
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("Text", ev.target.id);
+        }
+        //ondragstart 属性调用了一个函数，drag(event)，它规定了被拖动的数据。
+        //dataTransfer.setData() 方法设置被拖数据的数据类型和值：
+        function drop(ev) {
+            ev.preventDefault();
+            /*ondragover 事件规定在何处放置被拖动的数据。
+            默认地，无法将数据/元素放置到其他元素中。如果需要设置允许放置，我们必须阻止对元素的默认处理方式。
+            这要通过调用 ondragover 事件的 event.preventDefault() 方法：*/
+            var data = ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+    <!--draggable="true"元素可拖动-->
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="img/01.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="40" height="40"></div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <!--地理位置-->
+    <p id="demo">点击按钮获取您当前坐标（可能需要比较长的时间获取）：</p>
+    <button onclick="getLocation()">点我</button>
+    <div id="mapholder"></div>
+    <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                x.innerHTML = "该浏览器不支持获取地理位置。";
+            }
+        }
+        //地图显示当前位置
+        function showPosition(position) {
+            var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+            var img_url = "http://maps.googleapis.com/maps/api/staticmap?center=" +
+                latlon + "&zoom=14&size=400x300&sensor=false";
+            document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
+        }
+        //报错
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "用户拒绝对获取地理位置的请求。"
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "位置信息是不可用的。"
+                    break;
+                case error.TIMEOUT:
+                    x.innerHTML = "请求用户地理位置超时。"
+                    break;
+                case error.UNKNOWN_ERROR:
+                    x.innerHTML = "未知错误。"
+                    break;
+            }
+        }
+    </script>
+    <!--视频播放-->
+    <div style="text-align:center">
+        <!--style="text-align:center"居中-->
+        <video id="video1" width="272" height="480">
+      <source src="01.mp4" type="video/mp4">
+      <source src="01.ogg" type="video/ogg">
+      您的浏览器不支持 HTML5 video 标签。
+    </video><br>
+        <button onclick="playPause()">播放/暂停</button>
+        <button onclick="makeBig()">放大</button>
+        <button onclick="makeSmall()">缩小</button>
+        <button onclick="makeNormal()">普通</button>
+    </div>
+    <!--视频控件-->
+    <script>
+        var myVideo = document.getElementById("video1");
+
+        function playPause() {
+            if (myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+        }
+        //放大
+        function makeBig() {
+            myVideo.width = myVideo.width + 10;
+            myVideo.height = myVideo.height + 10;
+        }
+        //缩小
+        function makeSmall() {
+            myVideo.width = myVideo.width - 10;
+            myVideo.height = myVideo.height - 10;
+        }
+        //还原
+        function makeNormal() {
+            myVideo.width = 272;
+            myVideo.height = 480;
+        }
+    </script>
+    <!--音频播放-->
+    <audio controls>
+        <source src="01.ogg" type="audio/ogg">
+        <source src="01.mp3" type="audio/mpeg">
+      您的浏览器不支持 audio 元素。
+      </audio>
+    <form action="01.php">
+        <!--颜色-->
+        <input type="color" name="颜色">
+        <input type="submit"><br>
+        <!--年月日-->
+        <input type="date" name="年月日">
+        <input type="submit"><br>
+        <!--空格-->
+        <input type="datetime" name="时间">
+        <input type="submit"><br>
+        <!--年月日时间-->
+        <input type="datetime-local" name="年月日时间">
+        <input type="submit"><br>
+        <!--email-->
+        <input type="email" name="email">
+        <input type="submit"><br>
+        <!--年月-->
+        <input type="month" name="年月">
+        <input type="submit"><br>
+        <!--数值区间-->
+        输入 1980-01-01 之前的日期:
+        <input type="date" name="日期1" max="1979-12-31">
+        <br> 输入 2000-01-01 之后的日期:
+        <input type="date" name="日期2" min="2000-01-02">
+        <br> 数量 (在1和5之间):
+        <input type="number" name="数值" min="1" max="5"><br>
+        <input type="submit"><br>
+        <!--滑块控制-->
+        <input type="range" name="滑块" min="1" max="10">
+        <input type="submit"><br>
+        <!--搜索域-->
+        <input type="search" name="搜索域">
+        <input type="submit"><br>
+        <!--电话号码-->
+        <input type="tel" name="电话号码">
+        <input type="submit"><br>
+        <!--时间-->
+        <input type="time" name="时间2">
+        <input type="submit"><br>
+        <!--应该包含 URL 地址的输入域。在提交表单时，会自动验证 url 域的值。-->
+        <input type="url" name="地址">
+        <input type="submit"><br>
+        <!--选择周-->
+        <input type="week" name="周">
+        <input type="submit"><br>
+    </form>
+    <!--规定输入域的选项列表-->
+    <form action="01.php" method="get">
+        <input list="browsers" name="输入域">
+        <datalist id="browsers">
+          <option value="预选项1">
+          <option value="预选项2">
+          <option value="预选项3">
+          <option value="预选项4">
+          <option value="预选项5">
+        </datalist>
+        <input type="submit"><br>
+        <!--表单的密钥对生成器字段-->
+        用户名: <input type="text" name="密钥"> 加密: <keygen name="密钥2">
+        <input type="submit">
+    </form>
+    <!--输出-->
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+        <input type="range" id="a" value="50">100 +
+        <input type="number" id="b" value="50"> =
+        <output name="x" for="a b"></output>
+    </form>
+
+    <form action="01.php">
+        <!--自动填充-->
+        自动填充<input type="text" name="填充" autocomplete="on">
+        <br> 不自动填充 <input type="email" name="填充2" autocomplete="off">
+        <input type="submit"><br>
+    </form>
+    <!-- boolean(布尔) 属性-->
+    <form action="01.php" novalidate>
+        <input type="email" name="布尔">
+        <input type="submit">
+    </form>
+    <form action="demo-form.php">
+        <!--在页面加载时，域自动地获得焦点。-->
+        <input type="text" name="焦点1" autofocus>
+        <input type="text" name="焦点2">
+        <input type="submit"><br>
+        <!---->
+        <input type="submit" value="提交">
+        <!--The formaction 属性会覆盖<form> 元素中的action属性.-->
+        <input type="submit" formaction="demo-admin.php" value="提交">
+        <!--formenctype 属性描述了表单提交到服务器的数据编码 (只对form表单中 method="post" 表单)-->
+        <input type="submit" formenctype="multipart/form-data" value="以 Multipart/form-data 提交">
+        <!--formmethod 属性覆盖了 <form> 元素的 method 属性。-->
+        <input type="submit" formmethod="post" formaction="demo-post.php" value="使用 POST 提交">
+        <!--novalidate属性描述了 <input> 元素在表单提交时无需被验证。-->
+        <input type="submit" formnovalidate value="不验证提交">
+        <!--formtarget 属性指定一个名称或一个关键字来指明表单提交数据接收后的展示。-->
+        <input type="submit" formtarget="_blank" value="提交到一个新的页面上"><br>
+        <input type="image" src="img/01.jpg" alt="提交" width="48" height="48">
+        <!--选择照片-->
+        <input type="file" name="照片" multiple>
+        <input type="submit"><br>
+        <!--特定字母A到Z,a到z，3个字符-->
+        <input type="text" name="字符" pattern="[A-Za-z]{3}" title="Three letter country code">
+        <input type="submit"><br>
+        <!--预填写-->
+        <input type="text" name="预填写1" placeholder="First name">
+        <input type="text" name="预填写2" placeholder="Last name">
+        <input type="submit" value="提交"><br>
+        <!--合法的数字间隔-->
+        <input type="number" name="间隔" step="3">
+        <input type="submit"><br>
+    </form>
+</body>
+
+</html>

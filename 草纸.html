@@ -1,0 +1,337 @@
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>小游戏：合成大西瓜</title>
+
+  <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1">
+
+  <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- force webkit on 360 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <!-- force edge on IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- force full screen on some browser -->
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="360-fullscreen" content="true">
+  
+  <!-- force screen orientation on some browser -->
+  <meta name="screen-orientation" content="">
+  <meta name="x5-orientation" content="">
+
+  <!--fix fireball/issues/3568 -->
+  <!--<meta name="browsermode" content="application">-->
+  <meta name="x5-page-mode" content="app">
+
+  <!--<link rel="apple-touch-icon" href=".png" />-->
+  <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+  
+  
+    <!-- <script>
+        pushHistory();
+        window.addEventListener("popstate", function(e) {
+
+        }, false);
+        function pushHistory() {
+            var state = {
+                title: "",
+                url: window.location.href
+            };
+            window.history.pushState(state, state.title, state.url);
+        }
+    </script> -->
+     <script src="https://pagead2.googlesyndication.com/pagead/js/r20210127/r20190131/slotcar_library_fy2019.js"></script><script src="https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101"></script><script src="https://partner.googleadservices.com/gampad/cookie.js?domain=www.wesane.com&amp;callback=_gfp_s_&amp;client=ca-pub-3932234672445376"></script><script src="https://pagead2.googlesyndication.com/pagead/js/r20210127/r20190131/show_ads_impl_fy2019.js" id="google_shimpl"></script><script src="https://s0.2mdn.net/instream/video/client.js" async="" type="text/javascript"></script><script type="text/javascript">   
+        var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+        //判断是否是微信下访问
+        // if(ua.indexOf("weibo") > 0 || ua.indexOf("qbwebviewtype") > 0 || ua.indexOf("douban") > 0 || ua.indexOf("qqtheme") > 0) {
+        //     location.href = "http://g.dashenti.com/game/348/";  //大身体
+        // }
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {   
+            // if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+                location.href="https://mp.weixin.qq.com/s/m0U0L-vnD0Gu8aPJ2vcPoA";    
+            // }                      
+        }
+    </script>
+
+  <link rel="stylesheet" type="text/css" href="style-mobile.css">
+
+<meta http-equiv="origin-trial" content="A2shzsdPO+RKe83bUqT9oVkYwGZN6j9O7nrcOASNFPuQz8HefgVYb9qAqn6coNCSDIRtXoi6ybCrjEsYh3caFgIAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MTM0OTU4NjgsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxL6K+7uLMunmYb1wpp/pnDPBsoQgMGPaTDkE6HIAKvHNoXilVyfzrIZM9q7OUqMUDJCYgIlFmJcvooS3kGjowMAAACOeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGVhZHNlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjE0MTI0Nzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A2shzsdPO+RKe83bUqT9oVkYwGZN6j9O7nrcOASNFPuQz8HefgVYb9qAqn6coNCSDIRtXoi6ybCrjEsYh3caFgIAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MTM0OTU4NjgsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxL6K+7uLMunmYb1wpp/pnDPBsoQgMGPaTDkE6HIAKvHNoXilVyfzrIZM9q7OUqMUDJCYgIlFmJcvooS3kGjowMAAACOeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGVhZHNlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjE0MTI0Nzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.wesane.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.wesane.com"></script><style>.cocosVideo:-moz-full-screen{transform:matrix(1,0,0,1,0,0) !important;}.cocosVideo:full-screen{transform:matrix(1,0,0,1,0,0) !important;}.cocosVideo:-webkit-full-screen{transform:matrix(1,0,0,1,0,0) !important;}</style><style id="tsbrowser_video_independent_player_style" type="text/css">
+      [tsbrowser_force_max_size] {
+        width: 100% !important;
+        height: 100% !important;
+        left: 0px !important;
+        top: 0px !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        transform: none !important;
+      }
+      [tsbrowser_force_fixed] {
+        position: fixed !important;
+        z-index: 9999 !important;
+        background: black !important;
+      }
+      [tsbrowser_force_hidden] {
+        opacity: 0 !important;
+        z-index: 0 !important;
+      }
+      [tsbrowser_hide_scrollbar] {
+        overflow: hidden !important;
+      }
+      [tsbrowser_display_none] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+      }
+      [tsbrowser_force_show] {
+        display: black !important;
+        visibility: visible !important;
+        opacity: 0;
+      }</style></head>
+<body style="margin: 0; background: #ddd;" align="center">
+  <div style="align:center;display: none"><img src="res/share.jpg" width="10%"></div>
+  
+  <div id="canvasDiv" style="width: 100%; height: 623px;">
+      <div id="Cocos2dGameContainer" style="transform: rotate(0deg); width: 811px; height: 623px; margin: 0px; padding: 0px;"><canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="99" class="gameCanvas" width="811" height="623" style="width: 811px; height: 623px;"></canvas></div>
+
+      <video id="contentElement" style="display:none;position: absolute;top:0px;left: 0px;">
+                <source src="http://rmcdn.2mdn.net/Demo/vast_inspector/android.mp4">
+                <source src="http://rmcdn.2mdn.net/Demo/vast_inspector/android.webm">
+      </video> 
+      <div id="block-Box" style="display:block;width:100%;height:100%;"></div>
+  </div> 
+  
+  
+
+ <div id="adContainer" style="display:none;position: absolute;top:0px;left: 0px;width:100%;height:100%;z-index:999;"><div style="position: absolute;"><div style="display: none;"><lima-video webkit-playsinline="true" playsinline="true" style="background-color: rgb(0, 0, 0); height: 100%; width: 100%; position: absolute; left: 0px; top: 0px;"></lima-video><div style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px;"></div></div><div style="display: none;"><lima-video webkit-playsinline="true" playsinline="true" style="background-color: rgb(0, 0, 0); height: 100%; width: 100%; position: absolute; left: 0px; top: 0px;"></lima-video><div style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px;"></div></div><iframe src="http://imasdk.googleapis.com/js/core/bridge3.436.0_en.html#goog_1843118625" allowfullscreen="" allow="autoplay" style="border: 0px; opacity: 0; margin: 0px; padding: 0px; position: relative;"></iframe></div></div> 
+ 
+	
+	 <div id="splash" style="display: none;">
+      <!-- <div class="progress-bar stripes"> -->
+        <!-- <span style="width: 0%"></span> -->
+      <!-- </div> -->
+   </div>
+
+   
+  
+     <!-- 判断浏览器是否屏蔽广告 -->
+  <script src="http://demo.jb51.net/js/2015/adview_pic_cpc_cpm_cpa_guanggao_gg_ads_300x250.js" type="text/javascript"></script> 
+	<script type="text/javascript">
+	
+	 var killAdT = typeof(killads);
+		<!-- if (typeof(killads)=='undefined'){ -->
+			<!-- alert('广告被过滤'); -->
+			<!-- } -->
+	</script>
+   
+  
+  
+  
+<!--<div align="center" style="font-size: 10px;color: dimgrey">advertisement</div>-->
+
+<script type="text/javascript" src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+<script type="text/javascript" src="ads.js"></script>
+
+<script src="src/settings.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+
+	var preloader;
+    var adCompleteFlag = false;
+    var resCompleteFlag = false;
+
+    var adEndComplete = false;
+    var resEndComplete = false;
+	
+	judgeLanTitle();
+    function judgeLanTitle(){
+
+//        console.log("window.navigator.language",window.navigator.language);
+
+        if( window.navigator.language=="zh-CN" ||window.navigator.language=="zh-cn"){
+            document.title = "小游戏：合成大西瓜";
+        }else  if(window.navigator.language == "zh-TW" ){
+            document.title = "小遊戲：合成大西瓜";
+        }else  if(window.navigator.language == "zh-HK" ){
+            document.title = "小遊戲：合成大西瓜";
+        }else  if(window.navigator.language == "ko-KR"){
+            document.title = "작은 놀이：큰 수박 을 합성 하 다";
+        }else  if(window.navigator.language == "ja-JP"){
+            document.title = "ミニゲーム：合成スイカ";
+        }else  if(window.navigator.language == "th-TH"){
+            document.title = "เกมเล็กๆ：แตงโมสังเคราะห์";
+        }else{
+            document.title = "Little game：Synthetic watermelon";
+        }
+
+
+    }
+
+    var loadintT = document.getElementById("loadingText");
+    var loadintGif = document.getElementById("loadingImg")
+    setTimeout(function () {
+      loadintGif.remove();
+      loadintT.style.display = ""
+      updateLabView(0.1);
+    }, 1 * 1000)
+
+    window.timer = null;
+    window.tempSeconds = 1;
+    window.loadData = {};
+    loadData.completedCount = 0;
+    loadData.totalCount = 0;
+
+    onload();
+    function onload() {
+      var winHeight = document.documentElement.clientHeight;
+      document.getElementById("canvasDiv").style.height = winHeight + "px";
+    };
+    window.onload = function () {
+      document.getElementById("block-Box").style.display = "none";
+    }
+	
+	function updateLabView(t) {
+      if (timer != null) {
+        clearInterval(timer);
+      }
+      timer = setInterval(function () {
+        tempSeconds++;
+        actualTotal();
+        var loadintT = document.getElementById("loadingText")
+        if (!loadintT) {
+        	return;
+        }
+        loadintT.innerHTML = 'loading......' + parseInt(tempSeconds) + '%';
+
+        switch (tempSeconds) {
+          case 20:
+            updateLabView(0.2);
+            break;
+          case 40:
+            updateLabView(0.3);
+            break;
+          case 60:
+            updateLabView(0.4);
+            break;
+          case 96:
+            updateLabView(5);
+            break;
+          case 97:
+            updateLabView(10);
+            break;
+          case 98:
+            updateLabView(50);
+            break;
+          case 99:
+            updateLabView(100);
+            break;
+          default:
+            if (tempSeconds >= 80 && tempSeconds < 96) {
+              updateLabView(t + 0.1);
+            }
+            break;
+        }
+        if (tempSeconds > 100) {
+          clearInterval(timer);
+          tempSeconds = 100
+          loadintT.innerHTML = 'loading......' + parseInt(tempSeconds) + '%';
+        }
+      }, t * 1000);
+    }
+
+    function actualTotal() {
+      var percent = parseInt(100 * loadData.completedCount / loadData.totalCount);
+      if (percent > tempSeconds && loadData.totalCount > 1) {
+        tempSeconds = percent;
+      }
+    }
+
+
+    /*setTimeout("ShowBannerAD()","2000");*/
+
+
+</script>
+  
+  
+  
+  
+  
+<script src="src/settings.js" charset="utf-8"></script>
+
+<script src="main.js" charset="utf-8"></script>
+
+
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 暴力扣篮 -->
+<!-- <ins class="adsbygoogle"
+      style="position:absolute;border-top:5px #f0f0f1 solid;background:#f0f0f1;bottom:0px;z-index:1000;display:inline-block;min-width:320px;max-width:970px;width:100%;height:60px"
+     data-ad-client="ca-pub-3932234672445376"
+     data-ad-slot="7048809290"
+     ></ins>
+<script>
+	 var ads = document.getElementsByClassName('adsbygoogle')[0]; 
+
+	 if (document.body.clientHeight > 700){  
+	 	ads.style.height = 80+'px'; 
+	 }else{     
+	 	ads.style.height = 60+'px';    
+	 }
+    
+</script>
+
+<script>
+	function ShowBannerAD(){
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	}
+	
+</script> -->
+
+<script async="" data-ad-client="ca-pub-3932234672445376" data-ad-channel="8996206359" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" data-checked-head="true">
+</script>
+
+<script>window.adsbygoogle = window.adsbygoogle || [];
+const adBreak =  function(o) {adsbygoogle.push(o);}
+</script>
+
+
+<script type="text/javascript">
+(function () {
+    // open web debugger console
+    if (typeof VConsole !== 'undefined') {
+        window.vConsole = new VConsole();
+    }
+
+    var splash = document.getElementById('splash');
+    splash.style.display = 'block';
+	
+	
+	console.log("indexlTextTTTT");
+
+    var cocos2d = document.createElement('script');
+    cocos2d.async = true;
+    cocos2d.src = window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.js';
+
+    var engineLoaded = function () {
+        document.body.removeChild(cocos2d);
+        cocos2d.removeEventListener('load', engineLoaded, false);
+        window.boot();
+    };
+    cocos2d.addEventListener('load', engineLoaded, false);
+    document.body.appendChild(cocos2d);
+})();
+</script>
+
+
+
+
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-3932234672445376&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1611914566&amp;plat=1%3A32776%2C2%3A32776%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32&amp;channel=8996206359&amp;format=0x0&amp;url=http%3A%2F%2Fwww.wesane.com%2Fgame%2F654%2F%3Fdt_dapp%3D1&amp;ea=0&amp;flash=32.0.0&amp;pra=5&amp;wgl=1&amp;dt=1611920829764&amp;bpp=13&amp;bdt=739&amp;idt=203&amp;shv=r20210127&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;nras=1&amp;correlator=4691794760817&amp;frm=20&amp;pv=2&amp;ga_vid=1384329373.1611920830&amp;ga_sid=1611920830&amp;ga_hid=1350395751&amp;ga_fc=0&amp;u_tz=480&amp;u_his=2&amp;u_java=0&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1366&amp;bih=623&amp;scr_x=0&amp;scr_y=0&amp;eid=42530671%2C21068769%2C21068893%2C21068946%2C21069110&amp;oid=3&amp;pvsid=1588930311683495&amp;pem=410&amp;rx=0&amp;eae=2&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C623&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=8200&amp;bc=23&amp;ifi=0&amp;uci=a!0&amp;fsb=1&amp;dtd=461" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!0" data-load-complete="true"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_8630133056530" name="google_osd_static_frame" __idm_frm__="13" style="display: none; width: 0px; height: 0px;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20210127/r20190131/zrt_lookup.html#" data-ad-client="ca-pub-3932234672445376" style="display: none;"></iframe></html>

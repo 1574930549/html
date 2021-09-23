@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/zui.min.css">
+    <link rel="icon" type="image/ico" href="https://zlh0812.cn/img/m10.png">
+    <script src="js/jquery.js"></script>
+    <script src="js/zui.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styletest.css">
+    <title>导航页</title>
+    <!--阿里图标库-->
+    <script src="//at.alicdn.com/t/font_2565381_4uoh08q8vgc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+</head>
+<!--    -->
+
+<body>
+    <!-- <header style="opacity: 0.7;">-->
+    <!--    <div class="container" style="padding-right: 0px;padding-left: 0px;">-->
+    <!--        <div class="main">-->
+    <!--            <h1 class="logo">-->
+    <!--                <a href="zlh.html">-->
+    <!--                    <img src="images/ico.png" >-->
+    <!--                    <span >导航</span>-->
+    <!--                    <span >世界和我爱着你</span>-->
+    <!--                </a>-->
+    <!--            </h1>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <div class="not_operational"></div>-->
+    <!--</header> -->
+    <!-- 侧边栏 -->
+    <div id="menu" class="">
+        <i></i>
+    </div>
+    <div class="list closed">
+        <ul>
+        </ul>
+        <p class="cediceng">联系邮件：1574930549@qq.com</p>
+    </div>
+    <div id="content" data-customize="true" data-customtheme="true" class="default-bg">
+        <div class="main-index">
+            <div class="container content-box">
+                <div class="con">
+                    <div class="shlogo">
+                        <div class="logo-text embed">
+                            世界和我爱着你
+                        </div>
+                    </div>
+                    <div class="fubaioti">
+                        <p>zlhui</p>
+                    </div>
+                </div>
+                <section class="sousuo">
+                    <div class="search">
+                        <!-- <div class="search-box">
+                            <img class="search-icon" src="images/baidu.png">
+                            <input type="text" id="txt" class="search-input" placeholder=" ">
+                            <button class="search-btn visible-sm visible-md visible-lg" id="search-btn">百度一下</button>
+                            <i class="search-clear icon icon-remove-sign" style="display: none;"></i>
+                        </div> -->
+                        <div class="search-box">
+                            <svg class="search-icon" id="search-icon" aria-hidden="true"> 
+            <use xlink:href="#icon-baidu"></use> 
+           </svg>
+                            <input type="text" id="txt" class="search-input" autocomplete="off" autofocus="autofocus" placeholder="百度搜索" />
+                            <svg class="icon" aria-hidden="true" id="search-clear" style="display: none;"> 
+            <use xlink:href="#icon-shanchu"></use> 
+           </svg>
+                            <svg class="icon" aria-hidden="true" id="search-enter"> 
+            <use xlink:href="#icon-enter"></use> 
+           </svg>
+                        </div>
+                        <!-- 搜索热词 -->
+                        <div class="box search-hot-text" id="box" style="display: none;">
+                            <ul></ul>
+                        </div>
+                        <!-- 搜索引擎 -->
+                        <div class="search-engine" style="display: none;">
+                            <div class="search-engine-head">
+                                <strong class="search-engine-tit">选择默认搜索引擎：</strong>
+                                <div class="search-engine-tool">搜索热词：
+                                    <!-- <span id="hot-btn" class="off"></span> -->
+                                    <label class="switch"> 
+                                        <input id="hot-btn" class="off" type="checkbox" /> 
+                                        <div class="slider round"></div> 
+                                    </label>
+                                </div>
+                            </div>
+                            <ul class="search-engine-list">
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!--  -->
+                <footer class="footer text-center bg-white">
+                    <div class="container">
+                        <span id="hitokoto">:D 获取中...</span>
+                    </div>
+                </footer>
+                <div class="row dh trst" id="trst">
+
+                </div>
+                <div class="heiye">
+                    <a href="JavaScript:void(0);" id="black1" style="color: #88a">夜间模式</a>
+                </div>
+                <script>
+                    document.querySelector("#black1").onclick = function() {
+                        var s = this.innerText;
+                        if (s == "夜间模式") {
+                            document.body.style.cssText = "background-color:black;opacity:0.7;";
+                            this.innerText = "白天模式";
+                        } else {
+                            document.body.style.cssText = "background-color:white;opacity:1;";
+                            this.innerText = "夜间模式";
+                        }
+                    };
+                </script>
+                <!-- 底部菜单 -->
+                <div class="caidan">
+                    <nav class="nav">
+                        <input type="checkbox" class="nav__cb" id="menu-cb">
+                        <div class="nav__content">
+                            <ul class="nav__items">
+                                <a href="https://www.zlh0812.cn/欢迎页/" target="_blank">
+                                    <li class="nav__item"><span class="nav__item-text"> 首页 </span></li>
+                                </a>
+                                <a href="https://www.zlh0812.cn/home" target="_blank">
+                                    <li class="nav__item"><span class="nav__item-text"> 博客 </span></li>
+                                </a>
+                                <a href="https://www.zlh0812.cn/home/cross-1.html" target="_blank">
+                                    <li class="nav__item"><span class="nav__item-text"> 时光 </span></li>
+                                </a>
+                                <a href="https://www.zlh0812.cn/home/16.html" target="_blank">
+                                    <li class="nav__item"><span class="nav__item-text"> 关于我 </span></li>
+                                </a>
+                            </ul>
+                        </div>
+                        <label class="nav__btn" for="menu-cb"></label>
+                        <script src="./js/nav.js"></script>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    <script>
+        document.write(`<script src=" ./js/zlhjsonload.js?t=${Math.random()}"><\/script>`)
+    </script>
+    <div id="get-top" title="回到顶部" style="display: none;"><i class="icon icon-arrow-up"></i></div>
+    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+    <script src="js/js.js"></script>
+    <script type="text/javascript" src="js/19916167.js"></script>
+
+</body>
+
+</html>

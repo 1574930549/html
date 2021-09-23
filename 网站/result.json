@@ -1,0 +1,51 @@
+/**
+ * 技术信息：请求参数
+ * 请参考: https://yya.gs/faq
+*/
+{
+    "directory": "ab-gzqiyou-cn-90902fe6",
+    "options": {
+        "url": "http://ab.gzqiyou.cn/cmsbdsz06/",
+        "domain": "ab.gzqiyou.cn",
+        "oldURL": "http://ab.gzqiyou.cn/cmsbdsz06",
+        "request": {
+            "headers": {
+                "Accept": "text/html,*/*",
+                "Accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cache-control": "no-cache",
+                "upgrade-insecure-requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "X-Scraper-WebSite": "https://yya.gs/",
+                "referer": "http://ab.gzqiyou.cn/cmsbdsz06"
+            }
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "server": "nginx/1.8.1",
+                "date": "Mon, 20 Apr 2020 14:53:22 GMT",
+                "content-type": "text/html",
+                "transfer-encoding": "chunked",
+                "connection": "keep-alive",
+                "vary": "Accept-Encoding",
+                "last-modified": "Wed, 15 Apr 2020 13:10:30 GMT",
+                "etag": "W/\"186d-5a3540a629aec\"",
+                "content-encoding": "gzip"
+            }
+        }
+    },
+    "formatter": {
+        "css": false,
+        "html": false,
+        "javascript": false,
+        "saveOriginal": true
+    },
+    "user": {
+        "isWhite": false
+    },
+    "time": {
+        "start": 1587394401352,
+        "end": 1587394405829,
+        "spend": "4.477s"
+    }
+}

@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>My first Three.js app</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<!-- 初始化WebGL绘图上下文
+初始化着色器程序
+建立模型和数据缓存
+完成绘制和动画 -->
+
+<body>
+    <script src="three.js"></script>
+    <script>
+        // 场景（scene）, 相机（camera）, 渲染器（renderer）
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera( // 远景相机（PerspectiveCamera）
+            75, // 第一个属性75设置的是视角（field of view）。
+            window.innerWidth / window.innerHeight, // 第二个属性设置的是相机拍摄面的长宽比（aspect ratio）
+            0.1, //近裁剪面（near clipping plane）
+            1000 // 远裁剪面（far clipping plane）
+        );
+
+        var renderer = new THREE.WebGLRenderer(); // 渲染器
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+        // 把 renderer 元素添加到HTML文档中。这里是一个 <canvas> 元素，渲染器用来显示场景
+
+        var geometry = new THREE.BoxGeometry(1, 1, 1); // 盒子模型（BoxGeometry）
+        var material = new THREE.MeshBasicMaterial({
+            // 网孔基础材料（MeshBasicMaterial）
+            color: 0x00ff00,
+        });
+        var cube = new THREE.Mesh(geometry, material); // 网孔(Mesh)
+        scene.add(cube);
+
+        camera.position.z = 2;
+
+        var render = function() {
+            // 渲染循环（render loop）
+            requestAnimationFrame(render);
+
+            //cube.rotation.x += 0.1;
+            //cube.rotation.y += 0.1;
+
+            renderer.render(scene, camera);
+        };
+
+        render();
+    </script>
+</body>
+
+</html>

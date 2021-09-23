@@ -1,0 +1,82 @@
+[{
+    "icon": "icon-",
+    "title": "LOVE",
+    "node": [ {
+        "url": "http://fst.zlh0812.cn",
+        "icon": "icon-",
+        "text": "LOVE",
+        "prompt": ""
+    },
+    {
+        "url": "https://www.zlh0812.cn/home",
+        "icon": "icon-",
+        "text": "张立辉的博客",
+        "prompt": ""
+    }
+]
+},
+{
+    "icon": "icon-",
+    "title": "看剧",
+    "node": [ {
+        "url": "https://www.bilibili.com",
+        "icon": "icon-",
+        "text": "bilibili",
+        "prompt": ""
+    },
+    {
+        "url": "https://www.iqiyi.com/",
+        "icon": "icon-",
+        "text": "爱奇艺",
+        "prompt": ""
+    },
+    {
+        "url": "https://v.qq.com/",
+        "icon": "icon-",
+        "text": "腾讯",
+        "prompt": ""
+    },
+    {
+        "url": "https://www.mgtv.com",
+        "icon": "icon-",
+        "text": "芒果",
+        "prompt": ""
+    },
+    {
+        "url": "https://www.youku.com/",
+        "icon": "icon-",
+        "text": "优酷",
+        "prompt": ""
+    },
+    {
+        "url": "https://www.tudou.com/",
+        "icon": "icon-",
+        "text": "土豆",
+        "prompt": ""
+    },
+    {
+        "url": "https://tv.sohu.com",
+        "icon": "icon-",
+        "text": "搜狐",
+        "prompt": ""
+    },
+    {
+        "url": "http://dianying.im/?bienao.com",
+        "icon": "icon-",
+        "text": "电影先生",
+        "prompt": ""
+    },
+    {
+        "url": "https://www.kankanwu.com/?bienao.com",
+        "icon": "icon-",
+        "text": "看看屋",
+        "prompt": ""
+    },
+    {
+        "url": "",
+        "icon": "icon-",
+        "text": "",
+        "prompt": ""
+    }
+]
+}]

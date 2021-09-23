@@ -1,0 +1,110 @@
+body
+{
+	background-color: #F4FBFF;
+	/* background:#EEF2FB url(../image/bj.jpg);
+	background-attachment: fixed;
+    background-size: cover; */
+	/* scrollbar-highlight-color: buttonface;
+	scrollbar-shadow-color: buttonface;
+	scrollbar-3dlight-color: buttonhighlight;
+	scrollbar-track-color: #CBF1F4;
+	scrollbar-darkshadow-color: buttonshadow;
+	scrollbar-arrow-color: #596579; */
+}
+
+a
+{
+	text-decoration: none;
+	color: #000;
+}
+.table_style
+{
+	background-color:#076C98;
+	/* font-family: "����"; */
+}
+.table_style2
+{border-style: solid;
+	border-color:#076C98
+	/* background-color:#076C98; */
+	/* font-family: "����"; */
+}
+.td_title
+{
+	background-color: #E5F6FF;
+	font: normal 12px Arial;
+	
+}
+.td_title2
+{
+	background-color: #E5F6FF;
+	font: normal 12px Arial;
+	border-color:#076C98
+}
+.td_list
+{
+	background-color:#fff;
+	font: normal 12px Arial;
+	
+}
+.td_list2
+{
+	background-color:#fff;
+	font: normal 12px Arial;
+	border-color:#076C98
+}
+.navi_bar
+{
+	background-image:url(../images/index_11.gif);
+	background-repeat: repeat-x;
+	padding-left:24px;
+	font: bold 12px "����";
+	color: #333333;
+	text-align:left;
+	height: 20px;
+}
+td
+{
+	font-size:12px;
+	text-align:center;
+}
+.input_area
+{
+	font: normal 12px Arial;
+	color: #000;
+	height: 18px;
+	border: 1px solid #0C84BE;
+	background: #FCFFFB;
+}
+.left
+{
+	text-align:left;
+}
+.right
+{
+	text-align:right;
+}
+.center
+{
+	text-align:center;
+}
+.td_search
+{
+	background-color: #fff;
+	font: normal 11px Arial;	
+}
+.td_search2
+{
+	background-color: #fff;
+	font: normal 12px Arial;
+border-color:#076C98	
+}
+.input_text
+{
+	border: 1px solid #A7A6AA;
+	height: 19px;
+	font: normal 12px Arial;
+	color: #000;
+	padding: 2px 4px 0 4px;
+	background-color:#fff;
+	cursor:hand;
+}

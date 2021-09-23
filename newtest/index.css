@@ -1,0 +1,33 @@
+
+body 
+{ 
+    /* font-size:30px; */
+} 
+div {
+    height:60px;
+    /* border: 2px dashed #f69c55; */
+}
+li{ 
+    float:left; 
+    list-style:none
+}
+p { 
+    text-indent: 2em; 
+    /*em是相对单位，2em即现在一个字大小的两倍*/ 
+} 
+.center-h1 {
+    text-align: center;
+} 
+.center-li {
+    width: 8rem;
+}
+.center-text{
+    /* width: 8rem; */
+    /* margin : 0.45in; */
+}
+.divcss5{ 
+    word-wrap:break-word
+} 
+.img{
+ margin-top: 60px;
+}

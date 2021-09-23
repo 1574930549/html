@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./css/bienao.css">
+
+</head>
+<body >
+
+
+    <div class="container">
+        <div class="search bg">
+        <div class="search-box col-12 col-lg-6 col-md-12">
+            <div class="search-type">
+                <div index="6" onclick="searchTypeAction(6)" class="item item6 item-active">常用</div>
+                <div index="0" onclick="searchTypeAction(0)" class="item item0">磁力</div>
+                <div index="1" onclick="searchTypeAction(1)" class="item item1">看电影</div>
+                <div index="2" onclick="searchTypeAction(2)" class="item item2">下电影</div>
+                <div index="4" onclick="searchTypeAction(4)" class="item item4">美剧</div>
+                <div index="3" onclick="searchTypeAction(3)" class="item item3">听歌</div>
+                <div index="5" onclick="searchTypeAction(5)" class="item item5">下歌</div>
+    <div index="7" onclick="searchTypeAction(7)" class="item item7">动漫</div>
+            </div>
+          <div class="input-group">
+            <input type="text" class="form-control search-box-keyword" placeholder="输入关键词" aria-label="输入关键词" onkeydown="if(event.keyCode==13)searchNavAction();">
+            <button class="btn search-btn" type="button" onclick="searchNavAction();" accept-charset="UTF-8" aria-label="搜索"><i class="iconfont">&#xe65c;</i></button>
+          </div>
+    
+          <!-- 常用 -->
+        <div class="site site6">
+                <div onclick="searchSiteSwitchAction(1);" url="https://www.baidu.com/s?wd=_k_" class="sites search-type-6 sites1 sites0 sites-active sites-active-6">百度</div>
+                <div onclick="searchSiteSwitchAction(2);" url="https://cn.bing.com/search?q=_k_" class="sites search-type-6 sites2">Bing</div>
+                <div onclick="searchSiteSwitchAction(3);" url="https://www.google.com/search?q=_k_" class="sites search-type-6 sites3">Google</div>
+                <div onclick="searchSiteSwitchAction(4);" url="https://search.jd.com/Search?keyword=_k_&enc=utf-8" class="sites search-type-6 sites4">京东</div>
+                <div onclick="searchSiteSwitchAction(5);" url="https://s.taobao.com/search?q=_k_" class="sites search-type-6 sites5">淘宝网</div>
+        </div>
+    
+          <!-- 磁力 -->
+        <div style="display:none" class="site site0">
+                <div onclick="searchSiteSwitchAction(1);" url="https://nao.so11.top?q=_k_" class="sites search-type-0 sites1 sites0 sites-active sites-active-0">磁力多</div>
+                <div onclick="searchSiteSwitchAction(2);" url="http://9mag.net/search?q=_k_" class="sites search-type-0 sites2">无极磁链</div>
+                <div onclick="searchSiteSwitchAction(3);" url="https://ciliaa.com//search/_k_/1/undefined?from=user" class="sites search-type-0 sites3">磁力窝</div>
+                <div onclick="searchSiteSwitchAction(4);" url="https://hmjs7.xyz//search/_k_/1/undefined?from=user" class="sites search-type-0 sites4">磁力兽</div>
+                <div onclick="searchSiteSwitchAction(5);" url="https://www.sokankan81.xyz/search.html?name=_k_" class="sites search-type-0 sites5">BT吃力</div>
+                <div onclick="searchSiteSwitchAction(6);" url="https://bthuya.ml/s/_k_/1.html" class="sites search-type-0 sites6">bthuya</div>
+                <div onclick="searchSiteSwitchAction(7);" url="http://wx8088.icu//search?word=_k_" class="sites search-type-0 sites7">无限磁力</div>
+                <div onclick="searchSiteSwitchAction(8);" url="https://btsow.digital/tagssearch/_k_" class="sites search-type-0 sites8">BTSOW</div>
+                <div onclick="searchSiteSwitchAction(9);" url="https://www.yuhuage9.xyz//search/_k_-1.html" class="sites search-type-0 sites9">雨花阁</div>
+                <div onclick="searchSiteSwitchAction(10);" url="https://m.zhongziso21.xyz//list/_k_/1" class="sites search-type-0 sites10">种子搜</div>
+                <div onclick="searchSiteSwitchAction(11);" url="https://bthub27.xyz/cn/search/kw-_k_-1.html" class="sites search-type-0 sites11">BTHub</div>
+                <div onclick="searchSiteSwitchAction(12);" url="https://102433.cf//main-search-kw-_k_-1.html" class="sites search-type-0 sites12">1024BT</div>
+        </div>
+        
+          <!-- 电影在线 -->
+        <div style="display:none" class="site site1">
+                <div onclick="searchSiteSwitchAction(1);" url="https://www.pianku.li/s/_k_.html" class="sites search-type-1 sites1 sites0 sites-active sites-active-0">片库</div>
+                <div onclick="searchSiteSwitchAction(2);" url="https://www.pianba.net/so/-------------.html?wd=_k_&submit=" class="sites search-type-1 sites2">片吧</div>
+                <div onclick="searchSiteSwitchAction(3);" url="https://www.ixigua.com/search/_k_/" class="sites search-type-1 sites3">西瓜视频</div>
+                <div onclick="searchSiteSwitchAction(4);" url="https://www.zhenbuka2.com//vodsearch/-------------/?wd=_k_" class="sites search-type-1 sites4">真不卡影院</div>
+                <div onclick="searchSiteSwitchAction(5);" url="https://www.77kpp.com/index.php?m=vod-search&wd=_k_" class="sites search-type-1 sites5">七七看片</div>
+                <div onclick="searchSiteSwitchAction(6);" url="https://www.o8tv.com//index.php/vod/search.html?wd=_k_&submit=" class="sites search-type-1 sites6">555电影</div>
+        </div>
+    
+          <!-- 电影下载 -->
+        <div style="display:none" class="site site2">
+                <div onclick="searchSiteSwitchAction(1);" url="https://www.piaohua.com/plus/search.php?keyword=_k_" class="sites search-type-2 sites1 sites0 sites-active sites-active-0">飘花电影网</div>
+                <div onclick="searchSiteSwitchAction(2);" url="https://www.bd-film.cc//search.jspx?q=_k_" class="sites search-type-2 sites2">BD影视</div>
+                <div onclick="searchSiteSwitchAction(3);" url="http://www.btdx8.com/?s=_k_" class="sites search-type-2 sites3">比特大雄</div>
+                <div onclick="searchSiteSwitchAction(4);" url="http://www.yinfans.me//?s=_k_" class="sites search-type-2 sites4">音范丝</div>
+                <div onclick="searchSiteSwitchAction(5);" url="http://www.hhyyk.com//search?keyword=_k_" class="sites search-type-2 sites5">后花园影库</div>
+        </div>
+          <!-- 美剧 -->
+        <div style="display:none" class="site site4">
+                <div onclick="searchSiteSwitchAction(1);" url="https://www.imeiju.io//?s=_k_" class="sites search-type-4 sites1 sites0 sites-active sites-active-0">爱美剧io</div>
+                <div onclick="searchSiteSwitchAction(2);" url="https://www.meijumi.net//?s=_k_" class="sites search-type-4 sites2">美剧迷</div>
+                <div onclick="searchSiteSwitchAction(3);" url="https://meijutt.cn//tag/-------------.html?wd=_k_&submit=" class="sites search-type-4 sites3">不卡美剧</div>
+                <div onclick="searchSiteSwitchAction(4);" url="http://www.ttkmj.org//?s=_k_" class="sites search-type-4 sites4">天天美剧</div>
+        </div>
+          <!-- 听歌 -->
+        <div style="display:none" class="site site3">
+                <div onclick="searchSiteSwitchAction(1);" url="https://music.163.com//#/search/m/?s=_k_&type=" class="sites search-type-3 sites1 sites0 sites-active sites-active-0">网易云音乐</div>
+                <div onclick="searchSiteSwitchAction(2);" url="https://y.qq.com//portal/search.html#page=1&searchid=1&remoteplace=txt.yqq.top&t=song&w=_k_" class="sites search-type-3 sites2">QQ音乐</div>
+        </div>
+          <!-- 下歌 -->
+        <div style="display:none" class="site site5">
+                <div onclick="searchSiteSwitchAction(1);" url="http://music.9q4.cn/?name=_k_&type=netease" class="sites search-type-5 sites1 sites0 sites-active sites-active-0">9q4</div>
+                <div onclick="searchSiteSwitchAction(2);" url="http://music.sonimei.cn/?name=_k_&type=netease" class="sites search-type-5 sites2">搜你妹音乐</div>
+        </div>
+        <!-- -->
+          <!-- 动漫 -->
+        <div style="display:none" class="site site7">
+                <div onclick="searchSiteSwitchAction(1);" url="https://search.bilibili.com/all?keyword=_k_" class="sites search-type-7 sites1 sites0 sites-active sites-active-0">哔哩哔哩</div>
+                <div onclick="searchSiteSwitchAction(2);" url="https://www.kuaikanmanhua.com/s/result/_k_" class="sites search-type-7 sites2">快看漫画</div>
+                <div onclick="searchSiteSwitchAction(3);" url="https://www.dmzj.com/dynamic/o_search/index/_k_" class="sites search-type-7 sites3">动漫之家</div>
+                <div onclick="searchSiteSwitchAction(4);" url="https://www.acfun.cn/search?keyword=_k_" class="sites search-type-7 sites4">AcFun</div>
+        </div>
+        <!-- -->
+    
+        </div>
+        </div>
+    </div>
+
+
+
+<script src="./js/search.js"></script>
+<script src="./js/jquery.min.js"></script>
+
+</body>
+</html>

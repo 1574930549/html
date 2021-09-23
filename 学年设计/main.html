@@ -1,0 +1,182 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<script language="JavaScript">
+
+</script>
+<html>
+<head>
+	<title>基于遗传算法的卷烟生产计划排程管理系统</title>
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styletest.css" >
+    <link rel="stylesheet" href="css/zui.min.css">
+    <script src="js/jquery.js"></script>
+
+</head>
+<body>
+	<div id="menu" class="" >
+		<i></i>
+	</div>
+	<div class="list closed"  >
+		<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#EEF2FB">
+			<tr>
+				<td width="182" valign="top"><div id="container">
+				<!-- <img src="../images/menu.gif" width="207" height="25" /> -->
+					<!-- <h1 class="type"><a href="javascript:void(0)">工作中心</a></h1> -->
+					<h1 class="type"><a href="javascript:void(0)">制造资源</a></h1>
+					  <div class="content">
+						 <img src="../images/menu_topline.gif" width="182" height="5" />
+						  <ul class="MM">
+							  <li><a href="workcenter/wc_selectshow.jsp" target="mainFrame">工作中心管理</a></li>
+							  <li><a href="device/de_selectshow.jsp" target="mainFrame">设备管理</a></li>
+							  <li><a href="staff/st_selectshow.jsp" target="mainFrame">员工管理</a></li>
+						  </ul>
+						   <img src="../images/menu_topline.gif" width="182" height="5" />
+					</div>
+			
+				  <h1 class="type"><a href="javascript:void(0)">工件管理</a></h1>
+				  <div class="content">
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+					<ul class="MM">
+					  <li><a href="workpiece/wp_selectshow.jsp" target="mainFrame">工件信息</a></li>
+					   <li><a href="workpieceRefe/wr_selectshow.jsp" target="mainFrame">采购管理</a></li>
+					</ul>
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+				  </div>
+			
+					<h1 class="type"><a href="javascript:void(0)">工艺管理</a></h1>
+				  <div class="content">
+						  <img src="../images/menu_topline.gif" width="182" height="5" />
+					<ul class="MM">
+					  <li><a href="craftbase/cb_selectshow.jsp" target="mainFrame">查询工艺信息</a></li>
+					  <li><a href="proceduretype/pt_selectshow.jsp" target="mainFrame">查询工序信息</a></li>
+					</ul>
+						<img src="../images/menu_topline.gif" width="182" height="5" />
+					</div>
+			
+					<h1 class="type"><a href="javascript:void(0)">MRP单管理</a></h1>
+				  <div class="content">
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+					<ul class="MM">
+					  <li><a href="mrpextend/mrpe_selectshow.jsp" target="mainFrame">查询MRP单</a></li>
+					</ul>
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+					</div>
+			
+					 <h1 class="type"><a href="javascript:void(0)">调度计划管理</a></h1>
+				  <div class="content">
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+					<ul class="MM">
+					  <li><a href="workplan/scheduleplanshow.jsp" target="mainFrame">作业计划制定</a></li>
+					  <li><a href="workplan/scheduleout.jsp" target="mainFrame">计划结果显示</a></li>
+					</ul>
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+					</div>
+			
+			
+			   <script type="text/javascript">
+					var contents = document.getElementsByClassName('content');
+					var toggles = document.getElementsByClassName('type');
+			
+					var myAccordion = new fx.Accordion(
+						toggles, contents, {opacity: true, duration: 400}
+					);
+					myAccordion.showThisHideOpen(contents[0]);
+				</script>
+				 </td>
+			  </tr>
+			 <!--  <tr>
+				<td width="182" valign="top"><div id="container">
+					<h1 class="type"><a href="javascript:void(0)">工作中心</a></h1>
+					  <div class="content">
+						 <img src="../images/menu_topline.gif" width="182" height="5" />
+						  <ul class="MM">
+							  <li><a href="workcenter/wc_selectshow.jsp" target="mainFrame">查询工作中心</a></li>
+						  </ul>
+						   <img src="../images/menu_topline.gif" width="182" height="5" />
+					</div>
+				  <h1 class="type"><a href="javascript:void(0)">设备管理</a></h1>
+				  <div class="content">
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+					<ul class="MM">
+					  <li><a href="device/de_selectshow.jsp" target="mainFrame">查询设备信息</a></li>
+					</ul>
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+				  </div>
+			
+				  <h1 class="type"><a href="javascript:void(0)">员工管理</a></h1>
+				  <div class="content">
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+					<ul class="MM">
+						<li><a href="staff/st_selectshow.jsp" target="mainFrame">查询员工信息</a></li>
+			
+					</ul>
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+				  </div>
+			
+				  <h1 class="type"><a href="javascript:void(0)">工艺管理</a></h1>
+				  <div class="content">
+						  <img src="../images/menu_topline.gif" width="182" height="5" />
+					<ul class="MM">
+					  <li><a href="craftbase/cb_selectshow.jsp" target="mainFrame">查询工艺信息</a></li>
+					  <li><a href="proceduretype/pt_selectshow.jsp" target="mainFrame">查询工序信息</a></li>
+					</ul>
+						<img src="../images/menu_topline.gif" width="182" height="5" />
+					</div>
+			
+				  <h1 class="type"><a href="javascript:void(0)">MRP单管理</a></h1>
+				  <div class="content">
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+					<ul class="MM">
+					  <li><a href="mrpextend/mrpe_selectshow.jsp" target="mainFrame">查询MRP单</a></li>
+					</ul>
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+					</div>
+			
+				  <h1 class="type"><a href="javascript:void(0)">工件管理</a></h1>
+				  <div class="content">
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+					<ul class="MM">
+					  <li><a href="workpiece/wp_selectshow.jsp" target="mainFrame">查询工件信息</a></li>
+					</ul>
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+				  </div>
+			
+				  <h1 class="type"><a href="javascript:void(0)">工具采购管理</a></h1>
+				  <div class="content">
+				 <img src="../images/menu_topline.gif" width="182" height="5" />
+					<ul class="MM">
+					  <li><a href="workpieceRefe/wr_selectshow.jsp" target="mainFrame">查询采购信息</a></li>
+					</ul>
+					<img src="../images/menu_topline.gif" width="182" height="5" />
+				  </div>
+				</div>
+			   <script type="text/javascript">
+					var contents = document.getElementsByClassName('content');
+					var toggles = document.getElementsByClassName('type');
+			
+					var myAccordion = new fx.Accordion(
+						toggles, contents, {opacity: true, duration: 400}
+					);
+					myAccordion.showThisHideOpen(contents[0]);
+				</script>
+				 </td>
+			  </tr> -->
+			</table>
+		<p class="cediceng">联系邮件：1574930549@qq.com</p>
+	</div> 
+	
+	<script src="js/js.js"></script>
+	<iframe src="jsp/top.html"  name="mainFrame" scrolling="no"  height="10%" width="100%"   ></frame>
+	<iframe src="jsp/right2.html" name="mainFrame" scrolling="no"  height="99%" width="100%" ></frame>
+
+    
+</body>
+<!-- <frameset name="frame1" rows="86,*" cols="*" frameborder="1" border="1" bordercolor="#000000" framespacing="0">
+
+	<frame src="jsp/top.html" name="topFrame" scrolling="no" noresize>
+	<frameset name="frame11" cols="*" frameborder="1" border="1" bordercolor="#ffffff" framespacing="0" >
+		<frame src="jsp/right.html" name="mainFrame" scrolling="" noresize>
+	</frameset> -->
+
+</html>
+

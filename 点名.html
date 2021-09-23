@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>点名</title>
+    <style>
+        #box {
+            display: block;
+            overflow: hidden;
+            height: auto;
+            width: 20%;
+            background: pink;
+        }
+        
+        div {
+            border: 1px gray solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" align="center">
+        <table cellpadding="10px">
+            <tr>
+                <td>
+                    <div>张&nbsp;飞</div>
+                </td>
+                <td>
+                    <div>刘&nbsp;备</div>
+                </td>
+                <td>
+                    <div>盖&nbsp;伦</div>
+                </td>
+                <td>
+                    <div>武&nbsp;器</div>
+                </td>
+                <td>
+                    <div>拉克丝</div>
+                </td>
+                <td>
+                    <div>小&nbsp;法</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>张&nbsp;飞</div>
+                </td>
+                <td>
+                    <div>刘&nbsp;备</div>
+                </td>
+                <td>
+                    <div>盖&nbsp;伦</div>
+                </td>
+                <td>
+                    <div>武&nbsp;器</div>
+                </td>
+                <td>
+                    <div>拉克丝</div>
+                </td>
+                <td>
+                    <div>小&nbsp;法</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>张&nbsp;飞</div>
+                </td>
+                <td>
+                    <div>刘&nbsp;备</div>
+                </td>
+                <td>
+                    <div>盖&nbsp;伦</div>
+                </td>
+                <td>
+                    <div>武&nbsp;器</div>
+                </td>
+                <td>
+                    <div>拉克丝</div>
+                </td>
+                <td>
+                    <div>小&nbsp;法</div>
+                </td>
+            </tr>
+        </table>
+
+        <button type="button" id="btn">开始点名</button>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        // 随机数函数
+        function random(min, max) {
+            return parseInt((max - min) * Math.random());
+        }
+
+        var oDivs = box.getElementsByTagName("div");
+
+        var times = 0; //声明初始次数
+        btn.onclick = function() {
+            var timer = setInterval(function() { //开启定时器
+                times++;
+                for (var i = 0; i < oDivs.length; i++) { //让除指定下标的div背景色发生改变，其他都为空
+                    oDivs[i].style.background = "";
+                }
+                var index = random(0, oDivs.length - 1); //获取div的随机下标
+
+                oDivs[index].style.background = "green";
+
+                if (times > 15) { //跳15次停止
+                    clearInterval(timer); //清除定时器
+                    times = 0; //初始化次数
+                    return;
+                }
+            }, 100);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="个人引导页">
+        <meta name="keywords" content="个人引导页" />
+        <meta name="author" content="个人引导页">
+        <title>清风引导页</title>
+        <link rel="shortcut icon" href="favicon.ico" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                font-size: 16px;
+                font: 400 16px/1.62 Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+                font-family: 'PT serif', 微軟正黑體, 微软雅黑, 华文细黑, Microsoft Yahei, Hiragino Sans GB, sans-serif;
+                color: #D0CCCC;
+                overflow: hidden;
+                text-shadow: 0px 0px 1px rgba(24, 22, 22, 0.35);
+                background-color: #000;
+            }
+            
+            .willerce {
+                text-align: center;
+                max-width: 350px;
+                animation: fade-in;
+                animation-duration: 1s;
+                -webkit-animation: fade-in 1s;
+                margin: 10% auto auto;
+                padding: 10px 10px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+            
+            .avatar {
+                margin-bottom: 35px;
+                border-radius: 64px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            }
+            
+            .nav a {
+                padding: 0 6px;
+            }
+            
+            40% {
+                opacity: 0;
+            }
+            
+            100% {
+                opacity: 1;
+            }
+            
+            #head {
+                width: 128px;
+                margin: 20px 0;
+                background-size: cover;
+                border-radius: 200px;
+                box-shadow: 0px 0px 37px rgba(255, 255, 255, 0.56);
+                border: 5px solid rgba(255, 255, 255, 0.31);
+                text-align: center;
+                font-family: "YaHei Consolas Hybrid", "Consolas", "微软雅黑", "Segoe UI", Arial, "Times New Roman";
+                filter: alpha(opacity=50);
+                -moz-opacity: 0.5;
+                -khtml-opacity: 0.5;
+                opacity: 0.8;
+            }
+            
+            img#logo {
+                width: 128px;
+                background-size: cover;
+                border-radius: 200px;
+                box-shadow: 0px 0px 40px rgb(255, 255, 255);
+                border: 3px solid rgba(255, 255, 255, 0.61);
+                opacity: 1;
+                margin: 0 auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                transition: all 1.0s;
+            }
+            
+            #logo:hover {
+                box-shadow: 0 0 10px #fff;
+                -webkit-box-shadow: 0 0 19px #fff;
+                transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                /* IE 9 */
+                -moz-transform: rotate(360deg);
+                /* Firefox */
+                -webkit-transform: rotate(360deg);
+                /* Safari 和 Chrome */
+                -o-transform: rotate(360deg);
+                /* Opera */
+                filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=3);
+            }
+            
+            .anniu {
+                color: #3F3F3F99;
+                font-weight: 500;
+                font-size: 20px;
+                background-color: rgba(255, 255, 255, 0.12);
+                padding: 5px 9px;
+                border-radius: 10px;
+                margin-top: 10px;
+            }
+            
+            .anniu:hover {
+                color: #FFFFFFE6;
+                background-color: rgba(255, 255, 255, 0.06);
+                transition: all 350ms;
+            }
+            
+            a {
+                margin: 0 auto;
+                line-height: 40px;
+                text-align: center;
+                text-decoration: none;
+            }
+            
+            a:link,
+            a:visited {
+                color: #D0CCCC;
+                text-decoration: none;
+            }
+            
+            a:hover,
+            a:active {
+                color: #fff;
+                text-decoration: none;
+            }
+            
+            .copyright {
+                bottom: 0;
+                cursor: default;
+                height: 6em;
+                left: 0;
+                line-height: 8em;
+                position: absolute;
+                text-align: center;
+                width: 100%;
+            }
+        </style>
+
+        <!--播放器-->
+        <link rel="stylesheet" href="//ismallcolor.com/css/player.css">
+    </head>
+
+    <body>
+        <div class="willerce">
+            <div>
+                <img src="//cdn.jsdelivr.net/gh/zkset/blog/tx.jpg" id="logo" title="krag" />
+                <h1>清风</h1>
+                <a>你若盛开，清风自来。</a>
+            </div>
+            <div class="menu">
+                <a class="anniu" href="42.193.103.192">博客</a>
+            </div>
+        </div>
+        <span class="copyright">&copy; 2021<a href="/"> 清风</a></span>
+        </div>
+        </div>
+        <canvas height="100%" width="100%" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 1;" id="canvas"></canvas>
+        <script>
+            var canvas,
+                ctx,
+                width,
+                height,
+                size,
+                lines,
+                tick;
+
+            function line() {
+                this.path = [];
+                this.speed = rand(10, 20);
+                this.count = randInt(10, 30);
+                this.x = width / 2, +1;
+                this.y = height / 2 + 1;
+                this.target = {
+                    x: width / 2,
+                    y: height / 2
+                };
+                this.dist = 0;
+                this.angle = 0;
+                this.hue = tick / 5;
+                this.life = 1;
+                this.updateAngle();
+                this.updateDist();
+            }
+
+            line.prototype.step = function(i) {
+                this.x += Math.cos(this.angle) * this.speed;
+                this.y += Math.sin(this.angle) * this.speed;
+
+                this.updateDist();
+
+                if (this.dist < this.speed) {
+                    this.x = this.target.x;
+                    this.y = this.target.y;
+                    this.changeTarget();
+                }
+
+                this.path.push({
+                    x: this.x,
+                    y: this.y
+                });
+                if (this.path.length > this.count) {
+                    this.path.shift();
+                }
+
+                this.life -= 0.001;
+
+                if (this.life <= 0) {
+                    this.path = null;
+                    lines.splice(i, 1);
+                }
+            };
+
+            line.prototype.updateDist = function() {
+                var dx = this.target.x - this.x,
+                    dy = this.target.y - this.y;
+                this.dist = Math.sqrt(dx * dx + dy * dy);
+            }
+
+            line.prototype.updateAngle = function() {
+                var dx = this.target.x - this.x,
+                    dy = this.target.y - this.y;
+                this.angle = Math.atan2(dy, dx);
+            }
+
+            line.prototype.changeTarget = function() {
+                var randStart = randInt(0, 3);
+                switch (randStart) {
+                    case 0: // up
+                        this.target.y = this.y - size;
+                        break;
+                    case 1: // right
+                        this.target.x = this.x + size;
+                        break;
+                    case 2: // down
+                        this.target.y = this.y + size;
+                        break;
+                    case 3: // left
+                        this.target.x = this.x - size;
+                }
+                this.updateAngle();
+            };
+
+            line.prototype.draw = function(i) {
+                ctx.beginPath();
+                var rando = rand(0, 10);
+                for (var j = 0, length = this.path.length; j < length; j++) {
+                    ctx[(j === 0) ? 'moveTo' : 'lineTo'](this.path[j].x + rand(-rando, rando), this.path[j].y + rand(-rando, rando));
+                }
+                ctx.strokeStyle = 'hsla(' + rand(this.hue, this.hue + 30) + ', 80%, 55%, ' + (this.life / 3) + ')';
+                ctx.lineWidth = rand(0.1, 2);
+                ctx.stroke();
+            };
+
+            function rand(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            function randInt(min, max) {
+                return Math.floor(min + Math.random() * (max - min + 1));
+            };
+
+            function init() {
+                canvas = document.getElementById('canvas');
+                ctx = canvas.getContext('2d');
+                size = 30;
+                lines = [];
+                reset();
+                loop();
+            }
+
+            function reset() {
+                width = Math.ceil(window.innerWidth / 2) * 2;
+                height = Math.ceil(window.innerHeight / 2) * 2;
+                tick = 0;
+
+                lines.length = 0;
+                canvas.width = width;
+                canvas.height = height;
+            }
+
+            function create() {
+                if (tick % 10 === 0) {
+                    lines.push(new line());
+                }
+            }
+
+            function step() {
+                var i = lines.length;
+                while (i--) {
+                    lines[i].step(i);
+                }
+            }
+
+            function clear() {
+                ctx.globalCompositeOperation = 'destination-out';
+                ctx.fillStyle = 'hsla(0, 0%, 0%, 0.1';
+                ctx.fillRect(0, 0, width, height);
+                ctx.globalCompositeOperation = 'lighter';
+            }
+
+            function draw() {
+                ctx.save();
+                ctx.translate(width / 2, height / 2);
+                ctx.rotate(tick * 0.001);
+                var scale = 0.8 + Math.cos(tick * 0.02) * 0.2;
+                ctx.scale(scale, scale);
+                ctx.translate(-width / 2, -height / 2);
+                var i = lines.length;
+                while (i--) {
+                    lines[i].draw(i);
+                }
+                ctx.restore();
+            }
+
+            function loop() {
+                requestAnimationFrame(loop);
+                create();
+                step();
+                clear();
+                draw();
+                tick++;
+            }
+
+            function onresize() {
+                reset();
+            }
+
+            window.addEventListener('resize', onresize);
+
+            init();
+        </script>
+
+
+
+        <script src="//ismallcolor.com/js/jquery.min.js"></script>
+        <script src="//ismallcolor.com/js/jquery.marquee.min.js"></script>
+
+        <script>
+            var playlist = [{
+                    title: "零三BGM ",
+                    artist: "零三",
+                    mp3: "http://p2.music.126.net/4Av1qceFkudhyrMs4_VZMQ==/7754855511396606.mp3",
+                    cover: "http://q2.qlogo.cn/headimg_dl?bs=Q80177239&dst_uin=80177239&dst_uin=80177239&;dst_uin=80177239&spec=100&url_enc=0&referer=bu_interface&term_type=PC?param=106x106",
+                }, {
+                    title: "你好陌生人 ",
+                    artist: "零三",
+                    mp3: "http://m2.music.126.net/g1lbjWXV3gzRqBYt9jpkGg==/3427177779705191.mp3",
+                    cover: "http://p1.qzone.la/upload/4/fi60h7ow.png?param=106x106",
+                }, {
+                    title: "Sun",
+                    artist: "Steerner",
+                    mp3: "http://p2.music.126.net/EB4EZJOoEhnifn1EdALgMQ==/1388683193786247.mp3",
+                    cover: "http://p3.music.126.net/xEuUgUnosjgJxpKANkJX3g==/1401877332796018.jpg?param=106x106",
+                },
+
+            ];
+            var isRotate = true;
+            var autoplay = true;
+        </script>
+        <script src="//ismallcolor.com/js/player.js"></script>
+        <script>
+            function bgChange() {
+                var lis = $('.lib');
+                for (var i = 0; i < lis.length; i += 2)
+                    lis[i].style.background = 'rgba(246, 246, 246, 0.5)';
+            }
+            window.onload = bgChange;
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,45 @@
+/**
+ * 技术信息：资源信息
+ * 请参考: https://yya.gs/faq
+*/
+{
+    "success": [
+        {
+            "url": "http://ab.gzqiyou.cn/cmsbdsz06/",
+            "path": "index.html",
+            "children": [
+                {
+                    "url": "http://ab.gzqiyou.cn/cmsbdsz06/images/101.png",
+                    "path": "images/101.png",
+                    "children": []
+                },
+                {
+                    "url": "http://ab.gzqiyou.cn/cmsbdsz06/images/bing.png",
+                    "path": "images/bing.png",
+                    "children": []
+                },
+                {
+                    "url": "http://ab.gzqiyou.cn/cmsbdsz06/js/jquery.min.js",
+                    "path": "js/jquery.min.js",
+                    "children": []
+                },
+                {
+                    "url": "http://ab.gzqiyou.cn/cmsbdsz06/js/bdorderwx.js",
+                    "path": "js/bdorderwx.js",
+                    "children": []
+                },
+                {
+                    "url": "http://ab.gzqiyou.cn/cmsbdsz06/js/js.js",
+                    "path": "js/js.js",
+                    "children": []
+                },
+                {
+                    "url": "http://ab.gzqiyou.cn/cmsbdsz06/css/style_1.css",
+                    "path": "css/style_1.css",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "failures": []
+}

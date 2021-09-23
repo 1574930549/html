@@ -1,0 +1,2826 @@
+<html class="small-scroll-bar no-js bg" lang="zh-cmn-Hans"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <!--IE 8浏览器的页面渲染方式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <!--默认使用极速内核：针对国内浏览器产商-->
+    <meta name="renderer" content="webkit">
+    <!--chrome Android 地址栏颜色-->
+            <meta name="theme-color" content="#000000">
+            <!-- #3a3f51 -->
+    
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+    <title>世界和我爱着你</title>
+    <link rel="icon" type="image/ico" href="../img/01.jpg">
+    <meta name="description" content="晓梦的个人博客，博主是一位热爱网络技术的90后小伙子，主要分享学习中的心得和笔记">
+    <meta name="keywords" content="晓梦,晓梦博客,晓梦Blog,Wordpress,Typecho">
+<meta name="generator" content="Typecho 1.1/17.10.30">
+<meta name="template" content="handsome">
+<link rel="pingback" href="https://www.xmbkw.cn/action/xmlrpc">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.xmbkw.cn/action/xmlrpc?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.xmbkw.cn/action/xmlrpc?wlw">
+<link rel="alternate" type="application/rss+xml" title="晓梦 Blog » RSS 2.0" href="https://www.xmbkw.cn/feed/">
+<link rel="alternate" type="application/rdf+xml" title="晓梦 Blog » RSS 1.0" href="https://www.xmbkw.cn/feed/rss/">
+<link rel="alternate" type="application/atom+xml" title="晓梦 Blog » ATOM 1.0" href="https://www.xmbkw.cn/feed/atom/">
+<link rel="stylesheet" type="text/css" href="https://www.xmbkw.cn/usr/plugins/CodePrettify/static/styles/BlackMac.css">
+
+    
+    
+    <script type="text/javascript">
+
+        window['LocalConst'] = {
+            //base
+            BASE_SCRIPT_URL: 'https://www.xmbkw.cn/usr/themes/handsome/',
+            BLOG_URL: 'https://www.xmbkw.cn/',
+            BLOG_URL_N: 'https://www.xmbkw.cn',
+            STATIC_PATH: 'https://cdn.xmbkw.cn/usr/themes/handsome/assets/',
+            BLOG_URL_PHP: 'https://www.xmbkw.cn/',
+            VDITOR_CDN: 'https://cdn.jsdelivr.net/npm/vditor@3.4.5',
+            MATHJAX_SVG_CDN: 'https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js',
+            THEME_VERSION: '7.3.12020081501',
+            THEME_VERSION_PRO: '7.3.1',
+
+            //comment
+            COMMENT_NAME_INFO: '必须填写昵称或姓名',
+            COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
+            COMMENT_EMAIL_LEGAL_INFO: '邮箱地址不合法',
+            COMMENT_CONTENT_INFO: '必须填写评论内容',
+            COMMENT_SUBMIT_ERROR: '提交失败，请重试！',
+            COMMENT_CONTENT_LEGAL_INFO: '提交失败,评论被拦截或者进入审核区域',
+            COMMENT_CONTENT_CHECK_INFO: '评论进入审核区域，请勿重复评论',
+            COMMENT_TITLE: '评论通知',
+
+            //login
+            LOGIN_TITLE: '登录通知',
+            LOGIN_USERNAME_INFO: '必须填写用户名',
+            LOGIN_PASSWORD_INFO: '请填写密码',
+            LOGIN_SUBMIT_ERROR: '登录失败，请重新登录',
+            LOGIN_SUBMIT_INFO: '用户名或者密码错误，请重试',
+            LOGIN_SUBMIT_SUCCESS: '登录成功',
+            CLICK_TO_REFRESH: '点击以刷新页面',
+            LOGOUT_SUCCESS_REFRESH: '退出成功，正在刷新当前页面',
+
+            LOGOUT_ERROR: '退出失败，请重试',
+            LOGOUT_SUCCESS: '退出成功',
+            SUBMIT_PASSWORD_INFO: '密码错误，请重试',
+
+            //comment
+            ChANGYAN_APP_KEY: '',
+            CHANGYAN_CONF: '',
+
+            COMMENT_SYSTEM: '0',
+            COMMENT_SYSTEM_ROOT: '0',
+            COMMENT_SYSTEM_CHANGYAN: '1',
+            COMMENT_SYSTEM_OTHERS: '2',
+            EMOJI: '表情',
+            COMMENT_NEED_EMAIL: '1',
+            COMMENT_REJECT_PLACEHOLDER: '居然什么也不说，哼',
+            COMMENT_PLACEHOLDER: '说点什么吧……',
+
+            //pjax
+            IS_PJAX: '1',
+            IS_PAJX_COMMENT: '1',
+            PJAX_ANIMATE: 'default',
+            PJAX_TO_TOP: '0',
+            TO_TOP_SPEED: '100',
+
+
+            USER_COMPLETED: {"data":"<!--\u4ee3\u7801\u9ad8\u4eae-->\r\nif (typeof Prism !== \"undefined\") {\r\nvar pres = document.getElementsByTagName(\"pre\");\r\n                for (var i = 0; i < pres.length; i++){\r\n                    if (pres[i].getElementsByTagName(\"code\").length > 0)\r\n                        pres[i].className  = \"line-numbers\";}\r\nPrism.highlightAll(true,null);}\r\n\r\n<!--\u5f69\u8272\u6807\u7b7e\u4e91-->\r\nfunction colorfultags(){\r\nlet tags = document.querySelectorAll(\"#tag_cloud-2 a\");\r\nlet colorArr = [\"#f60\", \"#45B6F7\", \"#15a287\", \"#5cb85c\", \"#d9534f\", \"#567e95\", \"#00a67c\", \"#b37333\"];\r\nlet count = 1;\r\ntags.forEach(tag => {\r\n    tagsColor = colorArr[count%8];\r\n    tag.style.backgroundColor = tagsColor;\r\n    count++;\r\n});\r\n}\r\nwindow.onload=colorfultags();\r\n<script>\r\n(function(){\r\n    var bp = document.createElement(\"script\");\r\n    var curProtocol = window.location.protocol.split(\":\")[0];\r\n    if (curProtocol === \"https\"){\r\n   bp.src = \"https:\/\/zz.bdstatic.com\/linksubmit\/push.js\";\r\n  }\r\n  else{\r\n  bp.src = \"http:\/\/push.zhanzhang.baidu.com\/push.js\";\r\n  }\r\n    var s = document.getElementsByTagName(\"script\")[0];\r\n    s.parentNode.insertBefore(bp, s);\r\n})();\r\n<\/script>"},
+
+            //ui
+            OPERATION_NOTICE: '操作通知',
+            SCREENSHOT_BEGIN: '正在生成当前页面截图……',
+            SCREENSHOT_NOTICE: '点击顶部下载按钮保存当前卡片',
+            SCREENSHORT_ERROR: '由于图片跨域原因导致截图失败',
+            SCREENSHORT_SUCCESS: '截图成功',
+
+            //music
+            MUSIC_NOTICE: '播放通知',
+            MUSIC_FAILE: '当前音乐地址无效，自动为您播放下一首',
+            MUSIC_FAILE_END: '当前音乐地址无效',
+            MUSIC_LIST_SUCCESS: '歌单歌曲加载成功',
+
+            //option
+            TOC_TITLE: '文章目录',
+            HEADER_FIX: '固定头部',
+            ASIDE_FIX: '固定导航',
+            ASIDE_FOLDED: '折叠导航',
+            ASIDE_DOCK: '置顶导航',
+            CONTAINER_BOX: '盒子模型',
+            DARK_MODE: '深色模式',
+            DARK_MODE_AUTO: '深色模式（自动）',
+            DARK_MODE_FIXED: '深色模式（固定）',
+            EDITOR_CHOICE: 'origin',
+
+
+            CDN_NAME: 'ALIOSS',
+            LAZY_LOAD: '',
+            PAGE_ANIMATE: '',
+            THEME_COLOR: '14',
+            THEME_COLOR_EDIT: 'white-white-white',
+            THEME_HEADER_FIX: '1',
+            THEME_ASIDE_FIX: '1',
+            THEME_ASIDE_FOLDED: '',
+            THEME_ASIDE_DOCK: '',
+            THEME_CONTAINER_BOX: '1',
+            THEME_HIGHLIGHT_CODE: '',
+            THEME_MATHJAX: '',
+            THEME_TOC: '1',
+            THEME_DARK_MODE: 'light',
+            THEME_DARK_MODE_VALUE: 'light',
+            SHOW_SETTING_BUTTON: '1',
+
+            THEME_DARK_HOUR: '18',
+            THEME_LIGHT_HOUR: '6',
+            THUMB_STYLE: '',
+            AUTO_READ_MODE: '',
+
+            //代码高亮
+            CODE_STYLE_LIGHT: 'dracula',
+            CODE_STYLE_DARK: 'dracula',
+
+            //other
+            OFF_SCROLL_HEIGHT: '50',
+            SHOW_IMAGE_ALT: '1',
+            USER_LOGIN: '',
+            USE_CACHE: '',
+            POST_SPEECH: '1',
+        };
+
+        if ('serviceWorker' in navigator) {
+            if (LocalConst.USE_CACHE) {
+                navigator.serviceWorker.register(LocalConst.BLOG_URL + 'sw.min.js?v=7.3.12020081501')
+                    .then(function (reg) {
+
+                    }).catch(function (error) {
+                    console.log('cache failed with ' + error); // registration failed
+                });
+            } else {
+                navigator.serviceWorker.getRegistrations()
+                    .then(function (registrations) {
+                        for (let registration of registrations) {
+                            registration.unregister();
+                            // 清除缓存
+                            window.caches && caches.keys && caches.keys().then(function (keys) {
+                                keys.forEach(function (key) {
+                                    caches.delete(key);
+                                });
+                            });
+                            console.log("unregister success")
+                        }
+                    });
+            }
+        }
+    </script>
+
+
+    
+
+    <!-- 第三方CDN加载CSS -->
+    <link href="https://cdn.xmbkw.cn/usr/themes/handsome/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- 本地css静态资源 -->
+
+        <link rel="stylesheet" href="https://cdn.xmbkw.cn/usr/themes/handsome/assets/css/origin/function.min.css?v=7.3.12020081501" type="text/css">
+    <link rel="stylesheet" href="https://cdn.xmbkw.cn/usr/themes/handsome/assets/css/handsome.min.css?v=7.3.12020081501" type="text/css">
+
+        
+    
+    <!--主题组件css文件加载-->
+    
+    <!--引入英文字体文件-->
+            <link rel="stylesheet preload" href="https://cdn.xmbkw.cn/usr/themes/handsome/assets/css/features/font.min.css?v=7.3.12020081501" as="style">
+    
+    <style type="text/css">
+        
+        html.bg {
+        background: #EFEFEF
+        }
+        .cool-transparent .off-screen+* .app-content-body {
+        background: #EFEFEF
+        }
+@media (max-width:767px){
+    html.bg {
+        background: #EFEFEF
+        }
+        .cool-transparent .off-screen+* .app-content-body {
+        background: #EFEFEF
+        }
+}
+#tag_cloud-2>div>a {
+    color: #fff;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 3px 5px;
+    border: 0;
+    border-radius: 3px;
+    display: inline-block;
+    line-height: 18px;
+}
+
+#tag_cloud-2>div>a:hover {
+    background: #d02f53;
+}#aside .wrapper:hover {
+	background: url(https://cdn.xmbkw.cn/usr/themes/handsome/assets/img/snow.gif);
+	background-size: cover;
+	color: #999;
+}    </style>
+
+    <!--全站jquery-->
+    <script src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/libs/jquery/jquery.min.js"></script>
+
+    <!--网站统计代码-->
+    
+
+<style id="tsbrowser_video_independent_player_style" type="text/css">
+      [tsbrowser_force_max_size] {
+        width: 100% !important;
+        height: 100% !important;
+        left: 0px !important;
+        top: 0px !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        transform: none !important;
+      }
+      [tsbrowser_force_fixed] {
+        position: fixed !important;
+        z-index: 9999 !important;
+        background: black !important;
+      }
+      [tsbrowser_force_hidden] {
+        opacity: 0 !important;
+        z-index: 0 !important;
+      }
+      [tsbrowser_hide_scrollbar] {
+        overflow: hidden !important;
+      }
+      [tsbrowser_display_none] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+      }
+      [tsbrowser_force_show] {
+        display: black !important;
+        visibility: visible !important;
+        opacity: 0;
+      }</style></head>
+
+<body id="body" class="fix-padding" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/normal.cur&quot;), default;">
+
+
+<!-- aside -->
+  
+  <div id="alllayout" class="app app-aside-fix container app-header-fixed">  <!-- headnav -->
+  <header id="header" class="app-header navbar box-shadow-bottom-lg" role="menu">
+    <!-- navbar header（交集处） -->
+    <div class="text-ellipsis navbar-header bg-white">
+    <button class="pull-right visible-xs" ui-toggle-class="show animated animated-lento fadeIn" target=".navbar-collapse">
+        <span class="menu-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+    </button>
+    <button class="pull-left visible-xs" ui-toggle-class="off-screen animated" target=".app-aside" ui-scroll="app">
+        <span class="menu-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span>
+    </button>
+    <!-- brand -->
+    <a href="https://www.xmbkw.cn/" class="navbar-brand text-lt" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+        <span id="navbar-brand-day">
+                                                <i class="fontello fontello-home"></i>
+                            <span class="hidden-folded m-l-xs">晓梦Blog</span>
+                    </span>
+            </a>
+    <!-- / brand -->
+    </div>
+    <!-- / navbar header -->
+
+    <!-- navbar collapse（顶部导航栏） -->
+    <div class="collapse pos-rlt navbar-collapse bg-white">
+    <!-- statitic info-->
+        <ul class="nav navbar-nav hidden-sm">
+        <li class="dropdown pos-stc">
+            <a id="statistic_pane" data-status="false" href="#" data-toggle="dropdown" class="dropdown-toggle feathericons dropdown-toggle" aria-expanded="false" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                <span class="caret"></span>
+            </a>
+            <div class="dropdown-menu wrapper w-full bg-white">
+                <div class="row">
+                    <div class="col-sm-8 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">动态日历<span class="info-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info" data-toggle="tooltip" title="" data-original-title="统计近10个月的文章和作者评论数目"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            </span></div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="post-calendar" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">分类雷达图</div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="category-radar" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">发布统计图</div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="posts-chart" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">分类统计图</div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="categories-chart" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">标签统计图</div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="tags-chart" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    
+    <!-- search form -->
+
+    <form id="searchform1" class="searchform navbar-form navbar-form-sm navbar-left shift" method="post" role="search">
+        <div class="form-group">
+            <div class="input-group rounded bg-white-pure box-shadow-wrap-normal">
+                <input autocomplete="off" id="search_input" type="search" name="s" class="transparent rounded form-control input-sm no-borders padder" required="" placeholder="输入关键词搜索…">
+                <!--搜索提示-->
+                <ul id="search_tips_drop" class="small-scroll-bar dropdown-menu hide" style="display: block;top: 
+                30px; left: 0px;">
+                </ul>
+                <span id="search_submit" class="transparent input-group-btn">
+                  <button type="submit" class="transparent btn btn-sm">
+                      <span class="feathericons" id="icon-search"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+                      <span class="feathericons animate-spin  hide" id="spin-search"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-loader"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg></span>
+                      <!--                      <i class="fontello fontello-search" id="icon-search"></i>-->
+                      <!--                      <i class="animate-spin  fontello fontello-spinner hide" id="spin-search"></i>-->
+                  </button>
+              </span>
+            </div>
+        </div>
+    </form>
+    <a href="" style="display: none; cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;" id="searchUrl"></a>
+    <!-- / search form -->
+        <ul class="nav navbar-nav navbar-right">
+                    <li class="music-box hidden-xs hidden-sm">
+                <div id="skPlayer">
+            <audio class="skPlayer-source" src="https://m701.music.126.net/20210218151851/4ecd23eff04f675fab6ad6283cbfcc66/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/4959745806/482a/1a84/ca27/02c0f32c8c1b78a97988cebbee2ede1b.mp3" preload="auto" __idm_id__="1033605121"></audio>
+            <div class="skPlayer-picture">
+                <img class="skPlayer-cover" src="https://p3.music.126.net/GI1Ex39x73zBT-1r7_o-sQ==/109951165494781109.jpg?param=300y300" alt="">
+    
+            </div>
+            <div class="skPlayer-control">
+                <p class="skPlayer-name">for ya</p>
+                <div class="playController"><div onclick="player.prev();" class="lastMusic  music-off "><span class="feathericons"><svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="11 19 2 12 11 5 11 19"></polygon><polygon points="22 19 13 12 22 5 22 19"></polygon></svg></span></div> &nbsp;&nbsp;
+ <div class="runMusic  music-off skPlayer-play-btn"><span class="runMusicIcon feathericons"><svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></span></div>&nbsp;&nbsp; 
+ <div onclick="player.next();" class="nextMusic  music-off "><span class="feathericons"><svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="13 19 22 12 13 5 13 19"></polygon><polygon points="2 19 11 12 2 5 2 19"></polygon></svg></span></div></div>
+                <p class="skPlayer-author">蒋小呢</p>
+                <div class="skPlayer-percent">
+                    <div class="skPlayer-line-loading" style="width: 100%;"></div>
+                    <div class="skPlayer-line lter"></div>
+                </div>
+                <p class="skPlayer-time">
+                    <span class="skPlayer-cur">00:00</span>/<span class="skPlayer-total">02:33</span>
+                </p>
+                <div class="skPlayer-volume" style="">
+                    <span class="feathericons skPlayer-volume-icon"><svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></span>
+                    <div class="skPlayer-percent">
+                        <div class="skPlayer-line"></div>
+                    </div>
+                </div>
+                <i class="skPlayer-mode"></i>
+            </div>
+            <ul id="skPlayer-list" class="skPlayer-list animated flipInX">
+        
+                <li data-index="0" class="skPlayer-curMusic">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">1</span>
+                    <span class="skPlayer-list-name" title="for ya">for ya</span>
+                    <span class="skPlayer-list-author" title="蒋小呢">蒋小呢</span>
+                </li>
+            
+                <li data-index="1">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">2</span>
+                    <span class="skPlayer-list-name" title="他只是经过">他只是经过</span>
+                    <span class="skPlayer-list-author" title="h3R3">h3R3</span>
+                </li>
+            
+                <li data-index="2">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">3</span>
+                    <span class="skPlayer-list-name" title="踏山河">踏山河</span>
+                    <span class="skPlayer-list-author" title="是七叔呢">是七叔呢</span>
+                </li>
+            
+                <li data-index="3">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">4</span>
+                    <span class="skPlayer-list-name" title="囍（Chinese Wedding）">囍（Chinese Wedding）</span>
+                    <span class="skPlayer-list-author" title="葛东琪">葛东琪</span>
+                </li>
+            
+                <li data-index="4">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">5</span>
+                    <span class="skPlayer-list-name" title="晚风">晚风</span>
+                    <span class="skPlayer-list-author" title="Copy">Copy</span>
+                </li>
+            
+                <li data-index="5">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">6</span>
+                    <span class="skPlayer-list-name" title="关机又关机">关机又关机</span>
+                    <span class="skPlayer-list-author" title="YangYang">YangYang</span>
+                </li>
+            
+                <li data-index="6">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">7</span>
+                    <span class="skPlayer-list-name" title="你的轮廓">你的轮廓</span>
+                    <span class="skPlayer-list-author" title="叶琼琳">叶琼琳</span>
+                </li>
+            
+                <li data-index="7">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">8</span>
+                    <span class="skPlayer-list-name" title="狐狸的童话">狐狸的童话</span>
+                    <span class="skPlayer-list-author" title="Santa_SA">Santa_SA</span>
+                </li>
+            
+                <li data-index="8">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">9</span>
+                    <span class="skPlayer-list-name" title="大雾">大雾</span>
+                    <span class="skPlayer-list-author" title="未知音素">未知音素</span>
+                </li>
+            
+                <li data-index="9">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">10</span>
+                    <span class="skPlayer-list-name" title="茫">茫</span>
+                    <span class="skPlayer-list-author" title="李润祺">李润祺</span>
+                </li>
+            
+                <li data-index="10">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">11</span>
+                    <span class="skPlayer-list-name" title="爱人错过">爱人错过</span>
+                    <span class="skPlayer-list-author" title="告五人">告五人</span>
+                </li>
+            
+                <li data-index="11">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">12</span>
+                    <span class="skPlayer-list-name" title="海底">海底</span>
+                    <span class="skPlayer-list-author" title="一支榴莲">一支榴莲</span>
+                </li>
+            
+                <li data-index="12">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">13</span>
+                    <span class="skPlayer-list-name" title="把回忆拼好给你">把回忆拼好给你</span>
+                    <span class="skPlayer-list-author" title="王贰浪">王贰浪</span>
+                </li>
+            
+                <li data-index="13">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">14</span>
+                    <span class="skPlayer-list-name" title="中间人">中间人</span>
+                    <span class="skPlayer-list-author" title="Ice Paper">Ice Paper</span>
+                </li>
+            
+                <li data-index="14">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">15</span>
+                    <span class="skPlayer-list-name" title="千千万万">千千万万</span>
+                    <span class="skPlayer-list-author" title="深海鱼子酱">深海鱼子酱</span>
+                </li>
+            
+                <li data-index="15">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">16</span>
+                    <span class="skPlayer-list-name" title="起风了">起风了</span>
+                    <span class="skPlayer-list-author" title="买辣椒也用券">买辣椒也用券</span>
+                </li>
+            
+                <li data-index="16">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">17</span>
+                    <span class="skPlayer-list-name" title="阿拉斯加海湾">阿拉斯加海湾</span>
+                    <span class="skPlayer-list-author" title="蓝心羽">蓝心羽</span>
+                </li>
+            
+                <li data-index="17">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">18</span>
+                    <span class="skPlayer-list-name" title="会不会（吉他版）">会不会（吉他版）</span>
+                    <span class="skPlayer-list-author" title="刘大壮">刘大壮</span>
+                </li>
+            
+                <li data-index="18">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">19</span>
+                    <span class="skPlayer-list-name" title="万拒（吉他版）">万拒（吉他版）</span>
+                    <span class="skPlayer-list-author" title="就是南方凯">就是南方凯</span>
+                </li>
+            
+                <li data-index="19">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">20</span>
+                    <span class="skPlayer-list-name" title="Celebrity">Celebrity</span>
+                    <span class="skPlayer-list-author" title="IU">IU</span>
+                </li>
+            
+                <li data-index="20">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">21</span>
+                    <span class="skPlayer-list-name" title="我都明白">我都明白</span>
+                    <span class="skPlayer-list-author" title="范倪Liu">范倪Liu</span>
+                </li>
+            
+                <li data-index="21">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">22</span>
+                    <span class="skPlayer-list-name" title="还是分开">还是分开</span>
+                    <span class="skPlayer-list-author" title="张叶蕾">张叶蕾</span>
+                </li>
+            
+                <li data-index="22">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">23</span>
+                    <span class="skPlayer-list-name" title="Love Is Gone (feat. Dylan Matthew) (Acoustic)">Love Is Gone (feat. Dylan Matthew) (Acoustic)</span>
+                    <span class="skPlayer-list-author" title="SLANDER">SLANDER</span>
+                </li>
+            
+                <li data-index="23">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">24</span>
+                    <span class="skPlayer-list-name" title="天外来物">天外来物</span>
+                    <span class="skPlayer-list-author" title="薛之谦">薛之谦</span>
+                </li>
+            
+                <li data-index="24">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">25</span>
+                    <span class="skPlayer-list-name" title="是想你的声音啊">是想你的声音啊</span>
+                    <span class="skPlayer-list-author" title="傲七爷">傲七爷</span>
+                </li>
+            
+                <li data-index="25">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">26</span>
+                    <span class="skPlayer-list-name" title="一分一寸">一分一寸</span>
+                    <span class="skPlayer-list-author" title="阿YueYue">阿YueYue</span>
+                </li>
+            
+                <li data-index="26">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">27</span>
+                    <span class="skPlayer-list-name" title="星星在唱歌（官方女声版）">星星在唱歌（官方女声版）</span>
+                    <span class="skPlayer-list-author" title="司南">司南</span>
+                </li>
+            
+                <li data-index="27">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">28</span>
+                    <span class="skPlayer-list-name" title="世间美好与你环环相扣">世间美好与你环环相扣</span>
+                    <span class="skPlayer-list-author" title="柏松">柏松</span>
+                </li>
+            
+                <li data-index="28">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">29</span>
+                    <span class="skPlayer-list-name" title="我很好（吉他版）">我很好（吉他版）</span>
+                    <span class="skPlayer-list-author" title="刘大壮">刘大壮</span>
+                </li>
+            
+                <li data-index="29">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">30</span>
+                    <span class="skPlayer-list-name" title="MOM">MOM</span>
+                    <span class="skPlayer-list-author" title="蜡笔小心">蜡笔小心</span>
+                </li>
+            
+                <li data-index="30">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">31</span>
+                    <span class="skPlayer-list-name" title="花.间.酒">花.间.酒</span>
+                    <span class="skPlayer-list-author" title="澄海伯伯">澄海伯伯</span>
+                </li>
+            
+                <li data-index="31">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">32</span>
+                    <span class="skPlayer-list-name" title="Dancing in My Room">Dancing in My Room</span>
+                    <span class="skPlayer-list-author" title="347aidan">347aidan</span>
+                </li>
+            
+                <li data-index="32">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">33</span>
+                    <span class="skPlayer-list-name" title="云与海">云与海</span>
+                    <span class="skPlayer-list-author" title="Kiki">Kiki</span>
+                </li>
+            
+                <li data-index="33">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">34</span>
+                    <span class="skPlayer-list-name" title="我在等">我在等</span>
+                    <span class="skPlayer-list-author" title="林宝馨">林宝馨</span>
+                </li>
+            
+                <li data-index="34">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">35</span>
+                    <span class="skPlayer-list-name" title="虞兮叹">虞兮叹</span>
+                    <span class="skPlayer-list-author" title="闻人听書_">闻人听書_</span>
+                </li>
+            
+                <li data-index="35">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">36</span>
+                    <span class="skPlayer-list-name" title="DEAR JOHN">DEAR JOHN</span>
+                    <span class="skPlayer-list-author" title="比莉">比莉</span>
+                </li>
+            
+                <li data-index="36">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">37</span>
+                    <span class="skPlayer-list-name" title="无人之岛">无人之岛</span>
+                    <span class="skPlayer-list-author" title="任然">任然</span>
+                </li>
+            
+                <li data-index="37">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">38</span>
+                    <span class="skPlayer-list-name" title="Love Story (Taylor’s Version)">Love Story (Taylor’s Version)</span>
+                    <span class="skPlayer-list-author" title="Taylor Swift">Taylor Swift</span>
+                </li>
+            
+                <li data-index="38">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">39</span>
+                    <span class="skPlayer-list-name" title="夏天的风">夏天的风</span>
+                    <span class="skPlayer-list-author" title="火羊瞌睡了">火羊瞌睡了</span>
+                </li>
+            
+                <li data-index="39">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">40</span>
+                    <span class="skPlayer-list-name" title="歌曲：可可托海的牧羊人">歌曲：可可托海的牧羊人</span>
+                    <span class="skPlayer-list-author" title="王琪">王琪</span>
+                </li>
+            
+                <li data-index="40">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">41</span>
+                    <span class="skPlayer-list-name" title="大眠 (完整版)">大眠 (完整版)</span>
+                    <span class="skPlayer-list-author" title="小乐哥">小乐哥</span>
+                </li>
+            
+                <li data-index="41">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">42</span>
+                    <span class="skPlayer-list-name" title="MELANCHOLY">MELANCHOLY</span>
+                    <span class="skPlayer-list-author" title="White Cherry">White Cherry</span>
+                </li>
+            
+                <li data-index="42">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">43</span>
+                    <span class="skPlayer-list-name" title="风儿吹">风儿吹</span>
+                    <span class="skPlayer-list-author" title="要不要买菜">要不要买菜</span>
+                </li>
+            
+                <li data-index="43">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">44</span>
+                    <span class="skPlayer-list-name" title="水星记">水星记</span>
+                    <span class="skPlayer-list-author" title="郭顶">郭顶</span>
+                </li>
+            
+                <li data-index="44">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">45</span>
+                    <span class="skPlayer-list-name" title="永不失联的爱">永不失联的爱</span>
+                    <span class="skPlayer-list-author" title="周兴哲">周兴哲</span>
+                </li>
+            
+                <li data-index="45">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">46</span>
+                    <span class="skPlayer-list-name" title="春风十里报新年">春风十里报新年</span>
+                    <span class="skPlayer-list-author" title="接个吻，开一枪">接个吻，开一枪</span>
+                </li>
+            
+                <li data-index="46">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">47</span>
+                    <span class="skPlayer-list-name" title="三号线（吉他版）">三号线（吉他版）</span>
+                    <span class="skPlayer-list-author" title="刘大壮">刘大壮</span>
+                </li>
+            
+                <li data-index="47">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">48</span>
+                    <span class="skPlayer-list-name" title="西楼别序">西楼别序</span>
+                    <span class="skPlayer-list-author" title="尹昔眠">尹昔眠</span>
+                </li>
+            
+                <li data-index="48">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">49</span>
+                    <span class="skPlayer-list-name" title="好想爱这个世界啊 (Live)">好想爱这个世界啊 (Live)</span>
+                    <span class="skPlayer-list-author" title="华晨宇">华晨宇</span>
+                </li>
+            
+                <li data-index="49">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">50</span>
+                    <span class="skPlayer-list-name" title="难生恨">难生恨</span>
+                    <span class="skPlayer-list-author" title="DAWN">DAWN</span>
+                </li>
+            
+                <li data-index="50">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">51</span>
+                    <span class="skPlayer-list-name" title="枕边童话">枕边童话</span>
+                    <span class="skPlayer-list-author" title="小田音乐社">小田音乐社</span>
+                </li>
+            
+                <li data-index="51">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">52</span>
+                    <span class="skPlayer-list-name" title="冬眠">冬眠</span>
+                    <span class="skPlayer-list-author" title="司南">司南</span>
+                </li>
+            
+                <li data-index="52">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">53</span>
+                    <span class="skPlayer-list-name" title="Remember Our Summer">Remember Our Summer</span>
+                    <span class="skPlayer-list-author" title="FrogMonster">FrogMonster</span>
+                </li>
+            
+                <li data-index="53">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">54</span>
+                    <span class="skPlayer-list-name" title="收敛">收敛</span>
+                    <span class="skPlayer-list-author" title="不够">不够</span>
+                </li>
+            
+                <li data-index="54">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">55</span>
+                    <span class="skPlayer-list-name" title="回到夏天">回到夏天</span>
+                    <span class="skPlayer-list-author" title="傲七爷">傲七爷</span>
+                </li>
+            
+                <li data-index="55">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">56</span>
+                    <span class="skPlayer-list-name" title="Not Angry">Not Angry</span>
+                    <span class="skPlayer-list-author" title="Chris James">Chris James</span>
+                </li>
+            
+                <li data-index="56">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">57</span>
+                    <span class="skPlayer-list-name" title="你是人间四月天">你是人间四月天</span>
+                    <span class="skPlayer-list-author" title="邵帅">邵帅</span>
+                </li>
+            
+                <li data-index="57">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">58</span>
+                    <span class="skPlayer-list-name" title="撒野">撒野</span>
+                    <span class="skPlayer-list-author" title="凯瑟喵">凯瑟喵</span>
+                </li>
+            
+                <li data-index="58">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">59</span>
+                    <span class="skPlayer-list-name" title="丢了你">丢了你</span>
+                    <span class="skPlayer-list-author" title="井胧">井胧</span>
+                </li>
+            
+                <li data-index="59">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">60</span>
+                    <span class="skPlayer-list-name" title="过">过</span>
+                    <span class="skPlayer-list-author" title="王嘉尔">王嘉尔</span>
+                </li>
+            
+                <li data-index="60">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">61</span>
+                    <span class="skPlayer-list-name" title="沉醉的青丝 (想你 念你)">沉醉的青丝 (想你 念你)</span>
+                    <span class="skPlayer-list-author" title="你的大表哥曲甲">你的大表哥曲甲</span>
+                </li>
+            
+                <li data-index="61">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">62</span>
+                    <span class="skPlayer-list-name" title="依兰爱情故事">依兰爱情故事</span>
+                    <span class="skPlayer-list-author" title="方磊">方磊</span>
+                </li>
+            
+                <li data-index="62">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">63</span>
+                    <span class="skPlayer-list-name" title="望">望</span>
+                    <span class="skPlayer-list-author" title="周深">周深</span>
+                </li>
+            
+                <li data-index="63">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">64</span>
+                    <span class="skPlayer-list-name" title="7 %">7 %</span>
+                    <span class="skPlayer-list-author" title="XMASwu">XMASwu</span>
+                </li>
+            
+                <li data-index="64">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">65</span>
+                    <span class="skPlayer-list-name" title="经济舱 (Live)">经济舱 (Live)</span>
+                    <span class="skPlayer-list-author" title="Kafe.Hu">Kafe.Hu</span>
+                </li>
+            
+                <li data-index="65">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">66</span>
+                    <span class="skPlayer-list-name" title="你走以后1.0">你走以后1.0</span>
+                    <span class="skPlayer-list-author" title="王恩信Est">王恩信Est</span>
+                </li>
+            
+                <li data-index="66">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">67</span>
+                    <span class="skPlayer-list-name" title="失眠飞行">失眠飞行</span>
+                    <span class="skPlayer-list-author" title="接个吻，开一枪">接个吻，开一枪</span>
+                </li>
+            
+                <li data-index="67">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">68</span>
+                    <span class="skPlayer-list-name" title="下雨天">下雨天</span>
+                    <span class="skPlayer-list-author" title="与少年他">与少年他</span>
+                </li>
+            
+                <li data-index="68">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">69</span>
+                    <span class="skPlayer-list-name" title="Dancing With Your Ghost">Dancing With Your Ghost</span>
+                    <span class="skPlayer-list-author" title="Sasha Sloan">Sasha Sloan</span>
+                </li>
+            
+                <li data-index="69">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">70</span>
+                    <span class="skPlayer-list-name" title="Morsmordre">Morsmordre</span>
+                    <span class="skPlayer-list-author" title="Crazy Donkey">Crazy Donkey</span>
+                </li>
+            
+                <li data-index="70">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">71</span>
+                    <span class="skPlayer-list-name" title="所念皆星河">所念皆星河</span>
+                    <span class="skPlayer-list-author" title="CMJ">CMJ</span>
+                </li>
+            
+                <li data-index="71">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">72</span>
+                    <span class="skPlayer-list-name" title="你的答案">你的答案</span>
+                    <span class="skPlayer-list-author" title="阿冗">阿冗</span>
+                </li>
+            
+                <li data-index="72">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">73</span>
+                    <span class="skPlayer-list-name" title="Unstoppable">Unstoppable</span>
+                    <span class="skPlayer-list-author" title="Sia">Sia</span>
+                </li>
+            
+                <li data-index="73">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">74</span>
+                    <span class="skPlayer-list-name" title="执迷不悟">执迷不悟</span>
+                    <span class="skPlayer-list-author" title="鱿籽酱">鱿籽酱</span>
+                </li>
+            
+                <li data-index="74">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">75</span>
+                    <span class="skPlayer-list-name" title="耗尽">耗尽</span>
+                    <span class="skPlayer-list-author" title="薛之谦">薛之谦</span>
+                </li>
+            
+                <li data-index="75">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">76</span>
+                    <span class="skPlayer-list-name" title="沈园外">沈园外</span>
+                    <span class="skPlayer-list-author" title="阿YueYue">阿YueYue</span>
+                </li>
+            
+                <li data-index="76">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">77</span>
+                    <span class="skPlayer-list-name" title="像我这样的人">像我这样的人</span>
+                    <span class="skPlayer-list-author" title="毛不易">毛不易</span>
+                </li>
+            
+                <li data-index="77">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">78</span>
+                    <span class="skPlayer-list-name" title="隔岸">隔岸</span>
+                    <span class="skPlayer-list-author" title="姚六一">姚六一</span>
+                </li>
+            
+                <li data-index="78">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">79</span>
+                    <span class="skPlayer-list-name" title="Lovefool">Lovefool</span>
+                    <span class="skPlayer-list-author" title="twocolors">twocolors</span>
+                </li>
+            
+                <li data-index="79">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">80</span>
+                    <span class="skPlayer-list-name" title="多想在平庸的生活拥抱你">多想在平庸的生活拥抱你</span>
+                    <span class="skPlayer-list-author" title="隔壁老樊">隔壁老樊</span>
+                </li>
+            
+                <li data-index="80">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">81</span>
+                    <span class="skPlayer-list-name" title="孤身">孤身</span>
+                    <span class="skPlayer-list-author" title="徐秉龙">徐秉龙</span>
+                </li>
+            
+                <li data-index="81">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">82</span>
+                    <span class="skPlayer-list-name" title="像鱼">像鱼</span>
+                    <span class="skPlayer-list-author" title="王贰浪">王贰浪</span>
+                </li>
+            
+                <li data-index="82">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">83</span>
+                    <span class="skPlayer-list-name" title="晚安">晚安</span>
+                    <span class="skPlayer-list-author" title="颜人中">颜人中</span>
+                </li>
+            
+                <li data-index="83">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">84</span>
+                    <span class="skPlayer-list-name" title="你要如何，我们就如何">你要如何，我们就如何</span>
+                    <span class="skPlayer-list-author" title="康姆士COM'Z">康姆士COM'Z</span>
+                </li>
+            
+                <li data-index="84">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">85</span>
+                    <span class="skPlayer-list-name" title="国王与乞丐">国王与乞丐</span>
+                    <span class="skPlayer-list-author" title="华晨宇">华晨宇</span>
+                </li>
+            
+                <li data-index="85">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">86</span>
+                    <span class="skPlayer-list-name" title="手心的蔷薇">手心的蔷薇</span>
+                    <span class="skPlayer-list-author" title="林俊杰">林俊杰</span>
+                </li>
+            
+                <li data-index="86">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">87</span>
+                    <span class="skPlayer-list-name" title="粉色星球">粉色星球</span>
+                    <span class="skPlayer-list-author" title="Youngior">Youngior</span>
+                </li>
+            
+                <li data-index="87">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">88</span>
+                    <span class="skPlayer-list-name" title="爱，存在">爱，存在</span>
+                    <span class="skPlayer-list-author" title="卢卢快闭嘴">卢卢快闭嘴</span>
+                </li>
+            
+                <li data-index="88">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">89</span>
+                    <span class="skPlayer-list-name" title="Love Story">Love Story</span>
+                    <span class="skPlayer-list-author" title="Taylor Swift">Taylor Swift</span>
+                </li>
+            
+                <li data-index="89">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">90</span>
+                    <span class="skPlayer-list-name" title="爸爸妈妈">爸爸妈妈</span>
+                    <span class="skPlayer-list-author" title="李荣浩">李荣浩</span>
+                </li>
+            
+                <li data-index="90">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">91</span>
+                    <span class="skPlayer-list-name" title="偏爱">偏爱</span>
+                    <span class="skPlayer-list-author" title="Lil Ghost小鬼">Lil Ghost小鬼</span>
+                </li>
+            
+                <li data-index="91">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">92</span>
+                    <span class="skPlayer-list-name" title="雨爱">雨爱</span>
+                    <span class="skPlayer-list-author" title="周星星">周星星</span>
+                </li>
+            
+                <li data-index="92">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">93</span>
+                    <span class="skPlayer-list-name" title="烟火里的尘埃">烟火里的尘埃</span>
+                    <span class="skPlayer-list-author" title="华晨宇">华晨宇</span>
+                </li>
+            
+                <li data-index="93">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">94</span>
+                    <span class="skPlayer-list-name" title="如一">如一</span>
+                    <span class="skPlayer-list-author" title="不是花火呀">不是花火呀</span>
+                </li>
+            
+                <li data-index="94">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">95</span>
+                    <span class="skPlayer-list-name" title="感谢你曾来过">感谢你曾来过</span>
+                    <span class="skPlayer-list-author" title="周思涵">周思涵</span>
+                </li>
+            
+                <li data-index="95">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">96</span>
+                    <span class="skPlayer-list-name" title="晚夜微雨问海棠">晚夜微雨问海棠</span>
+                    <span class="skPlayer-list-author" title="镜予歌">镜予歌</span>
+                </li>
+            
+                <li data-index="96">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">97</span>
+                    <span class="skPlayer-list-name" title="偏爱">偏爱</span>
+                    <span class="skPlayer-list-author" title="张芸京">张芸京</span>
+                </li>
+            
+                <li data-index="97">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">98</span>
+                    <span class="skPlayer-list-name" title="苦尽甘来">苦尽甘来</span>
+                    <span class="skPlayer-list-author" title="翁梓铭">翁梓铭</span>
+                </li>
+            
+                <li data-index="98">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">99</span>
+                    <span class="skPlayer-list-name" title="想见你想见你想见你">想见你想见你想见你</span>
+                    <span class="skPlayer-list-author" title="八三夭">八三夭</span>
+                </li>
+            
+                <li data-index="99">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">100</span>
+                    <span class="skPlayer-list-name" title="麻雀">麻雀</span>
+                    <span class="skPlayer-list-author" title="李荣浩">李荣浩</span>
+                </li>
+            
+                <li data-index="100">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">101</span>
+                    <span class="skPlayer-list-name" title="谪仙">谪仙</span>
+                    <span class="skPlayer-list-author" title="伊格赛听">伊格赛听</span>
+                </li>
+            
+                <li data-index="101">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">102</span>
+                    <span class="skPlayer-list-name" title="Walk Thru Fire">Walk Thru Fire</span>
+                    <span class="skPlayer-list-author" title="Vicetone">Vicetone</span>
+                </li>
+            
+                <li data-index="102">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">103</span>
+                    <span class="skPlayer-list-name" title="江南">江南</span>
+                    <span class="skPlayer-list-author" title="林俊杰">林俊杰</span>
+                </li>
+            
+                <li data-index="103">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">104</span>
+                    <span class="skPlayer-list-name" title="Blueming">Blueming</span>
+                    <span class="skPlayer-list-author" title="IU">IU</span>
+                </li>
+            
+                <li data-index="104">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">105</span>
+                    <span class="skPlayer-list-name" title="我要找到你">我要找到你</span>
+                    <span class="skPlayer-list-author" title="Zic子晨">Zic子晨</span>
+                </li>
+            
+                <li data-index="105">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">106</span>
+                    <span class="skPlayer-list-name" title="人间惊鸿客">人间惊鸿客</span>
+                    <span class="skPlayer-list-author" title="叶里">叶里</span>
+                </li>
+            
+                <li data-index="106">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">107</span>
+                    <span class="skPlayer-list-name" title="Sold Out">Sold Out</span>
+                    <span class="skPlayer-list-author" title="Hawk Nelson">Hawk Nelson</span>
+                </li>
+            
+                <li data-index="107">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">108</span>
+                    <span class="skPlayer-list-name" title="出山">出山</span>
+                    <span class="skPlayer-list-author" title="花粥">花粥</span>
+                </li>
+            
+                <li data-index="108">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">109</span>
+                    <span class="skPlayer-list-name" title="一个人想着一个人 ">一个人想着一个人 </span>
+                    <span class="skPlayer-list-author" title="如懿">如懿</span>
+                </li>
+            
+                <li data-index="109">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">110</span>
+                    <span class="skPlayer-list-name" title="Drown (feat. Clinton Kane) (Alle Farben Remix)">Drown (feat. Clinton Kane) (Alle Farben Remix)</span>
+                    <span class="skPlayer-list-author" title="Martin Garrix">Martin Garrix</span>
+                </li>
+            
+                <li data-index="110">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">111</span>
+                    <span class="skPlayer-list-name" title="形容">形容</span>
+                    <span class="skPlayer-list-author" title="沈以诚">沈以诚</span>
+                </li>
+            
+                <li data-index="111">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">112</span>
+                    <span class="skPlayer-list-name" title="消愁">消愁</span>
+                    <span class="skPlayer-list-author" title="毛不易">毛不易</span>
+                </li>
+            
+                <li data-index="112">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">113</span>
+                    <span class="skPlayer-list-name" title="这一生关于你的风景">这一生关于你的风景</span>
+                    <span class="skPlayer-list-author" title="隔壁老樊">隔壁老樊</span>
+                </li>
+            
+                <li data-index="113">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">114</span>
+                    <span class="skPlayer-list-name" title="Touch">Touch</span>
+                    <span class="skPlayer-list-author" title="3LAU">3LAU</span>
+                </li>
+            
+                <li data-index="114">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">115</span>
+                    <span class="skPlayer-list-name" title="山楂树之恋">山楂树之恋</span>
+                    <span class="skPlayer-list-author" title="程佳佳">程佳佳</span>
+                </li>
+            
+                <li data-index="115">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">116</span>
+                    <span class="skPlayer-list-name" title="万有引力">万有引力</span>
+                    <span class="skPlayer-list-author" title="F*yy">F*yy</span>
+                </li>
+            
+                <li data-index="116">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">117</span>
+                    <span class="skPlayer-list-name" title="盗墓笔记·十年人间">盗墓笔记·十年人间</span>
+                    <span class="skPlayer-list-author" title="李常超 (Lao乾妈)">李常超 (Lao乾妈)</span>
+                </li>
+            
+                <li data-index="117">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">118</span>
+                    <span class="skPlayer-list-name" title="木头人">木头人</span>
+                    <span class="skPlayer-list-author" title="马思唯">马思唯</span>
+                </li>
+            
+                <li data-index="118">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">119</span>
+                    <span class="skPlayer-list-name" title="白羊">白羊</span>
+                    <span class="skPlayer-list-author" title="徐秉龙">徐秉龙</span>
+                </li>
+            
+                <li data-index="119">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">120</span>
+                    <span class="skPlayer-list-name" title="坠">坠</span>
+                    <span class="skPlayer-list-author" title="房子帆">房子帆</span>
+                </li>
+            
+                <li data-index="120">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">121</span>
+                    <span class="skPlayer-list-name" title="Lemon">Lemon</span>
+                    <span class="skPlayer-list-author" title="米津玄師">米津玄師</span>
+                </li>
+            
+                <li data-index="121">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">122</span>
+                    <span class="skPlayer-list-name" title="年少有为">年少有为</span>
+                    <span class="skPlayer-list-author" title="李荣浩">李荣浩</span>
+                </li>
+            
+                <li data-index="122">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">123</span>
+                    <span class="skPlayer-list-name" title="努力工作吧">努力工作吧</span>
+                    <span class="skPlayer-list-author" title="赛文&amp;GOD">赛文&amp;GOD</span>
+                </li>
+            
+                <li data-index="123">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">124</span>
+                    <span class="skPlayer-list-name" title="不怪她">不怪她</span>
+                    <span class="skPlayer-list-author" title="HARIKIRI">HARIKIRI</span>
+                </li>
+            
+                <li data-index="124">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">125</span>
+                    <span class="skPlayer-list-name" title="情人">情人</span>
+                    <span class="skPlayer-list-author" title="蔡徐坤">蔡徐坤</span>
+                </li>
+            
+                <li data-index="125">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">126</span>
+                    <span class="skPlayer-list-name" title="归去来兮">归去来兮</span>
+                    <span class="skPlayer-list-author" title="花粥">花粥</span>
+                </li>
+            
+                <li data-index="126">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">127</span>
+                    <span class="skPlayer-list-name" title="Salt">Salt</span>
+                    <span class="skPlayer-list-author" title="Ava Max">Ava Max</span>
+                </li>
+            
+                <li data-index="127">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">128</span>
+                    <span class="skPlayer-list-name" title="隔岸（DJ完整版）">隔岸（DJ完整版）</span>
+                    <span class="skPlayer-list-author" title="姚六一">姚六一</span>
+                </li>
+            
+                <li data-index="128">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">129</span>
+                    <span class="skPlayer-list-name" title="欢">欢</span>
+                    <span class="skPlayer-list-author" title="刘大壮">刘大壮</span>
+                </li>
+            
+                <li data-index="129">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">130</span>
+                    <span class="skPlayer-list-name" title="同渡">同渡</span>
+                    <span class="skPlayer-list-author" title="金玟岐">金玟岐</span>
+                </li>
+            
+                <li data-index="130">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">131</span>
+                    <span class="skPlayer-list-name" title="Fractures">Fractures</span>
+                    <span class="skPlayer-list-author" title="ILLENIUM">ILLENIUM</span>
+                </li>
+            
+                <li data-index="131">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">132</span>
+                    <span class="skPlayer-list-name" title="忘不了的是你">忘不了的是你</span>
+                    <span class="skPlayer-list-author" title="刘大壮">刘大壮</span>
+                </li>
+            
+                <li data-index="132">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">133</span>
+                    <span class="skPlayer-list-name" title="好运来">好运来</span>
+                    <span class="skPlayer-list-author" title="祖海">祖海</span>
+                </li>
+            
+                <li data-index="133">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">134</span>
+                    <span class="skPlayer-list-name" title="望 (五福情人节特别版)">望 (五福情人节特别版)</span>
+                    <span class="skPlayer-list-author" title="周深">周深</span>
+                </li>
+            
+                <li data-index="134">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">135</span>
+                    <span class="skPlayer-list-name" title="吹梦到西洲">吹梦到西洲</span>
+                    <span class="skPlayer-list-author" title="恋恋故人难">恋恋故人难</span>
+                </li>
+            
+                <li data-index="135">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">136</span>
+                    <span class="skPlayer-list-name" title="海阔天空">海阔天空</span>
+                    <span class="skPlayer-list-author" title="Beyond">Beyond</span>
+                </li>
+            
+                <li data-index="136">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">137</span>
+                    <span class="skPlayer-list-name" title="I&nbsp;don't&nbsp;wanna&nbsp;see&nbsp;u&nbsp;anymore">I&nbsp;don't&nbsp;wanna&nbsp;see&nbsp;u&nbsp;anymore</span>
+                    <span class="skPlayer-list-author" title="NINEONE">NINEONE</span>
+                </li>
+            
+                <li data-index="137">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">138</span>
+                    <span class="skPlayer-list-name" title="断线">断线</span>
+                    <span class="skPlayer-list-author" title="Shang">Shang</span>
+                </li>
+            
+                <li data-index="138">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">139</span>
+                    <span class="skPlayer-list-name" title="心似烟火">心似烟火</span>
+                    <span class="skPlayer-list-author" title="陈壹千">陈壹千</span>
+                </li>
+            
+                <li data-index="139">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">140</span>
+                    <span class="skPlayer-list-name" title="盗将行">盗将行</span>
+                    <span class="skPlayer-list-author" title="花粥">花粥</span>
+                </li>
+            
+                <li data-index="140">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">141</span>
+                    <span class="skPlayer-list-name" title="句号">句号</span>
+                    <span class="skPlayer-list-author" title="G.E.M.邓紫棋">G.E.M.邓紫棋</span>
+                </li>
+            
+                <li data-index="141">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">142</span>
+                    <span class="skPlayer-list-name" title="过活">过活</span>
+                    <span class="skPlayer-list-author" title="高鱼">高鱼</span>
+                </li>
+            
+                <li data-index="142">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">143</span>
+                    <span class="skPlayer-list-name" title="天下">天下</span>
+                    <span class="skPlayer-list-author" title="高鱼">高鱼</span>
+                </li>
+            
+                <li data-index="143">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">144</span>
+                    <span class="skPlayer-list-name" title="我曾">我曾</span>
+                    <span class="skPlayer-list-author" title="隔壁老樊">隔壁老樊</span>
+                </li>
+            
+                <li data-index="144">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">145</span>
+                    <span class="skPlayer-list-name" title="嚣张">嚣张</span>
+                    <span class="skPlayer-list-author" title="en">en</span>
+                </li>
+            
+                <li data-index="145">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">146</span>
+                    <span class="skPlayer-list-name" title="蓝">蓝</span>
+                    <span class="skPlayer-list-author" title="石白其">石白其</span>
+                </li>
+            
+                <li data-index="146">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">147</span>
+                    <span class="skPlayer-list-name" title="游京">游京</span>
+                    <span class="skPlayer-list-author" title="海伦">海伦</span>
+                </li>
+            
+                <li data-index="147">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">148</span>
+                    <span class="skPlayer-list-name" title="Can We Kiss Forever">Can We Kiss Forever</span>
+                    <span class="skPlayer-list-author" title="Kina">Kina</span>
+                </li>
+            
+                <li data-index="148">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">149</span>
+                    <span class="skPlayer-list-name" title="可不可以">可不可以</span>
+                    <span class="skPlayer-list-author" title="张紫豪">张紫豪</span>
+                </li>
+            
+                <li data-index="149">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">150</span>
+                    <span class="skPlayer-list-name" title="没有理由">没有理由</span>
+                    <span class="skPlayer-list-author" title="永彬Ryan.B">永彬Ryan.B</span>
+                </li>
+            
+                <li data-index="150">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">151</span>
+                    <span class="skPlayer-list-name" title="星辰大海">星辰大海</span>
+                    <span class="skPlayer-list-author" title="是七叔呢">是七叔呢</span>
+                </li>
+            
+                <li data-index="151">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">152</span>
+                    <span class="skPlayer-list-name" title="勇气">勇气</span>
+                    <span class="skPlayer-list-author" title="棉子">棉子</span>
+                </li>
+            
+                <li data-index="152">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">153</span>
+                    <span class="skPlayer-list-name" title="Something Just Like This">Something Just Like This</span>
+                    <span class="skPlayer-list-author" title="The Chainsmokers">The Chainsmokers</span>
+                </li>
+            
+                <li data-index="153">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">154</span>
+                    <span class="skPlayer-list-name" title="关山酒">关山酒</span>
+                    <span class="skPlayer-list-author" title="等什么君">等什么君</span>
+                </li>
+            
+                <li data-index="154">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">155</span>
+                    <span class="skPlayer-list-name" title="But U">But U</span>
+                    <span class="skPlayer-list-author" title="NINEONE#">NINEONE#</span>
+                </li>
+            
+                <li data-index="155">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">156</span>
+                    <span class="skPlayer-list-name" title="我好像在哪见过你">我好像在哪见过你</span>
+                    <span class="skPlayer-list-author" title="薛之谦">薛之谦</span>
+                </li>
+            
+                <li data-index="156">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">157</span>
+                    <span class="skPlayer-list-name" title="富士山下">富士山下</span>
+                    <span class="skPlayer-list-author" title="陈奕迅">陈奕迅</span>
+                </li>
+            
+                <li data-index="157">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">158</span>
+                    <span class="skPlayer-list-name" title="经济舱">经济舱</span>
+                    <span class="skPlayer-list-author" title="KEY.L刘聪">KEY.L刘聪</span>
+                </li>
+            
+                <li data-index="158">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">159</span>
+                    <span class="skPlayer-list-name" title="Rubia">Rubia</span>
+                    <span class="skPlayer-list-author" title="周深">周深</span>
+                </li>
+            
+                <li data-index="159">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">160</span>
+                    <span class="skPlayer-list-name" title="荡漾RIPPLES">荡漾RIPPLES</span>
+                    <span class="skPlayer-list-author" title="ICE">ICE</span>
+                </li>
+            
+                <li data-index="160">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">161</span>
+                    <span class="skPlayer-list-name" title="Shape of You">Shape of You</span>
+                    <span class="skPlayer-list-author" title="Ed Sheeran">Ed Sheeran</span>
+                </li>
+            
+                <li data-index="161">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">162</span>
+                    <span class="skPlayer-list-name" title="红色高跟鞋">红色高跟鞋</span>
+                    <span class="skPlayer-list-author" title="蔡健雅">蔡健雅</span>
+                </li>
+            
+                <li data-index="162">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">163</span>
+                    <span class="skPlayer-list-name" title="歌曲：灯火里的中国">歌曲：灯火里的中国</span>
+                    <span class="skPlayer-list-author" title="张也">张也</span>
+                </li>
+            
+                <li data-index="163">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">164</span>
+                    <span class="skPlayer-list-name" title="愿你余生漫长">愿你余生漫长</span>
+                    <span class="skPlayer-list-author" title="王贰浪">王贰浪</span>
+                </li>
+            
+                <li data-index="164">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">165</span>
+                    <span class="skPlayer-list-name" title="Welcome to TOKYO">Welcome to TOKYO</span>
+                    <span class="skPlayer-list-author" title="三代目 J SOUL BROTHERS from EXILE TRIBE">三代目 J SOUL BROTHERS from EXILE TRIBE</span>
+                </li>
+            
+                <li data-index="165">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">166</span>
+                    <span class="skPlayer-list-name" title="多情种">多情种</span>
+                    <span class="skPlayer-list-author" title="要不要买菜">要不要买菜</span>
+                </li>
+            
+                <li data-index="166">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">167</span>
+                    <span class="skPlayer-list-name" title="所以你睡了没">所以你睡了没</span>
+                    <span class="skPlayer-list-author" title="沙一汀EL">沙一汀EL</span>
+                </li>
+            
+                <li data-index="167">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">168</span>
+                    <span class="skPlayer-list-name" title="吴哥窟">吴哥窟</span>
+                    <span class="skPlayer-list-author" title="吴雨霏">吴雨霏</span>
+                </li>
+            
+                <li data-index="168">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">169</span>
+                    <span class="skPlayer-list-name" title="Astronomia (Original Mix)">Astronomia (Original Mix)</span>
+                    <span class="skPlayer-list-author" title="MaxRiven">MaxRiven</span>
+                </li>
+            
+                <li data-index="169">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">170</span>
+                    <span class="skPlayer-list-name" title="有些">有些</span>
+                    <span class="skPlayer-list-author" title="颜人中">颜人中</span>
+                </li>
+            
+                <li data-index="170">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">171</span>
+                    <span class="skPlayer-list-name" title="下山">下山</span>
+                    <span class="skPlayer-list-author" title="要不要买菜">要不要买菜</span>
+                </li>
+            
+                <li data-index="171">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">172</span>
+                    <span class="skPlayer-list-name" title="游山恋">游山恋</span>
+                    <span class="skPlayer-list-author" title="夏艺韩">夏艺韩</span>
+                </li>
+            
+                <li data-index="172">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">173</span>
+                    <span class="skPlayer-list-name" title="老男孩">老男孩</span>
+                    <span class="skPlayer-list-author" title="筷子兄弟">筷子兄弟</span>
+                </li>
+            
+                <li data-index="173">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">174</span>
+                    <span class="skPlayer-list-name" title="太阳">太阳</span>
+                    <span class="skPlayer-list-author" title="王巨星">王巨星</span>
+                </li>
+            
+                <li data-index="174">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">175</span>
+                    <span class="skPlayer-list-name" title="信仰">信仰</span>
+                    <span class="skPlayer-list-author" title="是你的垚">是你的垚</span>
+                </li>
+            
+                <li data-index="175">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">176</span>
+                    <span class="skPlayer-list-name" title="哎呦喂">哎呦喂</span>
+                    <span class="skPlayer-list-author" title="YangYang">YangYang</span>
+                </li>
+            
+                <li data-index="176">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">177</span>
+                    <span class="skPlayer-list-name" title="云烟成雨">云烟成雨</span>
+                    <span class="skPlayer-list-author" title="房东的猫">房东的猫</span>
+                </li>
+            
+                <li data-index="177">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">178</span>
+                    <span class="skPlayer-list-name" title="我像一个傻瓜（Frowned blueface）">我像一个傻瓜（Frowned blueface）</span>
+                    <span class="skPlayer-list-author" title="河北吴孟达">河北吴孟达</span>
+                </li>
+            
+                <li data-index="178">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">179</span>
+                    <span class="skPlayer-list-name" title="吹灭小山河">吹灭小山河</span>
+                    <span class="skPlayer-list-author" title="国风堂">国风堂</span>
+                </li>
+            
+                <li data-index="179">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">180</span>
+                    <span class="skPlayer-list-name" title="刚刚好">刚刚好</span>
+                    <span class="skPlayer-list-author" title="薛之谦">薛之谦</span>
+                </li>
+            
+                <li data-index="180">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">181</span>
+                    <span class="skPlayer-list-name" title="Best Friend">Best Friend</span>
+                    <span class="skPlayer-list-author" title="YTH Chopie">YTH Chopie</span>
+                </li>
+            
+                <li data-index="181">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">182</span>
+                    <span class="skPlayer-list-name" title="All Falls Down">All Falls Down</span>
+                    <span class="skPlayer-list-author" title="Alan Walker">Alan Walker</span>
+                </li>
+            
+                <li data-index="182">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">183</span>
+                    <span class="skPlayer-list-name" title="大鱼">大鱼</span>
+                    <span class="skPlayer-list-author" title="周深">周深</span>
+                </li>
+            
+                <li data-index="183">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">184</span>
+                    <span class="skPlayer-list-name" title="欢">欢</span>
+                    <span class="skPlayer-list-author" title="苏琛">苏琛</span>
+                </li>
+            
+                <li data-index="184">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">185</span>
+                    <span class="skPlayer-list-name" title="Darling">Darling</span>
+                    <span class="skPlayer-list-author" title="空匪">空匪</span>
+                </li>
+            
+                <li data-index="185">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">186</span>
+                    <span class="skPlayer-list-name" title="飞">飞</span>
+                    <span class="skPlayer-list-author" title="王恩信Est">王恩信Est</span>
+                </li>
+            
+                <li data-index="186">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">187</span>
+                    <span class="skPlayer-list-name" title="MOM">MOM</span>
+                    <span class="skPlayer-list-author" title="是二智呀">是二智呀</span>
+                </li>
+            
+                <li data-index="187">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">188</span>
+                    <span class="skPlayer-list-name" title="嗜好">嗜好</span>
+                    <span class="skPlayer-list-author" title="颜人中">颜人中</span>
+                </li>
+            
+                <li data-index="188">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">189</span>
+                    <span class="skPlayer-list-name" title="说散就散">说散就散</span>
+                    <span class="skPlayer-list-author" title="艾福杰尼">艾福杰尼</span>
+                </li>
+            
+                <li data-index="189">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">190</span>
+                    <span class="skPlayer-list-name" title="会不会（正式版）">会不会（正式版）</span>
+                    <span class="skPlayer-list-author" title="刘大壮">刘大壮</span>
+                </li>
+            
+                <li data-index="190">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">191</span>
+                    <span class="skPlayer-list-name" title="丧&nbsp;prod&nbsp;by&nbsp;524（FTF）">丧&nbsp;prod&nbsp;by&nbsp;524（FTF）</span>
+                    <span class="skPlayer-list-author" title="张雪飞">张雪飞</span>
+                </li>
+            
+                <li data-index="191">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">192</span>
+                    <span class="skPlayer-list-name" title="悬溺">悬溺</span>
+                    <span class="skPlayer-list-author" title="葛东琪">葛东琪</span>
+                </li>
+            
+                <li data-index="192">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">193</span>
+                    <span class="skPlayer-list-name" title="情诗">情诗</span>
+                    <span class="skPlayer-list-author" title="李秋实">李秋实</span>
+                </li>
+            
+                <li data-index="193">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">194</span>
+                    <span class="skPlayer-list-name" title="期待爱">期待爱</span>
+                    <span class="skPlayer-list-author" title="林俊杰">林俊杰</span>
+                </li>
+            
+                <li data-index="194">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">195</span>
+                    <span class="skPlayer-list-name" title="所念皆星河">所念皆星河</span>
+                    <span class="skPlayer-list-author" title="房东的猫">房东的猫</span>
+                </li>
+            
+                <li data-index="195">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">196</span>
+                    <span class="skPlayer-list-name" title="借">借</span>
+                    <span class="skPlayer-list-author" title="毛不易">毛不易</span>
+                </li>
+            
+                <li data-index="196">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">197</span>
+                    <span class="skPlayer-list-name" title="后来">后来</span>
+                    <span class="skPlayer-list-author" title="刘若英">刘若英</span>
+                </li>
+            
+                <li data-index="197">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">198</span>
+                    <span class="skPlayer-list-name" title="是想你的声音啊（DJ完整版）">是想你的声音啊（DJ完整版）</span>
+                    <span class="skPlayer-list-author" title="傲七爷">傲七爷</span>
+                </li>
+            
+                <li data-index="198">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">199</span>
+                    <span class="skPlayer-list-name" title="追">追</span>
+                    <span class="skPlayer-list-author" title="陈壹千">陈壹千</span>
+                </li>
+            
+                <li data-index="199">
+                    <i class="skPlayer-list-sign"></i>
+                    <span class="skPlayer-list-index">200</span>
+                    <span class="skPlayer-list-name" title="告白">告白</span>
+                    <span class="skPlayer-list-author" title="沈以诚">沈以诚</span>
+                </li>
+            
+            </ul>
+        </div>
+            </li>
+            <li class="dropdown "><a class="skPlayer-list-switch dropdown-toggle
+            feathericons" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-disc"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg><span class="visible-xs-inline"></span></a></li>
+                                    <!--闲言碎语-->
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="feathericons dropdown-toggle" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitch"><path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"></path></svg>
+                    <span class="visible-xs-inline">
+              闲言碎语              </span>
+                    <span class="badge badge-sm up bg-danger pull-right-xs"></span>
+                </a>
+                <!-- dropdown -->
+                <div class="dropdown-menu w-xl animated fadeInUp">
+                    <div class="panel bg-white">
+                        <div class="panel-heading b-light bg-light">
+                            <strong>
+                                闲言碎语                            </strong>
+                        </div>
+                        <div class="list-group" id="smallRecording">
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+            <!--/闲言碎语-->
+                            <!--登录管理-->
+            <li class="dropdown" id="easyLogin">
+                <a onclick="return false" data-toggle="dropdown" class="dropdown-toggle clear" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                                            <span class="feathericons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-key"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg></span>
+                                        <b class="caret"></b><!--下三角符号-->
+                </a>
+                <!-- dropdown(已经登录) -->
+                                    <div class="dropdown-menu w-lg wrapper bg-white animated fadeIn" aria-labelledby="navbar-login-dropdown">
+                        <form id="Login_form" action="https://www.xmbkw.cn/index.php/action/login?_=199bdd2ad297bb789928b83facadc948" method="post">
+                            <div class="form-group">
+                                <label for="navbar-login-user">用户名</label>
+                                <input type="text" name="name" id="navbar-login-user" class="form-control" placeholder="用户名或电子邮箱"></div>
+                            <div class="form-group">
+                                <label for="navbar-login-password">密码</label>
+                                <input autocomplete="" type="password" name="password" id="navbar-login-password" class="form-control" placeholder="密码"></div>
+                            <button style="width: 100%" type="submit" id="login-submit" name="submitLogin" class="btn-rounded box-shadow-wrap-lg btn-gd-primary padder-lg">
+                                <span>登录</span>
+                                <span class="text-active">登录中...</span>
+                                <span class="banLogin_text">刷新页面后登录</span>
+                                <i class="animate-spin  fontello fontello-spinner hide" id="spin-login"></i>
+                                <i class="animate-spin fontello fontello-refresh hide" id="ban-login"></i>
+                            </button>
+
+
+<!--                            -->
+                            <input type="hidden" name="referer" value="https://www.xmbkw.cn/"></form>
+                    </div>
+                            </li>
+            <!--/登录管理-->
+            </ul>
+    </div>
+    <!-- / navbar collapse -->
+</header>
+  <!-- / headnav -->
+
+  <!--选择侧边栏的颜色-->
+  <aside id="aside" class="app-aside hidden-xs bg-white">  <!--<aside>-->
+        <div class="aside-wrap" layout="column">
+        <div class="navi-wrap scroll-y scroll-hide" flex="">
+          <!-- user -->
+          <div class="clearfix hidden-xs text-center hide  show" id="aside-user">
+            <div class="dropdown wrapper vertical-wrapper">
+                <div ui-nav="">
+                          <a href="https://www.xmbkw.cn/cross.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                            <span class="thumb-lg w-auto-folded avatar m-t-sm  vertical-avatar">
+                  <img src="https://www.xmbkw.cn/touxiang.jpg" class="img-full img-circle normal-shadow">
+                </span>
+              </a>
+                </div>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded  vertical-flex" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                <span class="clear">
+                  <span class="block m-t-sm">
+                    <strong class="font-bold text-lt">晓梦</strong>
+                    <b class="caret"></b>
+                  </span>
+                  <span class="text-muted text-xs block">一位热爱网络技术的90后博主</span>
+                </span>
+              </a>
+              <!-- dropdown -->
+              <ul class="dropdown-menu animated fadeInRight w hidden-folded no-padder">
+                <li class="wrapper b-b m-b-sm bg-info m-n">
+                  <span class="arrow top hidden-folded arrow-info"></span>
+                  <div>
+                                                  <p>下午好，是时候打个盹了</p>
+                                  </div>
+                  <div class="progress progress-xs m-b-none dker">
+                    <div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过58.33%" style="width: 58.33%"></div>
+                  </div>
+                </li>
+              </ul>
+              <!-- / dropdown -->
+            </div>
+          </div>
+          <!-- / user -->
+
+          <!-- nav -->
+          <nav ui-nav="" class="navi clearfix">
+            <ul class="nav">
+             <!--index-->
+                <div class="line dk hidden-folded"></div>
+                <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span>导航</span>
+              </li>
+                                          <!--主页-->
+              <li>
+                <a href="https://www.xmbkw.cn/" class="auto" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                    <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+                    <span>首页</span>
+                </a>
+              </li>
+              <!-- /主页 -->
+                            <li> <a target="_self" href="https://www.xmbkw.cn/links.html" class="auto" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></span><span>友链</span></a></li><li> <a target="_self" href="https://www.xmbkw.cn/archives.html" class="auto" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg></span><span>归档</span></a></li><li> <a target="_self" href="https://www.xmbkw.cn/msg.html" class="auto" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-at-sign"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path></svg></span><span>留言</span></a></li><li> <a target="_self" href="https://www.xmbkw.cn/about.html" class="auto" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-coffee"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></span><span>关于</span></a></li>                              <li class="line dk"></li>
+			<!--Components-->
+              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span>组成</span>
+              </li>
+              <!--分类category-->
+                              <li>
+                <a class="auto" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                  <span class="pull-right text-muted">
+                    <i class="fontello icon-fw fontello-angle-right text"></i>
+                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
+                  </span>
+<!--                  <i class="glyphicon glyphicon-th"></i>-->
+                    <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></span>
+
+                    <span>分类</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                      <span>分类</span>
+                    </a>
+                  </li>
+                  <!--循环输出分类-->
+
+                    <li class="category-level-0 category-parent"><a href="https://www.xmbkw.cn/category/typecho/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><b class="badge pull-right">0</b>Typecho</a></li><li class="category-level-0 category-parent"><a class="auto" href="https://www.xmbkw.cn/category/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><span class="pull-right text-muted">
+                    <i class="fontello icon-fw fontello-angle-right text"></i>
+                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
+                  </span><span class="parent_name">学习笔记</span></a><ul class="nav nav-sub dk child-nav"><li class="category-level-1 category-child category-level-odd"><a href="https://www.xmbkw.cn/category/java/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><b class="badge pull-right">0</b>Java</a></li><li class="category-level-1 category-child category-level-odd"><a href="https://www.xmbkw.cn/category/kotlin/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><b class="badge pull-right">0</b>Kotlin</a></li><li class="category-level-1 category-child category-level-odd"><a href="https://www.xmbkw.cn/category/markdown/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><b class="badge pull-right">0</b>Markdown</a></li><li class="category-level-1 category-child category-level-odd"><a href="https://www.xmbkw.cn/category/web/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><b class="badge pull-right">1</b>Web前端</a></li></ul></li><li class="category-level-0 category-parent"><a href="https://www.xmbkw.cn/category/wordpress/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><b class="badge pull-right">1</b>WordPress</a></li><li class="category-level-0 category-parent"><a href="https://www.xmbkw.cn/category/software/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><b class="badge pull-right">2</b>软件资源</a></li>                    
+                    <!--/循环输出分类-->
+
+                </ul>
+              </li>
+              <!--独立页面pages-->
+              <li>
+                <a class="auto" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                  <span class="pull-right text-muted">
+                    <i class="fontello icon-fw fontello-angle-right text"></i>
+                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
+                  </span>
+                    <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg></span>
+                  <span>页面</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a data-no-instant="" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                      <span>页面</span>
+                    </a>
+                  </li><!--这个字段不会被显示出来-->
+                  <!--循环输出独立页面-->
+                                                                                   <li><a href="https://www.xmbkw.cn/cross.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><span>时光机</span></a></li>
+                                                                 <li><a href="https://www.xmbkw.cn/archives.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><span>文章归档</span></a></li>
+                                                                 <li><a href="https://www.xmbkw.cn/msg.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><span>留言板</span></a></li>
+                                                                 <li><a href="https://www.xmbkw.cn/links.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><span>友情链接</span></a></li>
+                                                                 <li><a href="https://www.xmbkw.cn/about.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><span>关于我</span></a></li>
+                                   </ul>
+              </li>
+              <!--友情链接-->
+              <li>
+                <a class="auto" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                  <span class="pull-right text-muted">
+                    <i class="fontello icon-fw fontello-angle-right text"></i>
+                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
+                  </span>
+                    <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
+                  <span>友链</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a data-no-instant="" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                      <span>友链</span>
+                    </a>
+                  </li>
+                  <!--使用links插件，输出全站友链-->
+                 <li data-original-title="个人经验技术分享" data-toggle="tooltip" data-placement="top"><a rel="noopener" href="https://neosey.com" target="_blank" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><span>Neosey</span></a></li>                </ul>
+              </li>
+                            </ul>
+          </nav>
+          <!-- nav -->
+        </div>
+          <!--end of .navi-wrap-->
+          <!--left_footer-->
+                    <div id="left_footer" class="footer wrapper-xs text-center nav-xs lt">
+                  
+                                        <div class="col-xs-4 no-padder">
+                          <a target="_blank" class="tinav" href="https://www.xmbkw.cn/admin/" title="" data-toggle="tooltip" data-placement="top" data-original-title="后台管理" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                              <span class="left-bottom-icons block"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span>
+                              <small class="text-muted">管理</small>
+                          </a>
+                      </div>
+                                    <div class="col-xs-4 no-padder">
+                      <a target="_blank" class="tinav" href="https://www.xmbkw.cn/feed/" title="" data-toggle="tooltip" data-placement="top" data-original-title="文章RSS地址" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                          <span class="left-bottom-icons block"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></span>
+                          <small class="text-muted">文章</small>
+                      </a>
+                  </div>
+                  <div class="col-xs-4 no-padder">
+                      <a target="_blank" href="https://www.xmbkw.cn/feed/comments/" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                          <span class="left-bottom-icons block"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span>
+                          <small class="text-muted">评论</small>
+                      </a>
+                  </div>
+          </div>
+          
+      </div><!--.aside-wrap-->
+  </aside>
+<!-- content -->
+<div id="content" class="app-content">
+    <!--loading animate-->
+    <div id="loading" class="butterbar active hide">
+            <span class="bar"></span>
+        </div>
+
+
+
+
+
+<!-- / aside -->
+
+<!-- <div id="content" class="app-content"> -->
+<a class="off-screen-toggle hide" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"></a>
+<main class="app-content-body animated fadeIn">
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+        <div class="col center-part">
+                        <header class="bg-light lter wrapper-md">
+                <h1 class="m-n font-thin text-black l-h">晓梦 Blog</h1>
+                <small class="text-muted letterspacing indexWords">迷失的人迷失了，相逢的人会再相逢</small>
+            </header>
+            <div class="wrapper-md skt-loading" id="post-panel">
+
+                                <!--首页输出文章-->
+
+                <div class="blog-post"><div class="single-post panel">
+    <div class="index-post-img">
+        <a href="https://www.xmbkw.cn/8.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+            <div class="item-thumb lazy" style="background-image: url(https://cdn.xmbkw.cn/usr/themes/handsome/assets/img/sj/4.jpg)">
+</div>
+           
+        </a>
+    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a href="https://www.xmbkw.cn/8.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">CSS基础选择器</a></h2><p class="summary l-h-2x text-muted">标签选择器所有指定(该)类型的HTML元素，如p即所有&lt;p&gt;标签p {
+  color: red;
+}&lt;p&gt;红色&lt;/p&gt;类选择器具有特定类的元素（单一页面中，一个类可以有多个实例）.box {
+    width: 100px;
+    height: 100px;
+}
+.red {
+    background-color: red;
+}&lt;!-- ...</p><div class="line line-lg b-b b-light"></div>
+<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
+<li>
+<span class="m-r-sm right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span><a href="https://www.xmbkw.cn/author/1/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">晓梦</a></li>
+
+<li><span class="right-small-icons m-r-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>2020 年 06 月 30 日</li><li><span class="right-small-icons m-r-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span><a href="https://www.xmbkw.cn/8.html#comments" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">1 条评论</a></li></div><!--text-muted-->
+</div><!--post-meta wrapper-lg-->
+</div><!--panel/panel-small-->
+<div class="single-post panel">
+    <div class="index-post-img">
+        <a href="https://www.xmbkw.cn/7.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+            <div class="item-thumb lazy" style="background-image: url(https://cdn.xmbkw.cn/usr/uploads/2020/05/1898200589.png)">
+</div>
+           
+        </a>
+    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a href="https://www.xmbkw.cn/7.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">IntelliJ IDEA 2020 Chinese插件搜不到无法安装的解决方案</a></h2><p class="summary l-h-2x text-muted">IntelliJ IDEA 2020版本开始，官方自带了汉化插件，默认不安装，需要我们自己手动安装，昨天博主折腾过程中发现在插件中心压根搜不到，打开官网一看有这个插件呀，于是便想到离线安装，下面来教大家如何操作。首先打开IDEA，界面如下图比如我的版本号是201.7223.91，先记住它。接下来我们去官网下载Chinese &#8203;(Simplified)&#8203; Language Pack EAP这款...</p><div class="line line-lg b-b b-light"></div>
+<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
+<li>
+<span class="m-r-sm right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span><a href="https://www.xmbkw.cn/author/1/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">晓梦</a></li>
+
+<li><span class="right-small-icons m-r-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>2020 年 05 月 03 日</li><li><span class="right-small-icons m-r-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span><a href="https://www.xmbkw.cn/7.html#comments" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">暂无评论</a></li></div><!--text-muted-->
+</div><!--post-meta wrapper-lg-->
+</div><!--panel/panel-small-->
+<div class="single-post panel">
+    <div class="index-post-img">
+        <a href="https://www.xmbkw.cn/6.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+            <div class="item-thumb lazy" style="background-image: url(https://cdn.xmbkw.cn/usr/uploads/2020/05/2743511272.gif)">
+</div>
+           
+        </a>
+    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a href="https://www.xmbkw.cn/6.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">IntelliJ IDEA 2020.1更新内容汇总</a></h2><p class="summary l-h-2x text-muted">简述IntelliJ IDEA 2020.1 添加了对 Java 14 的支持以及适用于各种框架的新功能，通过数据流分析辅助升级了调试器，新增了 LightEdit 模式，以及为您下载并配置 JDK 等！同时2020.1版本官方自带汉化，可以去插件中心安装JavaJava14支持：记录与模式匹配IntelliJ IDEA 2020.1 支持 Java 14 及其新功能。 除了针对记录提供完整...</p><div class="line line-lg b-b b-light"></div>
+<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
+<li>
+<span class="m-r-sm right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span><a href="https://www.xmbkw.cn/author/1/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">晓梦</a></li>
+
+<li><span class="right-small-icons m-r-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>2020 年 05 月 03 日</li><li><span class="right-small-icons m-r-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span><a href="https://www.xmbkw.cn/6.html#comments" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">1 条评论</a></li></div><!--text-muted-->
+</div><!--post-meta wrapper-lg-->
+</div><!--panel/panel-small-->
+<div class="single-post panel">
+    <div class="index-post-img">
+        <a href="https://www.xmbkw.cn/5.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+            <div class="item-thumb lazy" style="background-image: url(https://cdn.xmbkw.cn/usr/themes/handsome/assets/img/sj/3.jpg)">
+</div>
+           
+        </a>
+    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a href="https://www.xmbkw.cn/5.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">WP-China-Yes - 关于WordPress提示429的最佳解决方案</a></h2><p class="summary l-h-2x text-muted">介绍WordPress服务器在国外，国内访问后台的主题商城，插件等等都会很慢，外加去年被攻击，导致CDN屏蔽了来自大陆的流量，导致我们出现了429错误，我们国内的坏蛋大佬便制作了WP-China-Yes这款插件来解决429的问题。作者声明此插件为公益项目，未来不会以任何方式收费，作者也不容易，有能力的可以捐助下坏蛋大大。安装和使用方法GitHub仓库：网络良好的同学也可以去WP插件商城搜索：...</p><div class="line line-lg b-b b-light"></div>
+<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
+<li>
+<span class="m-r-sm right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span><a href="https://www.xmbkw.cn/author/1/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">晓梦</a></li>
+
+<li><span class="right-small-icons m-r-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>2020 年 04 月 26 日</li><li><span class="right-small-icons m-r-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span><a href="https://www.xmbkw.cn/5.html#comments" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">2 条评论</a></li></div><!--text-muted-->
+</div><!--post-meta wrapper-lg-->
+</div><!--panel/panel-small-->
+<div class="single-post panel">
+    <div class="index-post-img">
+        <a href="https://www.xmbkw.cn/4.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+            <div class="item-thumb lazy" style="background-image: url(https://cdn.xmbkw.cn/usr/uploads/2020/01/15156156165465152135.jpg)">
+</div>
+           
+        </a>
+    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a href="https://www.xmbkw.cn/4.html" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">回顾2019，迎接2020新起点新开始，给自己加油！</a></h2><p class="summary l-h-2x text-muted">2019年总结2019感觉过的好快，不知不觉间就2020了，总结下自己一年的收获，事业上：事业上依旧如此，依旧在一家电池厂做一名普通员工，好多朋友都想拉我出去一起创业，但我因为家庭原因全部拒绝，不是我没有野性，只是条件不允许我失败，我只能选择稳中求胜。学习上，一年间感觉自己什么都没有学到，浑浑噩噩的过了一年，很多次下定决心想要学什么的时候，总会被自己的懒惰心和没耐心而失败告终。心理上：自己也...</p><div class="line line-lg b-b b-light"></div>
+<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
+<li>
+<span class="m-r-sm right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span><a href="https://www.xmbkw.cn/author/1/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">晓梦</a></li>
+
+<li><span class="right-small-icons m-r-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>2020 年 01 月 01 日</li><li><span class="right-small-icons m-r-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span><a href="https://www.xmbkw.cn/4.html#comments" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">2 条评论</a></li></div><!--text-muted-->
+</div><!--post-meta wrapper-lg-->
+</div><!--panel/panel-small-->
+</div>                <!--分页首页按钮-->
+                <nav class="text-center m-t-lg m-b-lg" role="navigation">
+                    <ol class="page-navigator"><li class="current"><a href="https://www.xmbkw.cn/page/1/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">1</a></li><li><a href="https://www.xmbkw.cn/page/2/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">2</a></li><li class="next"><a href="https://www.xmbkw.cn/page/2/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><i class="fontello fontello-chevron-right"></i></a></li></ol>                </nav>
+                <style>
+                    .page-navigator>li>a, .page-navigator>li>span{
+                        line-height: 1.42857143;
+                        padding: 6px 12px;
+                    }
+                </style>
+            </div>
+        </div>
+        <!--首页右侧栏-->
+                 <aside class="asideBar col w-md bg-white-only bg-auto no-border-xs" role="complementary">
+     <div id="sidebar">
+      <section id="tabs-4" class="widget widget_tabs clear">
+       <div class="nav-tabs-alt no-js-hide">
+        <ul class="nav nav-tabs nav-justified box-shadow-bottom-normal tablist" role="tablist">
+         <li data-index="0" class="active" role="presentation"> <a href="#widget-tabs-4-hots" role="tab" aria-controls="widget-tabs-4-hots" aria-expanded="true" data-toggle="tab" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><div class="sidebar-icon wrapper-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg></div><span class="sr-only">热门文章</span> </a></li>
+                            <li role="presentation" data-index="1"> <a href="#widget-tabs-4-comments" role="tab" aria-controls="widget-tabs-4-comments" aria-expanded="false" data-toggle="tab" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><div class="sidebar-icon wrapper-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div> <span class="sr-only">最新评论</span> </a></li>
+                        <li data-index="2" role="presentation"> <a href="#widget-tabs-4-random" role="tab" aria-controls="widget-tabs-4-random" aria-expanded="false" data-toggle="tab" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> <div class="sidebar-icon wrapper-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-gift"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg></div>  <span class="sr-only">随机文章</span>
+             </a></li>
+            <span class="navs-slider-bar"></span>
+        </ul>
+       </div>
+       <div class="tab-content">
+       <!--热门文章-->
+        <div id="widget-tabs-4-hots" class="tab-pane  fade in wrapper-md active" role="tabpanel">
+         <h5 class="widget-title m-t-none text-md">热门文章</h5>
+         <ul class="list-group no-bg no-borders pull-in m-b-none">
+          <li class="list-group-item">
+                <a href="https://www.xmbkw.cn/3.html" class="pull-left thumb-sm m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><img src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/img/sj2/8.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.xmbkw.cn/3.html" title="Kotlin代码和Java代码对比分析" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> Kotlin代码和Java代码对比分析 </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span>  <span class="sr-only">评论数：</span> <span class="meta-value">3</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.xmbkw.cn/4.html" class="pull-left thumb-sm m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><img src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.xmbkw.cn/4.html" title="回顾2019，迎接2020新起点新开始，给自己加油！" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> 回顾2019，迎接2020新起点新开始，给自己加油！ </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span>  <span class="sr-only">评论数：</span> <span class="meta-value">2</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.xmbkw.cn/5.html" class="pull-left thumb-sm m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><img src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.xmbkw.cn/5.html" title="WP-China-Yes - 关于WordPress提示429的最佳解决方案" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> WP-China-Yes - 关于WordPress提示429的最佳解决方案 </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span>  <span class="sr-only">评论数：</span> <span class="meta-value">2</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.xmbkw.cn/6.html" class="pull-left thumb-sm m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><img src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.xmbkw.cn/6.html" title="IntelliJ IDEA 2020.1更新内容汇总" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> IntelliJ IDEA 2020.1更新内容汇总 </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span>  <span class="sr-only">评论数：</span> <span class="meta-value">1</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.xmbkw.cn/8.html" class="pull-left thumb-sm m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><img src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.xmbkw.cn/8.html" title="CSS基础选择器" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> CSS基础选择器 </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span>  <span class="sr-only">评论数：</span> <span class="meta-value">1</span>
+                    </span></small></div></li>         </ul>
+        </div>
+                   <!--最新评论-->
+        <div id="widget-tabs-4-comments" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
+         <h5 class="widget-title m-t-none text-md">最新评论</h5>
+         <ul class="list-group no-borders pull-in auto m-b-none no-bg">
+                              <li class="list-group-item">
+
+              <a href="https://www.xmbkw.cn/8.html/comment-page-1#comment-23" class="pull-left thumb-sm avatar m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                  <img nogallery="" src="https://q.qlogo.cn/g?b=qq&amp;nk=2998160961&amp;s=100" class="img-40px photo img-square normal-shadow">              </a>
+              <a href="https://www.xmbkw.cn/8.html/comment-page-1#comment-23" class="text-muted" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
+                  <span class="sr-only"></span>-->
+              </a>
+              <div class="clear">
+                  <div class="text-ellipsis">
+                      <a href="https://www.xmbkw.cn/8.html/comment-page-1#comment-23" title="惠州注册公司" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> 惠州注册公司 </a>
+                  </div>
+                  <small class="text-muted">
+                      <span>
+                          又发现一个好站,收藏了~以后会经常光顾的|´・ω・)ノ                      </span>
+                  </small>
+              </div>
+          </li>
+                    <li class="list-group-item">
+
+              <a href="https://www.xmbkw.cn/6.html/comment-page-1#comment-22" class="pull-left thumb-sm avatar m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                  <img nogallery="" src="https://secure.gravatar.com/avatar/c4a76b2d08413cb704ac3af54ffe2341?s=65&amp;r=G&amp;d=https://secure.gravatar.com/avatar/05c74ff69002cdebad2cd4a9ce76f3da?s=65&amp;r=G&amp;d=https://www.xmbkw.cn/touxiang.jpg" class="img-40px photo img-square normal-shadow">              </a>
+              <a href="https://www.xmbkw.cn/6.html/comment-page-1#comment-22" class="text-muted" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
+                  <span class="sr-only"></span>-->
+              </a>
+              <div class="clear">
+                  <div class="text-ellipsis">
+                      <a href="https://www.xmbkw.cn/6.html/comment-page-1#comment-22" title="MurasakiSeiFu" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> MurasakiSeiFu </a>
+                  </div>
+                  <small class="text-muted">
+                      <span>
+                          写的很详细~                      </span>
+                  </small>
+              </div>
+          </li>
+                    <li class="list-group-item">
+
+              <a href="https://www.xmbkw.cn/3.html/comment-page-1#comment-20" class="pull-left thumb-sm avatar m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                  <img nogallery="" src="https://secure.gravatar.com/avatar/4f39f5543552f4b73867ba105ee18db8?s=65&amp;r=G&amp;d=https://secure.gravatar.com/avatar/05c74ff69002cdebad2cd4a9ce76f3da?s=65&amp;r=G&amp;d=https://www.xmbkw.cn/touxiang.jpg" class="img-40px photo img-square normal-shadow">              </a>
+              <a href="https://www.xmbkw.cn/3.html/comment-page-1#comment-20" class="text-muted" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
+                  <span class="sr-only"></span>-->
+              </a>
+              <div class="clear">
+                  <div class="text-ellipsis">
+                      <a href="https://www.xmbkw.cn/3.html/comment-page-1#comment-20" title="L0ki" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> L0ki </a>
+                  </div>
+                  <small class="text-muted">
+                      <span>
+                          刚刚解决好像cdn的问题 多刷新 不过你的站鼠标真好看                      </span>
+                  </small>
+              </div>
+          </li>
+                    <li class="list-group-item">
+
+              <a href="https://www.xmbkw.cn/3.html/comment-page-1#comment-19" class="pull-left thumb-sm avatar m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                  <img nogallery="" src="https://secure.gravatar.com/avatar/4f39f5543552f4b73867ba105ee18db8?s=65&amp;r=G&amp;d=https://secure.gravatar.com/avatar/05c74ff69002cdebad2cd4a9ce76f3da?s=65&amp;r=G&amp;d=https://www.xmbkw.cn/touxiang.jpg" class="img-40px photo img-square normal-shadow">              </a>
+              <a href="https://www.xmbkw.cn/3.html/comment-page-1#comment-19" class="text-muted" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
+                  <span class="sr-only"></span>-->
+              </a>
+              <div class="clear">
+                  <div class="text-ellipsis">
+                      <a href="https://www.xmbkw.cn/3.html/comment-page-1#comment-19" title="L0ki" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> L0ki </a>
+                  </div>
+                  <small class="text-muted">
+                      <span>
+                          兄弟 我的也是双排行号 想问一下是怎么解决的                      </span>
+                  </small>
+              </div>
+          </li>
+                    <li class="list-group-item">
+
+              <a href="https://www.xmbkw.cn/4.html/comment-page-1#comment-15" class="pull-left thumb-sm avatar m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                  <img nogallery="" src="https://secure.gravatar.com/avatar/05c74ff69002cdebad2cd4a9ce76f3da?s=65&amp;r=G&amp;d=https://secure.gravatar.com/avatar/05c74ff69002cdebad2cd4a9ce76f3da?s=65&amp;r=G&amp;d=https://www.xmbkw.cn/touxiang.jpg" class="img-40px photo img-square normal-shadow">              </a>
+              <a href="https://www.xmbkw.cn/4.html/comment-page-1#comment-15" class="text-muted" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">
+                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
+                  <span class="sr-only"></span>-->
+              </a>
+              <div class="clear">
+                  <div class="text-ellipsis">
+                      <a href="https://www.xmbkw.cn/4.html/comment-page-1#comment-15" title="小黑" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> 小黑 </a>
+                  </div>
+                  <small class="text-muted">
+                      <span>
+                          加油                      </span>
+                  </small>
+              </div>
+          </li>
+                   </ul>
+        </div>
+                   <!--随机文章-->
+        <div id="widget-tabs-4-random" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
+            <h5 class="widget-title m-t-none text-md">随机文章</h5>
+            <ul class="list-group no-bg no-borders pull-in">
+            <li class="list-group-item">
+                <a href="https://www.xmbkw.cn/5.html" class="pull-left thumb-sm m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><img src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/img/sj2/8.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.xmbkw.cn/5.html" title="WP-China-Yes - 关于WordPress提示429的最佳解决方案" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> WP-China-Yes - 关于WordPress提示429的最佳解决方案 </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span> <span class="sr-only">评论数：</span> <span class="meta-value">2</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.xmbkw.cn/4.html" class="pull-left thumb-sm m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><img src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.xmbkw.cn/4.html" title="回顾2019，迎接2020新起点新开始，给自己加油！" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> 回顾2019，迎接2020新起点新开始，给自己加油！ </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span> <span class="sr-only">评论数：</span> <span class="meta-value">2</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.xmbkw.cn/3.html" class="pull-left thumb-sm m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><img src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.xmbkw.cn/3.html" title="Kotlin代码和Java代码对比分析" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> Kotlin代码和Java代码对比分析 </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span> <span class="sr-only">评论数：</span> <span class="meta-value">3</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.xmbkw.cn/6.html" class="pull-left thumb-sm m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><img src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.xmbkw.cn/6.html" title="IntelliJ IDEA 2020.1更新内容汇总" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> IntelliJ IDEA 2020.1更新内容汇总 </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span> <span class="sr-only">评论数：</span> <span class="meta-value">1</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.xmbkw.cn/2.html" class="pull-left thumb-sm m-r" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"><img src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.xmbkw.cn/2.html" title="Windows10X来了，全新的设计，更漂亮的界面" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;"> Windows10X来了，全新的设计，更漂亮的界面 </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span> <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
+                    </span></small></div></li>            </ul>
+        </div>
+       </div>
+      </section>
+      <!--博客信息-->
+               <section id="blog_info" class="widget widget_categories wrapper-md clear">
+       <h5 class="widget-title m-t-none text-md">博客信息</h5>
+       <ul class="list-group box-shadow-wrap-normal">
+                      <li class="list-group-item text-second"><span class="blog-info-icons"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg></span> <span class="badge
+           pull-right">8</span>文章数目</li>
+           <li class="list-group-item text-second"> <span class="blog-info-icons"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span>
+               <span class="badge
+           pull-right">9</span>评论数目</li>
+           <li class="list-group-item text-second"><span class="blog-info-icons"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
+               <span class="badge
+           pull-right">1年66天</span>运行天数</li>
+           <li class="list-group-item text-second"><span class="blog-info-icons"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></span> <span class="badge
+           pull-right">7 个月前</span>最后活动</li>
+       </ul>
+      </section>
+                        <!--非文章页面-->
+            <section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
+       <h5 class="widget-title m-t-none text-md">标签云</h5>
+          <div class="tags l-h-2x">
+                                                                    <a href="https://www.xmbkw.cn/tag/WordPress/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(69, 182, 247);" data-original-title="WordPress">WordPress</a>
+                                        <a href="https://www.xmbkw.cn/tag/Windows/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(21, 162, 135);" data-original-title="Windows">Windows</a>
+                                        <a href="https://www.xmbkw.cn/tag/IntelliJ-IDEA-2020/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(92, 184, 92);" data-original-title="IntelliJ IDEA 2020">IntelliJ IDEA 2020</a>
+                                        <a href="https://www.xmbkw.cn/tag/CSS/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(217, 83, 79);" data-original-title="CSS">CSS</a>
+                                        <a href="https://www.xmbkw.cn/tag/CSS%E9%80%89%E6%8B%A9%E5%99%A8/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(86, 126, 149);" data-original-title="CSS选择器">CSS选择器</a>
+                                        <a href="https://www.xmbkw.cn/tag/%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(0, 166, 124);" data-original-title="邮件通知">邮件通知</a>
+                                        <a href="https://www.xmbkw.cn/tag/Windows10X/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(179, 115, 51);" data-original-title="Windows10X">Windows10X</a>
+                                        <a href="https://www.xmbkw.cn/tag/Android/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(255, 102, 0);" data-original-title="Android">Android</a>
+                                        <a href="https://www.xmbkw.cn/tag/Android%E5%BC%80%E5%8F%91/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(69, 182, 247);" data-original-title="Android开发">Android开发</a>
+                                        <a href="https://www.xmbkw.cn/tag/Kotlin/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(21, 162, 135);" data-original-title="Kotlin">Kotlin</a>
+                                        <a href="https://www.xmbkw.cn/tag/%E5%9B%9E%E9%A1%BE2019/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(92, 184, 92);" data-original-title="回顾2019">回顾2019</a>
+                                        <a href="https://www.xmbkw.cn/tag/%E8%BF%8E%E6%8E%A52020/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(217, 83, 79);" data-original-title="迎接2020">迎接2020</a>
+                                        <a href="https://www.xmbkw.cn/tag/Java/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(86, 126, 149);" data-original-title="Java">Java</a>
+                                        <a href="https://www.xmbkw.cn/tag/Windows%E6%8A%80%E5%B7%A7/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(0, 166, 124);" data-original-title="Windows技巧">Windows技巧</a>
+                                        <a href="https://www.xmbkw.cn/tag/WP-China-Yes/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(179, 115, 51);" data-original-title="WP-China-Yes">WP-China-Yes</a>
+                                        <a href="https://www.xmbkw.cn/tag/IntelliJ-IDEA/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(255, 102, 0);" data-original-title="IntelliJ IDEA">IntelliJ IDEA</a>
+                                        <a href="https://www.xmbkw.cn/tag/IDEA%E6%B1%89%E5%8C%96/" class="label badge" title="" data-toggle="tooltip" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer; background-color: rgb(69, 182, 247);" data-original-title="IDEA汉化">IDEA汉化</a>
+                                          </div>
+      </section>
+        </div>
+     </aside>
+      </div>
+</main>
+<!-- footer -->
+</div><!-- /content -->
+  <footer id="footer" class="app-footer" role="footer">
+    <div class="wrapper bg-light">
+      <span class="pull-right hidden-xs text-ellipsis">
+            Powered by <a target="_blank" href="http://www.typecho.org" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">Typecho</a>&nbsp;|&nbsp;Theme by <a target="_blank" href="https://www.ihewro.com/archives/489/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">handsome</a>
+      </span>
+        <span class="text-ellipsis">©&nbsp;2021 Copyright&nbsp;<a href="https://www.xmbkw.cn/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">晓梦Blog</a>&nbsp;&nbsp;&nbsp;<a href="http://beian.miit.gov.cn/" style="cursor: url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;), pointer;">冀ICP备19036453号-1</a></span>
+    </div>
+      <!--可以去除主题版权信息，最好保留版权信息或者添加主题信息到友链，谢谢你的理解-->
+            <script type="text/template" id="tmpl-customizer">
+          <div class="settings panel panel-default setting_body_panel" aria-hidden="true">
+              <button class="fix-padding btn btn-default no-shadow pos-abt border-radius-half-left"
+                      data-toggle="tooltip" data-placement="left" data-original-title="外观设置"
+                      data-toggle-class=".settings=active, .settings-icon=animate-spin">
+                  <i class="fontello fontello-gear settings-icon"></i>
+              </button>
+              <div class="panel-heading">
+                  <button class="pull-right btn btn-xs btn-rounded btn-danger " name="reset" data-toggle="tooltip"
+                          data-placement="left" data-original-title="恢复默认值" >重置</button>
+                  设置
+              </div>
+              <div class="setting_body">
+              <div class="panel-body">
+                  <# for ( var keys = _.keys( data.sections.settings ), i = 0, name; keys.length > i; ++i ) { #>
+                      <div<# if ( i !== ( keys.length - 1 ) ) print( ' class="m-b-sm"' ); else print(' id="mode_set"')
+                  #>>
+                          <label class="i-switch bg-info pull-right">
+                              <input type="checkbox" name="{{ keys[i] }}" <#
+                              print( ' value="'+handsome_UI.mode+data
+                              .defaults[keys[i]]+'"' )
+                              if ((data.defaults[keys[i]]=="auto" && handsome_UI.mode =="dark") || data
+                              .defaults[keys[i]] == true) print( ' checked="checked"' );
+                              #> /> 
+                                  <i></i>
+                          </label>
+
+                  <span> <# if(data.defaults[keys[i]]=="auto") print(LocalConst.DARK_MODE_AUTO); else if(data
+                      .sections.settings[keys[i]] == LocalConst.DARK_MODE) {print(LocalConst.DARK_MODE_FIXED)
+                      }else print(data.sections.settings[keys[i]]);#></span>
+       <# if ( i == ( keys.length - 1 ) ) {print( ' <small id="auto_info"'); if(data.defaults[keys[i]]!=="auto") print(' style="display:none"') ;print('><i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" data-original-title=""></i></small>')}; #>
+              </div>
+              <# } #>
+          </div>
+          <div class="wrapper b-t b-light bg-light lter r-b">
+              <div class="row row-sm">
+                  <div class="col-xs-4">
+                      <#
+                              _.each( data.sections.colors, function( color, i ) {
+                              var newColumnBefore = ( i % 5 ) === 4;
+                              #>
+                          <label class="i-checks block<# if ( !newColumnBefore ) print( ' m-b-sm' ); #>">
+                              <input type="radio" name="color" value="{{ i }}"<# if ( data.defaults['color'] === i ) print( ' checked="checked"' ); #> />
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs"></i>
+								</span>
+								<b class="{{ color.navbarHeader }} header"></b>
+								<b class="{{ color.navbarCollapse }} header"></b>
+								<b class="{{ color.aside.replace( ' b-r', '' ) }}"></b>
+							</span>
+                          </label>
+                          <#
+                                  if ( newColumnBefore && ( i + 1 ) < data.sections.colors.length )
+                          print( '</div><div class="col-xs-4">' );
+                              } );
+                              #>
+                          </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+      </script>
+
+
+      
+      <div class="topButton panel panel-default">
+          <button id="goToTop" class="fix-padding btn btn-default no-shadow pos-abt hide  border-radius-half-left" data-toggle="tooltip" data-placement="left" data-original-title="返回顶部">
+              <i class="fontello fontello-chevron-circle-up" aria-hidden="true"></i>
+          </button>
+      </div>
+  </footer>
+  </div><!--end of .app app-header-fixed-->
+
+
+<script type="text/javascript">
+	(function(){
+		var pres = document.querySelectorAll('pre');
+		var lineNumberClassName = 'line-numbers';
+		pres.forEach(function (item, index) {
+			item.className = item.className == '' ? lineNumberClassName : item.className + ' ' + lineNumberClassName;
+		});
+	})();
+</script>
+<script type="text/javascript" src="https://www.xmbkw.cn/usr/plugins/CodePrettify/static/clipboard.min.js"></script>
+<script type="text/javascript" src="https://www.xmbkw.cn/usr/plugins/CodePrettify/static/prism.js"></script>
+<canvas id="fireworks" style="position: fixed; left: 0px; top: 0px; pointer-events: none; width: 811px; height: 623px;" width="1622" height="1246"></canvas><script type="text/javascript" src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script><script type="text/javascript" src="/usr/plugins/HoerMouse/static/js/fireworks.js"></script><script>$("body").css("cursor", "url('/usr/plugins/HoerMouse/static/image/dew/normal.cur'), default");
+$("a").css("cursor", "url('/usr/plugins/HoerMouse/static/image/dew/link.cur'), pointer");</script><script>console.log('%c 炫彩鼠标插件 https://gitee.com/HoeXhe/HoerMouse %c www.hoehub.com 😊 HoerMouse By Hoe ', 'font-family:\'Microsoft YaHei\',\'SF Pro Display\',Roboto,Noto,Arial,\'PingFang SC\',sans-serif;color:white;background:#ffa099;padding:5px 0;', 'font-family:\'Microsoft YaHei\',\'SF Pro Display\',Roboto,Noto,Arial,\'PingFang SC\',sans-serif;color:#ffa099;background:#404040;padding:5px 0;'); // 你能留下我的信息, 我会很高兴的 ^_^</script>
+
+        
+
+<!--定义全局变量-->
+
+
+    <style>
+        #mode_set{
+            display: none;
+        }
+    </style>
+
+<!--主题核心js-->
+<script>
+    SearchConfig = {
+        url: "https://www.xmbkw.cn/usr/plugins/Preference/cache/search.json"
+    }
+</script>
+
+
+
+    <script src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/js/function.min.js?v=7.3.12020081501"></script>
+
+    <script src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/js/core.min.js?v=7.3.12020081501"></script>
+
+
+
+    <!--全局播放器组件-->
+    <script>
+                var player = new skPlayer({"autoplay":false,"listshow":false,"mode":"listloop","music":{"type":"cloud","source":"3778678","media":"netease"}});
+    </script>
+
+
+<script>
+    if ('serviceWorker' in navigator) {
+        if (LocalConst.USE_CACHE) {
+            navigator.serviceWorker.addEventListener('controllerchange', function (ev) {
+                try {
+                    $.message({
+                        title:"检测到本地缓存需要更新",
+                        message:"<a href='#' onclick='window.location.reload();'>点击刷新页面</a>更新本地缓存",
+                        type:'warning',
+                        time: '300000'
+                    });
+                }catch (e) {
+                }
+            });
+        }
+    }
+
+</script>
+
+<!--主题组件js加载-->
+    <script src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="text/javascript"></script>
+
+    <!--平滑滚动组件-->
+    <script src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/js/features/SmoothScroll.min.js"></script>
+
+
+<!--pjax动画组件-->
+
+
+
+
+
+
+<!--截图插件-->
+<script src="https://cdn.xmbkw.cn/usr/themes/handsome/assets/js/features/html2canvas.min.js"></script>
+<!--主题组件js加载结束-->
+
+<!--用户自定义js-->
+<script type="text/javascript">
+    <!--彩色标签-->
+function colorfultags(){
+let tags = document.querySelectorAll("#tag_cloud-2 a");
+let colorArr = ["#f60", "#45B6F7", "#15a287", "#5cb85c", "#d9534f", "#567e95", "#00a67c", "#b37333"];
+let count = 1;
+tags.forEach(tag => {
+    tagsColor = colorArr[count%8];
+    tag.style.backgroundColor = tagsColor;
+    count++;
+});
+}
+window.onload=colorfultags();</script>
+
+
+
+
+
+<!-- / footer -->
+
+
+
+<div class="settings panel panel-default setting_body_panel" aria-hidden="true">
+              <button class="fix-padding btn btn-default no-shadow pos-abt border-radius-half-left" data-toggle="tooltip" data-placement="left" data-original-title="外观设置" data-toggle-class=".settings=active, .settings-icon=animate-spin">
+                  <i class="fontello fontello-gear settings-icon" data-original-title="" title=""></i>
+              </button>
+              <div class="panel-heading">
+                  <button class="pull-right btn btn-xs btn-rounded btn-danger " name="reset" data-toggle="tooltip" data-placement="left" data-original-title="恢复默认值">重置</button>
+                  设置
+              </div>
+              <div class="setting_body">
+              <div class="panel-body">
+                  
+                      <div class="m-b-sm">
+                          <label class="i-switch bg-info pull-right">
+                              <input type="checkbox" name="header-fixed" value="light1" checked="checked"> 
+                                  <i data-original-title="" title=""></i>
+                          </label>
+
+                  <span> 固定头部</span>
+       
+              </div>
+              
+                      <div class="m-b-sm">
+                          <label class="i-switch bg-info pull-right">
+                              <input type="checkbox" name="aside-fix" value="light1" checked="checked"> 
+                                  <i data-original-title="" title=""></i>
+                          </label>
+
+                  <span> 固定导航</span>
+       
+              </div>
+              
+                      <div class="m-b-sm">
+                          <label class="i-switch bg-info pull-right">
+                              <input type="checkbox" name="aside-folded" value="light"> 
+                                  <i data-original-title="" title=""></i>
+                          </label>
+
+                  <span> 折叠导航</span>
+       
+              </div>
+              
+                      <div class="m-b-sm">
+                          <label class="i-switch bg-info pull-right">
+                              <input type="checkbox" name="aside-dock" value="light"> 
+                                  <i data-original-title="" title=""></i>
+                          </label>
+
+                  <span> 置顶导航</span>
+       
+              </div>
+              
+                      <div class="m-b-sm">
+                          <label class="i-switch bg-info pull-right">
+                              <input type="checkbox" name="layout-boxed" value="light1" checked="checked"> 
+                                  <i data-original-title="" title=""></i>
+                          </label>
+
+                  <span> 盒子模型</span>
+       
+              </div>
+              
+                      <div id="mode_set">
+                          <label class="i-switch bg-info pull-right">
+                              <input type="checkbox" name="dark_mode" value="lightlight"> 
+                                  <i data-original-title="" title=""></i>
+                          </label>
+
+                  <span> 深色模式（固定）</span>
+        <small id="auto_info" style="display:none"><i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" data-original-title=""></i></small>
+              </div>
+              
+          </div>
+          <div class="wrapper b-t b-light bg-light lter r-b">
+              <div class="row row-sm">
+                  <div class="col-xs-4">
+                      
+                          <label class="i-checks block m-b-sm">
+                              <input type="radio" name="color" value="0">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-black header"></b>
+								<b class="bg-white-only header"></b>
+								<b class="bg-black"></b>
+							</span>
+                          </label>
+                          
+                          <label class="i-checks block m-b-sm">
+                              <input type="radio" name="color" value="1">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-dark header"></b>
+								<b class="bg-white-only header"></b>
+								<b class="bg-dark"></b>
+							</span>
+                          </label>
+                          
+                          <label class="i-checks block m-b-sm">
+                              <input type="radio" name="color" value="2">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-white-only header"></b>
+								<b class="bg-white-only header"></b>
+								<b class="bg-black"></b>
+							</span>
+                          </label>
+                          
+                          <label class="i-checks block m-b-sm">
+                              <input type="radio" name="color" value="3">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-primary header"></b>
+								<b class="bg-white-only header"></b>
+								<b class="bg-dark"></b>
+							</span>
+                          </label>
+                          
+                          <label class="i-checks block">
+                              <input type="radio" name="color" value="4">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-info header"></b>
+								<b class="bg-white-only header"></b>
+								<b class="bg-black"></b>
+							</span>
+                          </label>
+                          </div><div class="col-xs-4">
+                          <label class="i-checks block m-b-sm">
+                              <input type="radio" name="color" value="5">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-success header"></b>
+								<b class="bg-white-only header"></b>
+								<b class="bg-dark"></b>
+							</span>
+                          </label>
+                          
+                          <label class="i-checks block m-b-sm">
+                              <input type="radio" name="color" value="6">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-danger header"></b>
+								<b class="bg-white-only header"></b>
+								<b class="bg-dark"></b>
+							</span>
+                          </label>
+                          
+                          <label class="i-checks block m-b-sm">
+                              <input type="radio" name="color" value="7">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-black header"></b>
+								<b class="bg-black header"></b>
+								<b class="bg-white"></b>
+							</span>
+                          </label>
+                          
+                          <label class="i-checks block m-b-sm">
+                              <input type="radio" name="color" value="8">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-dark header"></b>
+								<b class="bg-dark header"></b>
+								<b class="bg-light"></b>
+							</span>
+                          </label>
+                          
+                          <label class="i-checks block">
+                              <input type="radio" name="color" value="9">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-info dker header"></b>
+								<b class="bg-info dker header"></b>
+								<b class="bg-light dker"></b>
+							</span>
+                          </label>
+                          </div><div class="col-xs-4">
+                          <label class="i-checks block m-b-sm">
+                              <input type="radio" name="color" value="10">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-primary header"></b>
+								<b class="bg-primary header"></b>
+								<b class="bg-dark"></b>
+							</span>
+                          </label>
+                          
+                          <label class="i-checks block m-b-sm">
+                              <input type="radio" name="color" value="11">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-info dker header"></b>
+								<b class="bg-info dk header"></b>
+								<b class="bg-black"></b>
+							</span>
+                          </label>
+                          
+                          <label class="i-checks block m-b-sm">
+                              <input type="radio" name="color" value="12">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-success header"></b>
+								<b class="bg-success header"></b>
+								<b class="bg-dark"></b>
+							</span>
+                          </label>
+                          
+                          <label class="i-checks block m-b-sm">
+                              <input type="radio" name="color" value="13">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-danger header"></b>
+								<b class="bg-danger header"></b>
+								<b class="bg-dark"></b>
+							</span>
+                          </label>
+                          
+                          <label class="i-checks block">
+                              <input type="radio" name="color" value="14">
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs" data-original-title="" title=""></i>
+								</span>
+								<b class="bg-white header"></b>
+								<b class="bg-white header"></b>
+								<b class="bg-white"></b>
+							</span>
+                          </label>
+                          
+                          </div>
+                  </div>
+              </div>
+          </div>
+          </div></body></html>

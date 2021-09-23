@@ -1,0 +1,748 @@
+<html><head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    
+    <!--{if svg_edit_release}>
+      <link rel="stylesheet" href="css/method-draw.compiled.css"/>
+    <!{else}-->
+      <link rel="stylesheet" href="lib/jgraduate/css/jPicker.css">
+      <link rel="stylesheet" href="lib/jgraduate/css/jgraduate.css">
+      <link rel="stylesheet" href="css/method-draw.css">
+      <link rel="stylesheet" href="css/fonts.css">
+    <!--{endif}-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    
+      <script src="lib/jquery.js"></script>
+    
+    
+    <!--{if svg_edit_release}>
+      <script src="method-draw.compiled.js"></script>
+    <!{else}-->
+      <script src="lib/pathseg.js"></script>
+      <script src="lib/touch.js"></script>
+      <script src="lib/js-hotkeys/jquery.hotkeys.min.js"></script>
+      <script src="icons/jquery.svgicons.js"></script>
+      <script src="lib/jgraduate/jquery.jgraduate.js"></script>
+      <script src="lib/contextmenu/jquery.contextMenu.js"></script>
+      <script src="lib/jquery-ui/jquery-ui-1.8.17.custom.min.js"></script>
+      <script src="src/browser.js"></script>
+      <script src="src/svgtransformlist.js"></script>
+      <script src="src/math.js"></script>
+      <script src="src/units.js"></script>
+      <script src="src/svgutils.js"></script>
+      <script src="src/sanitize.js"></script>
+      <script src="src/history.js"></script>
+      <script src="src/select.js"></script>
+      <script src="src/draw.js"></script>
+      <script src="src/path.js"></script>
+      <script src="src/dialog.js"></script>
+      <script src="src/svgcanvas.js"></script>
+      <script src="src/method-draw.js"></script>
+      <script src="lib/jquery-draginput.js"></script>
+      <script src="lib/contextmenu.js"></script>
+      <script src="lib/jgraduate/jpicker.min.js"></script>
+      <script src="lib/mousewheel.js"></script>
+      <script src="extensions/ext-eyedropper.js"></script>
+      <script src="extensions/ext-shapes.js"></script>
+      <script src="extensions/ext-grid.js"></script>
+      <script src="lib/requestanimationframe.js"></script>
+      <script src="lib/taphold.js"></script>
+      <script src="lib/filesaver.js"></script>
+    <!--{endif}-->
+    
+    
+    <title>SVG在线编辑器</title>
+    <style id="tsbrowser_video_independent_player_style" type="text/css">
+          [tsbrowser_force_max_size] {
+            width: 100% !important;
+            height: 100% !important;
+            left: 0px !important;
+            top: 0px !important;
+            margin: 0px !important;
+            padding: 0px !important;
+            transform: none !important;
+          }
+          [tsbrowser_force_fixed] {
+            position: fixed !important;
+            z-index: 9999 !important;
+            background: black !important;
+          }
+          [tsbrowser_force_hidden] {
+            opacity: 0 !important;
+            z-index: 0 !important;
+          }
+          [tsbrowser_hide_scrollbar] {
+            overflow: hidden !important;
+          }
+          [tsbrowser_display_none] {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+          }
+          [tsbrowser_force_show] {
+            display: black !important;
+            visibility: visible !important;
+            opacity: 0;
+          }</style></head>
+    <body>
+    <div id="svg_editor">
+    
+    <div id="rulers">
+      <div id="ruler_corner"></div>
+      <div id="ruler_x">
+        <div id="ruler_x_cursor"></div>
+        <div style="width: 2212px;">
+          <canvas height="15" width="2212"></canvas>
+        </div>
+      </div>
+      <div id="ruler_y">
+        <div id="ruler_y_cursor"></div>
+        <div style="height: 1106px;">
+          <canvas width="15" height="1106"></canvas>
+        </div>
+      </div>
+    </div>
+    
+    <div id="workarea" style="overflow: scroll; line-height: 553px;" class="select">
+    <div id="svgcanvas" style="position: relative; width: 1106px; height: 553px;">
+    
+    <svg width="1106" height="553" id="svgroot" xlinkns="http://www.w3.org/1999/xlink"><svg id="canvasBackground" width="1106" height="454" x="0" y="49.5" overflow="none" style="pointer-events:none"><defs id="placeholder_defs"><pattern id="checkerPattern" patternUnits="userSpaceOnUse" x="0" y="0" width="20" height="20" viewBox="0 0 10 10"><rect x="0" y="0" width="10" height="10" fill="#fff"></rect><rect x="0" y="0" width="5" height="5" fill="#eee"></rect><rect x="5" y="5" width="5" height="5" fill="#eee"></rect></pattern><pattern id="gridpattern" patternUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><image x="0" y="0" width="100" height="100"></image></pattern></defs><rect width="100%" height="100%" x="0" y="0" stroke="#000" fill="url(#checkerPattern)" style="pointer-events:none"></rect></svg><svg id="svgcontent" width="1106" height="454" x="0" y="49.5" overflow="hidden" xmlns="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1106 454"><!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ --><g style="pointer-events:none"><title>background</title><rect x="-1" y="-1" width="1108" height="456" id="canvas_background" fill="#fff" style="pointer-events:none"></rect><g id="canvasGrid" width="100%" height="100%" x="0" y="0" overflow="visible" display="none"><rect width="100%" height="100%" x="0" y="0" stroke-width="0" stroke="none" fill="url(#gridpattern)" style="pointer-events: none; display:visible;"></rect></g></g><g style="pointer-events:all"><title>Layer 1</title></g></svg><g id="selectorParentGroup" transform="translate(0,49.5)"><rect id="selectorRubberBand" fill="none" stroke="#666" stroke-dasharray="3,2" display="none" style="pointer-events:none" x="315" y="54.4375" width="0" height="0"></rect><g id="selectorGroup0" transform="" display="none"><path id="selectedBox0" fill="none" stroke="#4F80FF" shape-rendering="crispEdges" style="pointer-events:none" d="M244,188.4375 L263.359375,188.4375 263.359375,221.4375 244,221.4375z"></path><g display="none"><circle id="selectorGrip_rotate_nw" fill="#000" r="8" stroke="#000" fill-opacity="0" stroke-opacity="0" stroke-width="0" style="cursor:url(images/rotate.png) 12 12, auto;" cx="240" cy="184.4375"></circle><circle id="selectorGrip_rotate_ne" fill="#000" r="8" stroke="#000" fill-opacity="0" stroke-opacity="0" stroke-width="0" style="cursor:url(images/rotate.png) 12 12, auto;" cx="267.359375" cy="184.4375"></circle><circle id="selectorGrip_rotate_se" fill="#000" r="8" stroke="#000" fill-opacity="0" stroke-opacity="0" stroke-width="0" style="cursor:url(images/rotate.png) 12 12, auto;" cx="267.359375" cy="225.4375"></circle><circle id="selectorGrip_rotate_sw" fill="#000" r="8" stroke="#000" fill-opacity="0" stroke-opacity="0" stroke-width="0" style="cursor:url(images/rotate.png) 12 12, auto;" cx="240" cy="225.4375"></circle><rect id="selectorGrip_resize_nw" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:nw-resize" pointer-events="all" x="240" y="184"></rect><rect id="selectorGrip_resize_n" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:n-resize" pointer-events="all" x="250" y="184"></rect><rect id="selectorGrip_resize_ne" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:ne-resize" pointer-events="all" x="259" y="184"></rect><rect id="selectorGrip_resize_e" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:e-resize" pointer-events="all" x="259" y="201"></rect><rect id="selectorGrip_resize_se" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:se-resize" pointer-events="all" x="259" y="217"></rect><rect id="selectorGrip_resize_s" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:s-resize" pointer-events="all" x="250" y="217"></rect><rect id="selectorGrip_resize_sw" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:sw-resize" pointer-events="all" x="240" y="217"></rect><rect id="selectorGrip_resize_w" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:w-resize" pointer-events="all" x="240" y="201"></rect></g></g><line id="text_cursor" stroke="#333" stroke-width="1" x1="253.6796875" y1="191.4375" x2="253.6796875" y2="218.4375" visibility="hidden" display="none"></line></g></svg></div>
+    </div>
+    
+    <div id="menu_bar">
+      <a class="menu">
+        <div class="menu_title" id="logo"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="15" height="15" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg viewBox="0 0 16 16" version="1.1">
+    <text transform="matrix(0.9724 0 0 1 5.9282 339.9761)" fill="#3E86C7" font-family="'ColonnaMT'" font-size="640.3779">Z</text>
+     </svg></svg></div>
+        <div class="menu_list">
+          <div id="tool_about" class="menu_item">关于...</div>
+          <div class="separator"></div>
+          <div id="tool_about" class="menu_item">快捷键...</div>
+        </div>
+      </a>
+      
+      <div class="menu">
+        <div class="menu_title">文件</div>
+        <div class="menu_list" id="file_menu"> 
+          <div id="tool_clear" class="menu_item">新建文件</div>
+          <div id="tool_open" class="menu_item" style=""><input type="file"><div id="fileinputs"></div>打开SVG...</div>
+          <div id="tool_import" class="menu_item" style=""><input type="file"><div id="fileinputs_import"></div>导入...</div>
+          <div id="tool_save" class="menu_item">保存... <span class="shortcut">Ctrl+S</span></div>
+          <div id="tool_export" class="menu_item">导出PNG</div>
+        </div>
+      </div>
+    
+      <div class="menu">
+        <div class="menu_title">编辑</div>
+        <div class="menu_list" id="edit_menu">
+          <div class="menu_item" id="tool_undo">撤销 <span class="shortcut">Ctrl+Z</span></div>
+          <div class="menu_item disabled" id="tool_redo">重做 <span class="shortcut">Ctrl+Y</span></div>
+          <div class="separator"></div>
+          <div class="menu_item action_selected disabled" id="tool_cut">剪切 <span class="shortcut">Ctrl+X</span></div>
+          <div class="menu_item action_selected disabled" id="tool_copy">复制 <span class="shortcut">Ctrl+C</span></div>
+          <div class="menu_item action_selected disabled" id="tool_paste">粘贴 <span class="shortcut">Ctrl+V</span></div>
+          <div class="menu_item action_selected disabled" id="tool_clone">重复 <span class="shortcut">Ctrl+D</span></div>
+          <div class="menu_item action_selected disabled" id="tool_delete">删除 <span>⌫</span></div>
+        </div>
+      </div>
+      
+      <div class="menu">
+        <div class="menu_title">选项</div>
+        <div class="menu_list" id="object_menu">
+          <div class="menu_item action_selected disabled" id="tool_move_top">置最前 <span class="shortcut">Ctrl+⇧↑</span></div>
+          <div class="menu_item action_selected disabled" id="tool_move_up">置前 <span class="shortcut">Ctrl+↑</span></div>
+          <div class="menu_item action_selected disabled" id="tool_move_down">置后 <span class="shortcut">Ctrl+↓</span></div>
+          <div class="menu_item action_selected disabled" id="tool_move_bottom">置最后<span class="shortcut">Ctrl+⇧↓</span></div>
+          <div class="separator"></div>
+          <div class="menu_item action_multi_selected disabled" id="tool_group">元素编组 <span class="shortcut">Ctrl+G</span></div>
+          <div class="menu_item action_group_selected disabled" id="tool_ungroup">取消编组 <span class="shortcut">Ctrl+⇧G</span></div>
+          <div class="separator"></div>
+          <div class="menu_item action_path_convert_selected disabled" id="tool_topath">转换为路径</div>
+          <div class="menu_item action_path_selected disabled" id="tool_reorient">调整路径</div>
+        </div>
+      </div>
+    
+      <div class="menu open">
+        <div class="menu_title">视图</div>
+        <div class="menu_list" id="view_menu">
+            <div class="menu_item push_button_pressed" id="tool_rulers">显示标尺</div>
+            <div class="menu_item" id="tool_wireframe">显示网格</div><div id="view_grid" title="View Grid" class="menu_item tool_button loaded">View Grid</div>
+            <div class="menu_item" id="tool_snap">对齐网格</div>
+            <div class="separator"></div>
+            <div class="menu_item" id="tool_source">源文件... <span class="shortcut">Ctrl+U</span></div>
+        </div>
+      </div>
+      
+    
+      
+    </div>
+    
+    <div id="tools_top" class="tools_panel">
+    
+      <div id="canvas_panel" class="context_panel" style="display: block;">
+        
+        <h4 class="clearfix">画布</h4>
+        
+        <label data-title="Change canvas width" class="draginput">
+          <input size="3" id="canvas_width" type="text" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="28.571428571428573" data-domain="70" data-cursor="false">
+          <span class="icon_label">宽度</span>
+        </label>
+        <label data-title="Change canvas height" class="draginput">
+          <input id="canvas_height" size="3" type="text" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="28.571428571428573" data-domain="70" data-cursor="false">
+          <span class="icon_label">高度</span>
+        </label>
+            
+        
+        <label data-title="Change canvas color" class="draginput">
+          <span>颜色</span>
+          <div id="color_canvas_tools">
+            <div class="color_tool active" id="tool_canvas">
+              <div class="color_block">
+                <div id="canvas_bg"></div>
+                <div id="canvas_color"><svg xmlns="http://www.w3.org/2000/svg" width="60.5"><rect width="100%" height="100%" fill="#fff" opacity="1"></rect>          <defs><linearGradient id="gradbox_"></linearGradient></defs></svg></div>
+              </div>
+            </div>
+          </div>
+        </label>
+    
+        <div class="draginput">
+          <span>尺寸</span>
+          <select id="resolution" autocomplete="off">
+            <option id="selectedPredefined" selected="selected">自定义</option>
+            <option>640x480</option>
+            <option>800x600</option>
+            <option>1024x768</option>
+            <option>1280x960</option>
+            <option>1600x1200</option>
+            <option id="fitToContent" value="content">自适应内容</option>
+          </select>
+          <div class="caret"></div>
+          <label id="resolution_label">自定义</label>
+        </div>
+    
+      </div>
+      
+      <div id="rect_panel" class="context_panel" style="display: none;">
+        <h4 class="clearfix">矩形</h4>
+        <label class="draginput">
+          <input id="rect_x" class="attr_changer" data-title="Change X coordinate" size="3" data-attr="x" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>X</span> 
+        </label>
+        <label class="draginput">
+          <input id="rect_y" class="attr_changer" data-title="Change Y coordinate" size="3" data-attr="y" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>Y</span> 
+        </label>
+        <label id="rect_width_tool attr_changer" data-title="Change rectangle width" class="draginput">
+          <input id="rect_width" class="attr_changer" size="3" data-attr="width" type="text" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span class="icon_label">宽度</span>
+        </label>
+        <label id="rect_height_tool" data-title="Change rectangle height" class="draginput">
+          <input id="rect_height" class="attr_changer" size="3" data-attr="height" type="text" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span class="icon_label">高度</span>
+        </label>
+      </div>
+      
+      <div id="path_panel" class="context_panel clearfix" style="display: none;">
+        <h4 class="clearfix">路径</h4>
+        <label class="draginput">
+          <input id="path_x" class="attr_changer" data-title="Change ellipse's cx coordinate" size="3" data-attr="x" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>X</span>
+        </label>
+        <label class="draginput">
+          <input id="path_y" class="attr_changer" data-title="Change ellipse's cy coordinate" size="3" data-attr="y" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>Y</span>
+        </label>
+      </div>
+    
+      <div id="image_panel" class="context_panel clearfix" style="display: none;">
+      <h4>图像</h4>
+        <label class="draginput">
+          <input id="image_x" class="attr_changer" data-title="Change X coordinate" size="3" data-attr="x" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>X</span> 
+        </label>
+        <label class="draginput">
+          <input id="image_y" class="attr_changer" data-title="Change Y coordinate" size="3" data-attr="y" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>Y</span> 
+        </label>
+        <label class="draginput">
+          <input id="image_width" class="attr_changer" data-title="Change image width" size="3" data-attr="width" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span class="icon_label">宽度</span>
+        </label>
+        <label class="draginput">
+          <input id="image_height" class="attr_changer" data-title="Change image height" size="3" data-attr="height" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span class="icon_label">高度</span>
+        </label>
+      </div>
+      
+      <div id="circle_panel" class="context_panel" style="display: none;">
+        <h4>圆</h4>
+        <label id="tool_circle_cx" class="draginput">
+          <span>圆心 X</span>
+          <input id="circle_cx" class="attr_changer" title="Change circle's cx coordinate" size="3" data-attr="cx" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        </label>
+        <label id="tool_circle_cy" class="draginput">
+          <span>圆心 Y</span>
+          <input id="circle_cy" class="attr_changer" title="Change circle's cy coordinate" size="3" data-attr="cy" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        </label>
+        <label id="tool_circle_r" class="draginput">
+          <span>半径</span>
+          <input id="circle_r" class="attr_changer" title="Change circle's radius" size="3" data-attr="r" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        </label>
+      </div>
+    
+      <div id="ellipse_panel" class="context_panel clearfix" style="display: none;">
+        <h4>椭圆</h4>
+        <label id="tool_ellipse_cx" class="draginput">
+          <input id="ellipse_cx" class="attr_changer" data-title="Change ellipse's cx coordinate" size="3" data-attr="cx" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>X</span>
+        </label>
+        <label id="tool_ellipse_cy" class="draginput">
+          <input id="ellipse_cy" class="attr_changer" data-title="Change ellipse's cy coordinate" size="3" data-attr="cy" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>Y</span>
+        </label>
+        <label id="tool_ellipse_rx" class="draginput">
+          <input id="ellipse_rx" class="attr_changer" data-title="Change ellipse's x radius" size="3" data-attr="rx" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>半径 X</span>
+        </label>
+        <label id="tool_ellipse_ry" class="draginput">
+          <input id="ellipse_ry" class="attr_changer" data-title="Change ellipse's y radius" size="3" data-attr="ry" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>半径 Y</span>
+        </label>
+      </div>
+    
+      <div id="line_panel" class="context_panel clearfix" style="display: none;">
+        <h4>线</h4>
+        <label id="tool_line_x1" class="draginput">
+          <input id="line_x1" class="attr_changer" data-title="Change line's starting x coordinate" size="3" data-attr="x1" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>开始 X</span>
+        </label>
+        <label id="tool_line_y1" class="draginput">
+          <input id="line_y1" class="attr_changer" data-title="Change line's starting y coordinate" size="3" data-attr="y1" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>开始 Y</span>
+        </label>
+        <label id="tool_line_x2" class="draginput">
+          <input id="line_x2" class="attr_changer" data-title="Change line's ending x coordinate" size="3" data-attr="x2" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>结束 X</span>
+        </label>
+        <label id="tool_line_y2" class="draginput">
+          <input id="line_y2" class="attr_changer" data-title="Change line's ending y coordinate" size="3" data-attr="y2" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>结束 Y</span>
+        </label>
+      </div>
+    
+      <div id="text_panel" class="context_panel" style="display: none;">
+        <h4>文本</h4>
+        <label class="draginput">
+          <input id="text_x" class="attr_changer" data-title="Change text x coordinate" size="3" data-attr="x" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>X</span>
+        </label>
+        <label class="draginput">
+          <input id="text_y" class="attr_changer" data-title="Change text y coordinate" size="3" data-attr="y" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>Y</span>
+        </label>
+        
+        <div class="toolset draginput select twocol" id="tool_font_family">
+            <!-- Font family -->
+          <span>字体</span>
+          <div id="preview_font" style="font-family: Helvetica, Arial, sans-serif;">Helvetica</div>
+          <div class="caret"></div>
+          <input id="font_family" data-title="Change Font Family" size="12" type="hidden" autocomplete="off" value="Helvetica, Arial, sans-serif">
+          <select id="font_family_dropdown" autocomplete="off">
+              <option value="Arvo, sans-serif">Arvo</option>
+              <option value="'Courier New', Courier, monospace">Courier</option>
+              <option value="Euphoria, sans-serif">Euphoria</option>
+              <option value="Georgia, Times, 'Times New Roman', serif">Georgia</option>
+              <option value="Helvetica, Arial, sans-serif" selected="selected">Helvetica</option>
+              <option value="Junction, sans-serif">Junction</option>
+              <option value="'League Gothic', sans-serif">League Gothic</option>
+              <option value="Oswald, sans-serif">Oswald</option>
+              <option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">Palatino</option>
+              <option value="'Trebuchet MS', Gadget, sans-serif">Trebuchet</option>
+              <option value="'Shadows Into Light', serif">Shadows Into Light</option>
+              <option value="'Simonetta', serif">Simonetta</option>
+              <option value="'Times New Roman', Times, serif">Times</option>
+          </select>
+          <div class="tool_button loaded" id="tool_bold" data-title="Bold Text [B]">B</div>
+          <div class="tool_button loaded" id="tool_italic" data-title="Italic Text [I]">i</div>
+        </div>
+    
+        <label id="tool_font_size" data-title="Change Font Size" class="draginput">
+          <input id="font_size" size="3" value="0" autocomplete="off" readonly="readonly" data-scale="3.557142857142857" data-domain="70" data-cursor="true">
+          <span id="font_sizeLabel" class="icon_label">字体大小</span>
+        <div class="draginput_cursor" style="top: 70px;"></div></label>
+        <!-- Not visible, but still used -->
+        <input id="text" type="text" size="35" autocomplete="off">
+      </div>
+    
+      <!-- formerly gsvg_panel -->
+      <div id="container_panel" class="context_panel clearfix" style="display: none;">
+      </div>
+      
+      <div id="use_panel" class="context_panel clearfix" style="display: none;">
+        <div class="tool_button clearfix loaded" id="tool_unlink_use" data-title="Break link to reference element (make unique)"> 断开链接引用 </div>
+      </div>
+      
+      <div id="g_panel" class="context_panel clearfix" style="display: none;">
+        <h4>组</h4>
+        <label class="draginput">
+          <input id="g_x" class="attr_changer" data-title="Change groups's x coordinate" size="3" data-attr="x" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>X</span>
+        </label>
+        <label class="draginput">
+          <input id="g_y" class="attr_changer" data-title="Change groups's y coordinate" size="3" data-attr="y" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>Y</span>
+        </label>
+      </div>
+      
+      <div id="path_node_panel" class="context_panel clearfix" style="display: none;">
+        <h4>编辑路径</h4>
+    
+        <label id="tool_node_x" class="draginput">
+          <input id="path_node_x" class="attr_changer" data-title="Change node's x coordinate" size="3" data-attr="x" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>X</span>
+        </label>
+        <label id="tool_node_y" class="draginput">
+          <input id="path_node_y" class="attr_changer" data-title="Change node's y coordinate" size="3" data-attr="y" autocomplete="off" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>Y</span>
+        </label>
+        
+        <div id="segment_type" class="draginput label">
+          <span>分割类型</span>
+          <select id="seg_type" data-title="Change Segment type" autocomplete="off">
+            <option id="straight_segments" selected="selected" value="4">直</option>
+            <option id="curve_segments" value="6">曲线</option>
+          </select>
+          <div class="caret"></div>
+          <label id="seg_type_label">直行</label>
+        </div>
+        
+        <!--
+        <label class="draginput checkbox" data-title="Link Control Points">
+          <span>Linked Control Points</span>
+          <div class="push_bottom"><input type="checkbox" id="tool_node_link" checked="checked" /></div>
+        </label>
+      -->
+        
+        <div class="clearfix"></div>
+        <div class="tool_button loaded" id="tool_node_clone" title="Adds a node">添加节点<svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path stroke-width="2" id="svg_102" d="m4.1953,19.42128c15.49391,-15.53349 -0.21065,0.1581 15.61084,-15.57944" stroke="#8dd35f" fill="none"></path>
+      <circle stroke-width="0.5" id="svg_121" stroke="#0000ff" fill="#00ffff" r="2.26172" cy="4" cx="19.75"></circle>
+      <circle id="svg_123" stroke-width="0.5" stroke="#0000ff" fill="#00ffff" r="2.26172" cy="19.40299" cx="4.0653"></circle>
+      <circle id="svg_7" stroke-width="0.5" stroke="#0000ff" fill="#00ffff" r="2.26172" cy="11.625" cx="11.9375"></circle>
+      <line stroke-linecap="round" id="svg_5" y2="14.46579" x2="9.66571" y1="4.02238" x1="9.7824" stroke-dasharray="null" stroke-width="2" stroke="#0000ff" fill="#0000ff"></line>
+      <line stroke-linecap="round" id="svg_4" y2="9.45264" x2="15.14996" y1="9.3943" x1="4.47318" stroke-dasharray="null" stroke-width="2" stroke="#0000ff" fill="#0000ff"></line>
+    </svg></svg></div>
+        <div class="tool_button loaded" id="tool_node_delete" title="Delete Node">删除节点<svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path stroke-width="2" id="svg_102" d="m4.1953,19.42128c15.49391,-15.53349 -0.21065,0.1581 15.61084,-15.57944" stroke="#8dd35f" fill="none"></path>
+      <circle stroke-width="0.5" id="svg_121" stroke="#0000ff" fill="#00ffff" r="2.26172" cy="4" cx="19.75"></circle>
+      <circle id="svg_123" stroke-width="0.5" stroke="#0000ff" fill="#00ffff" r="2.26172" cy="19.40299" cx="4.0653"></circle>
+      <circle id="svg_7" stroke-width="0.5" stroke="#0000ff" fill="#00ffff" r="2.26172" cy="11.625" cx="11.9375"></circle>
+      <g transform="rotate(-45.291072845458984 9.81157112121582,9.244086265563965) " id="svg_6">
+       <line stroke-linecap="round" id="svg_4" y2="9.45264" x2="15.14996" y1="9.3943" x1="4.47318" stroke-dasharray="null" stroke-width="2" stroke="#ff0000" fill="none"></line>
+       <line stroke-linecap="round" id="svg_5" y2="14.46579" x2="9.66571" y1="4.02238" x1="9.7824" stroke-dasharray="null" stroke-width="2" stroke="#ff0000" fill="none"></line>
+      </g>
+    </svg></svg></div>
+        <div class="tool_button loaded" id="tool_openclose_path" title="Open/close sub-path">打开路径<svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300">
+     <g>
+      <path stroke="#000" stroke-width="15" fill="#ffc8c8" d="m123.5,38l-84,106l27,115l166,2l29,-111"></path>
+      <line x1="276.5" y1="153" x2="108.5" y2="24" stroke="#000" stroke-width="10" fill="none"></line>
+      <g stroke-width="15" stroke="#00f" fill="#0ff">
+       <circle r="30" cy="41" cx="123"></circle>
+       <circle r="30" cy="146" cx="40"></circle>
+       <circle r="30" cy="260" cx="69"></circle>
+       <circle r="30" cy="260" cx="228"></circle>
+       <circle r="30" cy="148" cx="260"></circle>
+      </g>
+      <g stroke="#A00" stroke-width="15" fill="none">
+       <line x1="168" y1="24" x2="210" y2="150"></line>
+       <line x1="210" y1="24" x2="168" y2="150"></line>
+      </g>
+     </g>
+    </svg></svg></div>
+        <!--<div class="tool_button" id="tool_add_subpath" title="Add sub-path"></div>-->
+      </div>
+      
+      <!-- Buttons when a single element is selected -->
+      <div id="selected_panel" class="context_panel" style="display: none;">
+    
+        <label id="tool_angle" data-title="Change rotation angle" class="draginput">
+          <input id="angle" class="attr_changer" size="2" value="0" data-attr="transform" data-min="-180" data-max="180" type="text" autocomplete="off" readonly="readonly" data-scale="5.142857142857143" data-domain="70" data-cursor="false">
+          <span class="icon_label">旋转</span>
+          <div id="tool_angle_indicator">
+            <div id="tool_angle_indicator_cursor"></div>
+          </div>
+        </label>
+        
+          <label class="toolset draginput" id="tool_opacity" data-title="Change selected item opacity">
+            <input id="group_opacity" class="attr_changer" data-attr="opacity" data-multiplier="0.01" size="3" value="100" step="5" min="0" max="100" autocomplete="off" readonly="readonly" data-scale="1.4285714285714284" data-domain="70" data-cursor="true">
+            <span id="group_opacityLabel" class="icon_label">透明度</span>
+          <div class="draginput_cursor" style="top: -1.42109e-14px;"></div></label>
+        
+        <div class="toolset" id="tool_blur" data-title="Change gaussian blur value">
+          <label class="draginput">
+            <input id="blur" size="2" value="0" step=".1" min="0" max="10" autocomplete="off" readonly="readonly" data-scale="0.14285714285714288" data-domain="70" data-cursor="true">
+            <span class="icon_label">模糊</span>
+          <div class="draginput_cursor" style="top: 70px;"></div></label>
+        </div>
+        
+        <label id="cornerRadiusLabel" data-title="Change Rectangle Corner Radius" class="draginput" style="display: none;">
+          <input id="rect_rx" size="3" value="0" data-attr="rx" class="attr_changer" type="text" pattern="[0-9]*" autocomplete="off" readonly="readonly" data-scale="1.4285714285714286" data-domain="70" data-cursor="true">
+          <span class="icon_label">圆度</span>
+        <div class="draginput_cursor" style="top: 70px;"></div></label>
+        
+        <div class="clearfix"></div>
+        <div id="align_tools">
+          <h4>对齐</h4>
+          <div class="toolset align_buttons" id="tool_position">
+              <label>
+                <div class="col last clear" id="position_opts">
+                  <div class="draginput_cell" id="tool_posleft" title="Align Left"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27 27" version="1.1" xml:space="preserve" x="0px" y="0px">
+            <path d="M 2 1 L 2 5 L 14 5 L 14 11 L 2 11 L 2 16 L 20 16 L 20 22 L 2 22 L 2 26 L 1 26 L 1 1 L 2 1 ZM 27 0 L 0 0 L 0 27 L 27 27 L 27 0 Z" fill="#3f3f3c"></path>
+        </svg></svg></div>
+                  <div class="draginput_cell" id="tool_poscenter" title="Align Center"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+                <path d="M 13 1 L 14 1 L 14 6 L 22 6 L 22 12 L 14 12 L 14 15 L 19 15 L 19 21 L 14 21 L 14 26 L 13 26 L 13 21 L 8 21 L 8 15 L 13 15 L 13 12 L 5 12 L 5 6 L 13 6 L 13 1 ZM 0 0 L 0 27 L 27 27 L 27 0 L 0 0 Z" fill="#3f3f3c"></path>
+    
+        </svg></svg></div>
+                  <div class="draginput_cell" id="tool_posright" title="Align Right"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+            <path d="M 25 1 L 25 5 L 13 5 L 13 11 L 25 11 L 25 16 L 7 16 L 7 22 L 25 22 L 25 26 L 26 26 L 26 1 L 25 1 ZM 0 0 L 27 0 L 27 27 L 0 27 L 0 0 Z" fill="#3f3f3c"></path>
+        </svg></svg></div>
+                  <div class="draginput_cell" id="tool_postop" title="Align Top"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Untitled-Page%201" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+            <path d="M 1 2 L 5 2 L 5 14 L 11 14 L 11 2 L 16 2 L 16 20 L 22 20 L 22 2 L 26 2 L 26 1 L 1 1 L 1 2 ZM 0 27 L 0 0 L 27 0 L 27 27 L 0 27 Z" fill="#3f3f3c"></path>
+        </svg></svg></div>
+                  <div class="draginput_cell" id="tool_posmiddle" title="Align Middle"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Untitled-Page%201" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+        <path d="M 26 13 L 26 14 L 21 14 L 21 22 L 15 22 L 15 14 L 12 14 L 12 19 L 6 19 L 6 14 L 1 14 L 1 13 L 6 13 L 6 8 L 12 8 L 12 13 L 15 13 L 15 5 L 21 5 L 21 13 L 26 13 ZM 27 0 L 0 0 L 0 27 L 27 27 L 27 0 Z" fill="#3f3f3c"></path>
+    </svg></svg></div>
+                  <div class="draginput_cell" id="tool_posbottom" title="Align Bottom"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Untitled-Page%201" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+        <path d="M 1 25 L 5 25 L 5 13 L 11 13 L 11 25 L 16 25 L 16 7 L 22 7 L 22 25 L 26 25 L 26 26 L 1 26 L 1 25 ZM 0 0 L 0 27 L 27 27 L 27 0 L 0 0 Z" fill="#3f3f3c"></path>
+    </svg></svg></div>
+                </div>
+              </label>
+          </div>    
+        </div>
+      </div>
+      
+      <!-- Buttons when multiple elements are selected -->
+      <div id="multiselected_panel" class="context_panel clearfix" style="display: none;">
+        <h4 class="hidable">多元素</h4>
+        
+        <div class="toolset align_buttons" style="position: relative">
+          <label id="tool_align_relative" style="margin-top: 10px;"> 
+            <select id="align_relative_to" title="Align relative to ..." autocomplete="off">
+            <option id="selected_objects" value="selected">对齐对象</option>
+            <option id="page" value="page">对齐页面</option>
+            </select>
+          </label>
+          <h4>.</h4>
+            <div class="col last clear">
+              <div class="draginput_cell" id="tool_alignleft" title="Align Left"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27 27" version="1.1" xml:space="preserve" x="0px" y="0px">
+            <path d="M 2 1 L 2 5 L 14 5 L 14 11 L 2 11 L 2 16 L 20 16 L 20 22 L 2 22 L 2 26 L 1 26 L 1 1 L 2 1 ZM 27 0 L 0 0 L 0 27 L 27 27 L 27 0 Z" fill="#3f3f3c"></path>
+        </svg></svg></div>
+              <div class="draginput_cell" id="tool_aligncenter" title="Align Center"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+                <path d="M 13 1 L 14 1 L 14 6 L 22 6 L 22 12 L 14 12 L 14 15 L 19 15 L 19 21 L 14 21 L 14 26 L 13 26 L 13 21 L 8 21 L 8 15 L 13 15 L 13 12 L 5 12 L 5 6 L 13 6 L 13 1 ZM 0 0 L 0 27 L 27 27 L 27 0 L 0 0 Z" fill="#3f3f3c"></path>
+    
+        </svg></svg></div>
+              <div class="draginput_cell" id="tool_alignright" title="Align Right"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+            <path d="M 25 1 L 25 5 L 13 5 L 13 11 L 25 11 L 25 16 L 7 16 L 7 22 L 25 22 L 25 26 L 26 26 L 26 1 L 25 1 ZM 0 0 L 27 0 L 27 27 L 0 27 L 0 0 Z" fill="#3f3f3c"></path>
+        </svg></svg></div>
+              <div class="draginput_cell" id="tool_aligntop" title="Align Top"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Untitled-Page%201" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+            <path d="M 1 2 L 5 2 L 5 14 L 11 14 L 11 2 L 16 2 L 16 20 L 22 20 L 22 2 L 26 2 L 26 1 L 1 1 L 1 2 ZM 0 27 L 0 0 L 27 0 L 27 27 L 0 27 Z" fill="#3f3f3c"></path>
+        </svg></svg></div>
+              <div class="draginput_cell" id="tool_alignmiddle" title="Align Middle"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Untitled-Page%201" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+        <path d="M 26 13 L 26 14 L 21 14 L 21 22 L 15 22 L 15 14 L 12 14 L 12 19 L 6 19 L 6 14 L 1 14 L 1 13 L 6 13 L 6 8 L 12 8 L 12 13 L 15 13 L 15 5 L 21 5 L 21 13 L 26 13 ZM 27 0 L 0 0 L 0 27 L 27 27 L 27 0 Z" fill="#3f3f3c"></path>
+    </svg></svg></div>
+              <div class="draginput_cell" id="tool_alignbottom" title="Align Bottom"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Untitled-Page%201" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+        <path d="M 1 25 L 5 25 L 5 13 L 11 13 L 11 25 L 16 25 L 16 7 L 22 7 L 22 25 L 26 25 L 26 26 L 1 26 L 1 25 ZM 0 0 L 0 27 L 27 27 L 27 0 L 0 0 Z" fill="#3f3f3c"></path>
+    </svg></svg></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    
+      </div>
+      
+      <div id="stroke_panel" class="context_panel clearfix" style="display: none;">
+        <div class="clearfix"></div>
+        <h4>划线</h4>
+        <div class="toolset" data-title="Change stroke">
+          <label class="draginput">
+            <input id="stroke_width" size="2" value="5" data-attr="stroke-width" min="0" max="99" step="1" autocomplete="off" readonly="readonly" data-scale="1.4142857142857144" data-domain="70" data-cursor="true">
+            <span class="icon_label">划线宽度</span>
+          <div class="draginput_cursor" style="top: 70px;"></div></label>
+        </div>
+        <div class="stroke_tool draginput"> 
+          <span>划线样式</span>
+          <select id="stroke_style" data-title="Change stroke dash style" autocomplete="off">
+            <option value="none" selected="selected">—</option>
+            <option value="2,2">···</option>
+            <option value="5,5">- -</option>
+            <option value="5,2,2,2">-·-</option>
+            <option value="5,2,2,2,2,2">-··-</option>
+          </select>
+          <div class="caret"></div>
+          <label id="stroke_style_label">—</label>
+        </div>
+        
+        <label style="display: none;">
+          <span class="icon_label">Stroke Join</span>
+        </label>
+        
+        <label style="display: none;">
+          <span class="icon_label">Stroke Cap</span>
+        </label>
+      </div>
+    
+    </div> <!-- tools_top -->
+      <div id="cur_context_panel">
+        
+      </div>
+    
+    
+    <div id="tools_left" class="tools_panel">
+      <div class="loaded tool_button" id="tool_select" title="Select Tool  (V)"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg viewBox="0 0 24 24" version="1.1">
+        <g>
+        <path fill="#2F2F2C" d="M0,0v24h24V0H0z M17.147,20.757l-2.941,1.501l-3.677-6.005l-4.411,3.003V1.241l12.5,12.01l-4.412,1.501   L17.147,20.757z"></path>
+        </g>
+    </svg></svg></div>
+      <div class="loaded tool_button" id="tool_fhpath" title="Pencil Tool  (Q)"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg viewBox="0 0 24 24" version="1.1">
+        <path fill="#2F2F2C" d="M-1.5-1.5v27h27v-27 M19.616,9.216L6.647,21.567l-5.531,1.285l-0.1-0.094l1.449-5.269L15.438,5.204   c0.231-0.062,0.788-0.219,1.579-0.062L3.255,18.243l-0.394,1.381l1.58,1.504l1.481-0.375l0.66-0.598l0.065-1.408l-1.053-1.004   L18.203,5.736c0.196,0.157,0.196,0.157,0.396,0.376C20.476,7.869,19.616,9.216,19.616,9.216z M22.87,4.9   c-0.002,0.774-0.358,1.561-1.013,2.185l-1.217,1.16c0,0,0.921-1.348-0.989-3.103c-1.679-1.599-3.259-0.91-3.259-0.91l1.284-1.223   c1.154-1.126,3.161-1.126,4.278-0.062c0.622,0.549,0.913,1.239,0.915,1.938V4.9z"></path>
+    </svg></svg></div>
+      <div class="loaded tool_button" id="tool_line" title="Line Tool  (L)"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="eye-Page%201" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+        <path d="M 3 1 L 26 24 L 24 26 L 1 3 L 3 1 ZM 0 0 L 0 27 L 27 27 L 27 0 L 0 0 Z" fill="#2f2f2c"></path>
+    </svg></svg></div>
+      <div class="loaded tool_button" id="tool_rect" title="Square/Rect Tool  (R)"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="eye-Page%201" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+        <path d="M 0 25 L 0 27 L 27 27 L 27 25 L 0 25 ZM 0 0 L 0 8 L 27 8 L 27 0 L 0 0 Z" fill="#2f2f2c"></path>
+    </svg></svg></div>
+      <div class="loaded tool_button" id="tool_ellipse" title="Ellipse/Circle Tool  (C)"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="eye-Page%201" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+        <path fill="#2F2F2C" d="M27,0H0v27h27 M13.25,7.617c6.742,0,12.207,3.846,12.207,8.59c0,4.745-5.465,8.591-12.207,8.591   S1.042,20.952,1.042,16.207C1.042,11.463,6.508,7.617,13.25,7.617z"></path>
+    </svg></svg></div>
+      <div class="loaded tool_button" id="tool_path" title="Path Tool  (P)"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="eye-Page%201" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+        <g id="Layer%201">
+            <path fill="#2F2F2C" d="M0,0v27h27V0H0z M12.193,1.904c0-0.365,0.871,0,0.871,0v12.105c-0.509,0.18-0.871,0.664-0.871,1.233c0,0.722,0.585,1.305,1.307,1.305c0.722,0,1.307-0.583,1.307-1.305c0-0.569-0.362-1.054-0.871-1.233V1.904c0,0,0.871-0.365,0.871,0c0,6.811,5.226,11.677,5.226,11.677l-3.256,8.193h-6.552l-3.256-8.193C6.968,13.581,12.193,8.714,12.193,1.904z M7.839,25.258v-2.612h11.322v2.612H7.839z"></path>
+        </g>
+    </svg></svg></div>
+      <div id="tools_shapelib_show" title="图形库" class="loaded tool_button_current" data-curopt="#tool_shapelib"><div class="flyout_arrow_horiz"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon" style="width: 5px; height: 5px;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 50">
+          <path stroke="none" fill="#ccc" d="m0,0l0,50l25,-25l-25,-25z"></path>
+        </svg></svg></div><img class="svg_icon" src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjcgMjciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI3IiBoZWlnaHQ9IjI3IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgY2xhc3M9InN2Z19pY29uIj48c3ZnIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgICAgICAgPHBhdGggZmlsbD0iIzJGMkYyQyIgZD0iTTAsMHYyN2gyN1YwSDB6IE0yMC4zMjgsMjQuMTY2bC02Ljg5MS0zLjYyMmwtNi44OTEsMy42MjJsMS4zMTYtNy42NzJMMi4yODksMTEuMDZsNy43MDQtMS4xMjEgICAgICAgbDMuNDQ1LTYuOTc5bDMuNDQ3LDYuOThsNy43MDIsMS4xMjFsLTUuNTczLDUuNDM0TDIwLjMyOCwyNC4xNjZ6Ij48L3BhdGg+CiAgICA8L3N2Zz48L3N2Zz4="></div><div class="loaded tool_button" id="tool_text" title="Text Tool  (T)"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="eye-Page%201" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+        <path fill="#2F2F2C" d="M0,0v27h27V0H0z M7.283,25.258v-1.741h0.539c1.133,0,1.879-0.204,2.224-0.64c0.345-0.422,0.525-1.157,0.525-2.191V4.355H8.733c-1.105,0-1.906,0.123-2.417,0.367C5.791,4.967,5.362,5.443,5.017,6.151C4.658,6.873,4.451,7.73,4.381,8.709H2.613V2.613h21.774v6.097H22.48c-0.359-1.701-0.87-2.858-1.52-3.457s-1.686-0.898-3.108-0.898h-1.976v16.331c0,1.062,0.165,1.81,0.525,2.218c0.358,0.409,1.104,0.613,2.236,0.613h0.595v1.741H7.283z"></path>
+    </svg></svg></div>
+      <div class="tool_button loaded" id="tool_zoom" title="Zoom Tool  (Z)"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="eye-Page%201" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+        <circle fill="#2F2F2C" cx="10.887" cy="10.887" r="6.532"></circle>
+        <path fill="#2F2F2C" d="M0,0v27h27V0H0z M15.373,18.856c-1.326,0.747-2.855,1.176-4.486,1.176c-5.051,0-9.145-4.095-9.145-9.145   c0-5.051,4.094-9.145,9.145-9.145c5.05,0,9.145,4.094,9.145,9.145c0,2.081-0.697,3.999-1.868,5.536l6.223,6.223l-2.612,2.612   L15.373,18.856z"></path>
+    </svg></svg></div>
+      
+      <div id="tool_eyedropper" title="吸管工具 [I]" class="tool_button loaded"><img class="svg_icon" src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjcgMjciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI3IiBoZWlnaHQ9IjI3IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgY2xhc3M9InN2Z19pY29uIj48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGlkPSJVbnRpdGxlZC1QYWdlJTIwMSIgdmlld0JveD0iMCAwIDI3IDI3IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeD0iMHB4IiB5PSIwcHgiPgogICAgPHBhdGggZmlsbD0iIzJGMkYyQyIgZD0iTTE2Ljg2NywxMS43MjlsLTEuNS0xLjQ5bC05Ljg0NSw5Ljc3N2MtMC4xOTgsMC45MTktMC42NTMsMS44MzgtMS4xMDQsMi41ODUgICAgICAgYzAuNzUyLTAuNDQ4LDEuNjc4LTAuODk5LDIuNjA0LTEuMDk2TDE2Ljg2NywxMS43Mjl6Ij48L3BhdGg+CiAgICA8cGF0aCBmaWxsPSIjMkYyRjJDIiBkPSJNMCwwdjI3aDI3VjBIMHogTTIuNzAyLDI0LjgwMWwtMC41LTAuNDk2bC0wLjQ2LTAuNDU3bDAuNDIxLTAuNDkzYzAuMDE2LTAuMDIsMS43MTEtMi4wMzEsMi4wMDgtMy43OTkgICAgIGwwLjAzNy0wLjIyMkwxNC4zNjcsOS4yNDdsLTAuMzMzLTAuMzMxYy0wLjQ1OS0wLjQ1Ny0wLjQ1OS0xLjE5OCwwLTEuNjU1bDEuNS0xLjQ4OWMwLjQ2LTAuNDU3LDEuMjA2LTAuNDU3LDEuNjY3LDBMMTkuNywzLjI4OWMwLDAsMi41LTIuNDgyLDMuODMzLTEuMTU4TDI0LjIsMi43OTJsMC42NjcsMC42NjJjMC4yOCwwLjI3OCwwLjM5MSwwLjYwOSwwLjM5MSwwLjk1N2MwLDEuMzAyLTEuNTU4LDIuODQ5LTEuNTU4LDIuODQ5ICAgbC0yLjUsMi40ODJsMC4xNjcsMC4xNjZjMC40NiwwLjQ1NywwLjQ2LDEuMTk3LDAsMS42NTVsLTEuNSwxLjQ4OWMtMC40NiwwLjQ1Ni0xLjIwNywwLjQ1Ni0xLjY2NywwbC0wLjMzMy0wLjMzMkw3LjcwOCwyMi44MDlsLTAuMjIzLDAuMDM3Yy0xLjc4NywwLjI5Ni0zLjgwNSwxLjk3OC0zLjgyNiwxLjk5NWwtMC40OTYsMC40MTdMMi43MDIsMjQuODAxeiI+PC9wYXRoPgogIDwvc3ZnPjwvc3ZnPg=="></div><div id="color_tools">
+            <div id="tool_switch" title="Switch stroke and fill colors  (x)"></div>
+            <div class="color_tool active" id="tool_fill">
+              <label class="icon_label" title="Change fill color"></label>
+              <div class="color_block">
+                <div id="fill_bg"></div>
+                <div id="fill_color" class="color_block"><svg xmlns="http://www.w3.org/2000/svg" width="100%"><rect width="100%" height="100%" fill="#000000" opacity="1"></rect>          <defs><linearGradient id="gradbox_"></linearGradient></defs></svg></div>
+              </div>
+            </div>
+    
+            <div class="color_tool" id="tool_stroke">
+                <label class="icon_label" title="Change stroke color"></label>
+              <div class="color_block">
+                <div id="stroke_bg"></div>
+                <div id="stroke_color" class="color_block" title="Change stroke color"><svg xmlns="http://www.w3.org/2000/svg" width="100%"><rect width="100%" height="100%" fill="#000" opacity="1"></rect>          <defs><linearGradient id="gradbox_"></linearGradient></defs></svg></div>
+              </div>
+            </div>
+      </div>
+    </div> <!-- tools_left -->
+    
+    <div id="tools_bottom" class="tools_panel">
+    
+        <!-- Zoom buttons -->
+      <div id="zoom_panel" class="toolset" title="Change zoom level">
+        <div class="draginput select" id="zoom_label">
+          <span id="zoomLabel" class="zoom_tool icon_label"><svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="16" height="16" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="eye-Page%201" viewBox="0 0 27 27" style="background-color:#ffffff00" version="1.1" xml:space="preserve" x="0px" y="0px">
+        <circle fill="#2F2F2C" cx="10.887" cy="10.887" r="6.532"></circle>
+        <path fill="#2F2F2C" d="M0,0v27h27V0H0z M15.373,18.856c-1.326,0.747-2.855,1.176-4.486,1.176c-5.051,0-9.145-4.095-9.145-9.145   c0-5.051,4.094-9.145,9.145-9.145c5.05,0,9.145,4.094,9.145,9.145c0,2.081-0.697,3.999-1.868,5.536l6.223,6.223l-2.612,2.612   L15.373,18.856z"></path>
+    </svg></svg></span>
+          <select id="zoom_select" autocomplete="off">
+            <option value="6">6%</option>
+            <option value="12">12%</option>
+            <option value="16">16%</option>
+            <option value="25">25%</option>
+            <option value="50">50%</option>
+            <option value="75">75%</option>
+            <option value="100" selected="selected">100%</option>
+            <option value="150">150%</option>
+            <option value="200">200%</option>
+            <option value="300">300%</option>
+            <option value="400">400%</option>
+            <option value="600">600%</option>
+            <option value="800">800%</option>
+            <option value="1600">1600%</option>
+          </select>
+          <div class="caret"></div>
+          <input id="zoom" size="3" value="100%" type="text" readonly="readonly" autocomplete="off">
+        </div>
+      </div>
+    
+      <div id="tools_bottom_3">
+        <div id="palette" title="Click to change fill color, shift-click to change stroke color"><div class="palette_item transparent" data-rgb="none"></div>                <div class="palette_item black" data-rgb="#000000"></div>                <div class="palette_item white" data-rgb="#ffffff"></div><div class="palette_item" style="background-color: #444444;" data-rgb="#444444"></div><div class="palette_item" style="background-color: #482816;" data-rgb="#482816"></div><div class="palette_item" style="background-color: #422C10;" data-rgb="#422C10"></div><div class="palette_item" style="background-color: #3B2F0E;" data-rgb="#3B2F0E"></div><div class="palette_item" style="background-color: #32320F;" data-rgb="#32320F"></div><div class="palette_item" style="background-color: #293414;" data-rgb="#293414"></div><div class="palette_item" style="background-color: #1F361B;" data-rgb="#1F361B"></div><div class="palette_item" style="background-color: #153723;" data-rgb="#153723"></div><div class="palette_item" style="background-color: #0C372C;" data-rgb="#0C372C"></div><div class="palette_item" style="background-color: #083734;" data-rgb="#083734"></div><div class="palette_item" style="background-color: #0E353B;" data-rgb="#0E353B"></div><div class="palette_item" style="background-color: #1A333F;" data-rgb="#1A333F"></div><div class="palette_item" style="background-color: #273141;" data-rgb="#273141"></div><div class="palette_item" style="background-color: #332D40;" data-rgb="#332D40"></div><div class="palette_item" style="background-color: #3E2A3C;" data-rgb="#3E2A3C"></div><div class="palette_item" style="background-color: #462735;" data-rgb="#462735"></div><div class="palette_item" style="background-color: #4B252D;" data-rgb="#4B252D"></div><div class="palette_item" style="background-color: #4D2425;" data-rgb="#4D2425"></div><div class="palette_item" style="background-color: #4C261D;" data-rgb="#4C261D"></div><div class="palette_item" style="background-color: #666666;" data-rgb="#666666"></div><div class="palette_item" style="background-color: #845335;" data-rgb="#845335"></div><div class="palette_item" style="background-color: #7B572D;" data-rgb="#7B572D"></div><div class="palette_item" style="background-color: #6F5C2A;" data-rgb="#6F5C2A"></div><div class="palette_item" style="background-color: #62612C;" data-rgb="#62612C"></div><div class="palette_item" style="background-color: #546433;" data-rgb="#546433"></div><div class="palette_item" style="background-color: #46673D;" data-rgb="#46673D"></div><div class="palette_item" style="background-color: #396849;" data-rgb="#396849"></div><div class="palette_item" style="background-color: #306856;" data-rgb="#306856"></div><div class="palette_item" style="background-color: #2D6862;" data-rgb="#2D6862"></div><div class="palette_item" style="background-color: #33666C;" data-rgb="#33666C"></div><div class="palette_item" style="background-color: #426373;" data-rgb="#426373"></div><div class="palette_item" style="background-color: #535F75;" data-rgb="#535F75"></div><div class="palette_item" style="background-color: #645A73;" data-rgb="#645A73"></div><div class="palette_item" style="background-color: #74556D;" data-rgb="#74556D"></div><div class="palette_item" style="background-color: #805064;" data-rgb="#805064"></div><div class="palette_item" style="background-color: #884D58;" data-rgb="#884D58"></div><div class="palette_item" style="background-color: #8B4D4B;" data-rgb="#8B4D4B"></div><div class="palette_item" style="background-color: #894F3F;" data-rgb="#894F3F"></div><div class="palette_item" style="background-color: #999999;" data-rgb="#999999"></div><div class="palette_item" style="background-color: #C48157;" data-rgb="#C48157"></div><div class="palette_item" style="background-color: #B8874D;" data-rgb="#B8874D"></div><div class="palette_item" style="background-color: #A98E49;" data-rgb="#A98E49"></div><div class="palette_item" style="background-color: #97944B;" data-rgb="#97944B"></div><div class="palette_item" style="background-color: #849854;" data-rgb="#849854"></div><div class="palette_item" style="background-color: #729C62;" data-rgb="#729C62"></div><div class="palette_item" style="background-color: #619E73;" data-rgb="#619E73"></div><div class="palette_item" style="background-color: #559E84;" data-rgb="#559E84"></div><div class="palette_item" style="background-color: #529D94;" data-rgb="#529D94"></div><div class="palette_item" style="background-color: #5B9BA2;" data-rgb="#5B9BA2"></div><div class="palette_item" style="background-color: #6D97AB;" data-rgb="#6D97AB"></div><div class="palette_item" style="background-color: #8391AE;" data-rgb="#8391AE"></div><div class="palette_item" style="background-color: #9A8AAB;" data-rgb="#9A8AAB"></div><div class="palette_item" style="background-color: #AF84A3;" data-rgb="#AF84A3"></div><div class="palette_item" style="background-color: #BF7E96;" data-rgb="#BF7E96"></div><div class="palette_item" style="background-color: #C97A86;" data-rgb="#C97A86"></div><div class="palette_item" style="background-color: #CE7975;" data-rgb="#CE7975"></div><div class="palette_item" style="background-color: #CC7C65;" data-rgb="#CC7C65"></div><div class="palette_item" style="background-color: #BBBBBB;" data-rgb="#BBBBBB"></div><div class="palette_item" style="background-color: #FFB27C;" data-rgb="#FFB27C"></div><div class="palette_item" style="background-color: #FABA6F;" data-rgb="#FABA6F"></div><div class="palette_item" style="background-color: #E6C36A;" data-rgb="#E6C36A"></div><div class="palette_item" style="background-color: #CFCA6D;" data-rgb="#CFCA6D"></div><div class="palette_item" style="background-color: #B8D078;" data-rgb="#B8D078"></div><div class="palette_item" style="background-color: #A0D58A;" data-rgb="#A0D58A"></div><div class="palette_item" style="background-color: #8CD79F;" data-rgb="#8CD79F"></div><div class="palette_item" style="background-color: #7DD8B5;" data-rgb="#7DD8B5"></div><div class="palette_item" style="background-color: #7AD6CA;" data-rgb="#7AD6CA"></div><div class="palette_item" style="background-color: #84D3DB;" data-rgb="#84D3DB"></div><div class="palette_item" style="background-color: #9ACEE6;" data-rgb="#9ACEE6"></div><div class="palette_item" style="background-color: #B6C7EA;" data-rgb="#B6C7EA"></div><div class="palette_item" style="background-color: #D3BEE7;" data-rgb="#D3BEE7"></div><div class="palette_item" style="background-color: #EDB6DC;" data-rgb="#EDB6DC"></div><div class="palette_item" style="background-color: #FFAFCC;" data-rgb="#FFAFCC"></div><div class="palette_item" style="background-color: #FFAAB8;" data-rgb="#FFAAB8"></div><div class="palette_item" style="background-color: #FFA9A2;" data-rgb="#FFA9A2"></div><div class="palette_item" style="background-color: #FFAC8D;" data-rgb="#FFAC8D"></div><div class="palette_item" style="background-color: #DDDDDD;" data-rgb="#DDDDDD"></div><div class="palette_item" style="background-color: #FFE7A2;" data-rgb="#FFE7A2"></div><div class="palette_item" style="background-color: #FFF093;" data-rgb="#FFF093"></div><div class="palette_item" style="background-color: #FFFA8D;" data-rgb="#FFFA8D"></div><div class="palette_item" style="background-color: #FFFF91;" data-rgb="#FFFF91"></div><div class="palette_item" style="background-color: #EEFF9F;" data-rgb="#EEFF9F"></div><div class="palette_item" style="background-color: #D1FFB4;" data-rgb="#D1FFB4"></div><div class="palette_item" style="background-color: #B9FFCE;" data-rgb="#B9FFCE"></div><div class="palette_item" style="background-color: #A8FFE9;" data-rgb="#A8FFE9"></div><div class="palette_item" style="background-color: #A4FFFF;" data-rgb="#A4FFFF"></div><div class="palette_item" style="background-color: #B1FFFF;" data-rgb="#B1FFFF"></div><div class="palette_item" style="background-color: #CBFFFF;" data-rgb="#CBFFFF"></div><div class="palette_item" style="background-color: #EDFFFF;" data-rgb="#EDFFFF"></div><div class="palette_item" style="background-color: #FFF5FF;" data-rgb="#FFF5FF"></div><div class="palette_item" style="background-color: #FFEBFF;" data-rgb="#FFEBFF"></div><div class="palette_item" style="background-color: #FFE2FF;" data-rgb="#FFE2FF"></div><div class="palette_item" style="background-color: #FFDCEC;" data-rgb="#FFDCEC"></div><div class="palette_item" style="background-color: #FFDBD2;" data-rgb="#FFDBD2"></div><div class="palette_item" style="background-color: #FFDFB8;" data-rgb="#FFDFB8"></div></div>
+      </div>
+    </div>
+    
+    <!-- hidden divs -->
+    <div id="color_picker"></div>
+    
+    <div class="tools_flyout" id="tools_shapelib" style="left: 34px; top: 335px; margin-top: -162px; margin-left: 3px; display: block;"><div id="shape_cats"><div data-cat="basic" class="current">基础图元</div><div data-cat="object" class="">物体</div><div data-cat="symbol" class="">标志</div><div data-cat="arrow" class="">箭头</div><div data-cat="flowchart">流程图</div><div data-cat="nature">自然</div><div data-cat="game">卡 棋</div><div data-cat="dialog_balloon">对话框</div><div data-cat="music">音乐</div><div data-cat="weather">天气 &amp; 时间</div><div data-cat="ui">用户界面 </div><div data-cat="social">社交网</div></div><div id="shape_buttons"><div class="tool_button loaded" id="shapelib_star_points_5" title="star_points_5"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1,116.58409l113.82668,0l35.17332,-108.13487l35.17334,108.13487l113.82666,0l-92.08755,66.83026l35.17514,108.13487l-92.08759,-66.83208l-92.08757,66.83208l35.17515,-108.13487l-92.08758,-66.83026z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_donut" title="donut"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1,150l0,0c0,-82.29042 66.70958,-149 149,-149l0,0c39.51724,0 77.41599,15.69816 105.35889,43.64108c27.94293,27.94293 43.64111,65.84165 43.64111,105.35892l0,0c0,82.29041 -66.70958,149 -149,149l0,0c-82.29041,0 -149,-66.70959 -149,-149zm74.5,0l0,0c0,41.1452 33.35481,74.5 74.5,74.5c41.14522,0 74.5,-33.3548 74.5,-74.5c0,-41.1452 -33.3548,-74.5 -74.5,-74.5l0,0c-41.14519,0 -74.5,33.35481 -74.5,74.5z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_triangle" title="triangle"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1,280.375l149,-260.75l149,260.75z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_right_triangle" title="right_triangle"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1,299l0,-298l298,298z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_diamond" title="diamond"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1,150l149,-149l149,149l-149,149l-149,-149z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_pentagon" title="pentagon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1.00035,116.97758l148.99963,-108.4053l148.99998,108.4053l-56.91267,175.4042l-184.1741,0l-56.91284,-175.4042z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_hexagon" title="hexagon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1,149.99944l63.85715,-127.71428l170.28572,0l63.85713,127.71428l-63.85713,127.71428l-170.28572,0l-63.85715,-127.71428z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_septagon1" title="septagon1"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m0.99917,191.06511l29.51249,-127.7108l119.48833,-56.83673l119.48836,56.83673l29.51303,127.7108l-82.69087,102.41679l-132.62103,0l-82.69031,-102.41679z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_heptagon" title="heptagon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1,88.28171l87.28172,-87.28171l123.43653,0l87.28172,87.28171l0,123.43654l-87.28172,87.28172l-123.43653,0l-87.28172,-87.28172l0,-123.43654z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_decagon" title="decagon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1,150.00093l28.45646,-88.40318l74.49956,-54.63682l92.08794,0l74.50002,54.63682l28.45599,88.40318l-28.45599,88.40318l-74.50002,54.63681l-92.08794,0l-74.49956,-54.63681l-28.45646,-88.40318z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_dodecagon" title="dodecagon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1,110.07421l39.92579,-69.14842l69.14842,-39.92579l79.85159,0l69.14842,39.92579l39.92578,69.14842l0,79.85159l-39.92578,69.14842l-69.14842,39.92578l-79.85159,0l-69.14842,-39.92578l-39.92579,-69.14842l0,-79.85159z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_trapezoid" title="trapezoid"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1,299l55.875,-298l186.25001,0l55.87498,298z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_dialog_balloon_1" title="dialog_balloon_1"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m0.99786,35.96579l0,0c0,-19.31077 15.28761,-34.96524 34.14583,-34.96524l15.52084,0l0,0l74.50001,0l139.68748,0c9.05606,0 17.74118,3.68382 24.14478,10.24108c6.40356,6.55726 10.00107,15.45081 10.00107,24.72416l0,87.41311l0,0l0,52.44785l0,0c0,19.31078 -15.2876,34.96524 -34.14584,34.96524l-139.68748,0l-97.32507,88.90848l22.82506,-88.90848l-15.52084,0c-18.85822,0 -34.14583,-15.65446 -34.14583,-34.96524l0,0l0,-52.44785l0,0z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_heart" title="heart"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m150,73c61,-175 300,0 0,225c-300,-225 -61,-400 0,-225z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_cylinder" title="cylinder"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m299.0007,83.77844c0,18.28676 -66.70958,33.11111 -149.00002,33.11111m149.00002,-33.11111l0,0c0,18.28676 -66.70958,33.11111 -149.00002,33.11111c-82.29041,0 -148.99997,-14.82432 -148.99997,-33.11111m0,0l0,0c0,-18.28674 66.70956,-33.1111 148.99997,-33.1111c82.29044,0 149.00002,14.82436 149.00002,33.1111l0,132.44449c0,18.28674 -66.70958,33.11105 -149.00002,33.11105c-82.29041,0 -148.99997,-14.82431 -148.99997,-33.11105z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_arrow_up" title="arrow_up"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1.49805,149.64304l148.50121,-148.00241l148.50121,148.00241l-74.25061,0l0,148.71457l-148.5012,0l0,-148.71457z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_arrow_u_turn" title="arrow_u_turn"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1.00059,299.00055l0,-167.62497l0,0c0,-72.00411 58.37087,-130.37499 130.375,-130.37499l0,0l0,0c34.57759,0 67.73898,13.7359 92.18906,38.18595c24.45006,24.45005 38.18593,57.61144 38.18593,92.18904l0,18.625l37.24997,0l-74.49995,74.50002l-74.50002,-74.50002l37.25,0l0,-18.625c0,-30.8589 -25.0161,-55.87498 -55.87498,-55.87498l0,0l0,0c-30.85892,0 -55.875,25.01608 -55.875,55.87498l0,167.62497z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_arrow_left_up" title="arrow_left_up"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m0.99865,224.5l74.50004,-74.5l0,37.25l111.74991,0l0,-111.75l-37.25,0l74.5,-74.5l74.5,74.5l-37.25,0l0,186.25l-186.24989,0l0,37.25l-74.50005,-74.5z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_plaque" title="plaque"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m-0.00197,49.94376l0,0c27.5829,0 49.94327,-22.36036 49.94327,-49.94327l199.76709,0l0,0c0,27.5829 22.36037,49.94327 49.94325,49.94327l0,199.7671l0,0c-27.58289,0 -49.94325,22.36034 -49.94325,49.94325l-199.76709,0c0,-27.58292 -22.36037,-49.94325 -49.94327,-49.94325z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_page" title="page"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m249.3298,298.99744l9.9335,-39.73413l39.73413,-9.93355l-49.66763,49.66768l-248.33237,0l0,-298.00001l298.00001,0l0,248.33234"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_cross" title="cross"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m0.99844,99.71339l98.71494,0l0,-98.71495l101.26279,0l0,98.71495l98.71495,0l0,101.2628l-98.71495,0l0,98.71494l-101.26279,0l0,-98.71494l-98.71494,0z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_divide" title="divide"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m150,0.99785l0,0c25.17819,0 45.58916,20.41097 45.58916,45.58916c0,25.17821 -20.41096,45.58916 -45.58916,45.58916c-25.17822,0 -45.58916,-20.41093 -45.58916,-45.58916c0,-25.1782 20.41093,-45.58916 45.58916,-45.58916zm0,296.25203c-25.17822,0 -45.58916,-20.41095 -45.58916,-45.58917c0,-25.17819 20.41093,-45.58916 45.58916,-45.58916c25.17819,0 45.58916,20.41096 45.58916,45.58916c0,25.17822 -20.41096,45.58917 -45.58916,45.58917zm-134.06754,-193.71518l268.13507,0l0,91.17833l-268.13507,0z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_minus" title="minus"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m0.99887,102.39503l297.49445,0l0,95.2112l-297.49445,0z"></path></svg></svg></div><div class="tool_button loaded" id="shapelib_times" title="times"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path fill="#333" stroke="transparent" stroke-width="10" d="m1.00089,73.36786l72.36697,-72.36697l76.87431,76.87368l76.87431,-76.87368l72.36765,72.36697l-76.87433,76.87431l76.87433,76.87431l-72.36765,72.36765l-76.87431,-76.87433l-76.87431,76.87433l-72.36697,-72.36765l76.87368,-76.87431l-76.87368,-76.87431z"></path></svg></svg></div></div></div></div> <!-- svg_editor -->
+    
+    <div id="svg_source_editor">
+      <div id="svg_source_overlay"></div>
+      <div id="svg_source_container">
+        <div id="save_output_btns">
+          <p id="copy_save_note">将此框的内容复制到文本编辑器中，然后使用.svg扩展名保存该文件。</p>
+          <button id="copy_save_done">完成</button>
+        </div>
+        <form>
+          <textarea id="svg_source_textarea" spellcheck="false"></textarea>
+        </form>
+        <div id="tool_source_back" class="toolbar_button">
+          <button id="tool_source_cancel" class="cancel">取消</button>
+          <button id="tool_source_save" class="ok">应用</button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="base_unit_container">
+      <select id="base_unit" autocomplete="off">
+        <option value="px">Pixels</option>
+        <option value="cm">Centimeters</option>
+        <option value="mm">Millimeters</option>
+        <option value="in">Inches</option>
+        <option value="pt">Points</option>
+        <option value="pc">Picas</option>
+        <option value="em">Ems</option>
+        <option value="ex">Exs</option>
+      </select>
+    </div>
+    
+    <div id="dialog_box">
+      <div id="dialog_box_overlay"></div>
+      <div id="dialog_container" class="ui-draggable">
+        <div id="dialog_content"></div>
+        <div id="dialog_buttons"></div>
+      </div>
+    </div>
+    
+    <ul id="cmenu_canvas" class="contextMenu" style="display: none;">
+      <li class="disabled"><a href="#cut">剪切 <span class="shortcut">Ctrl+X;</span></a></li>
+      <li class="disabled"><a href="#copy">复制<span class="shortcut">Ctrl+C</span></a></li>
+      <li class="disabled"><a href="#paste">粘贴<span class="shortcut">Ctrl+V</span></a></li>
+      <li class="separator disabled"><a href="#delete">删除<span class="shortcut">⌫</span></a></li>
+      <li class="separator disabled"><a href="#group">分组<span class="shortcut">Ctrl+G</span></a></li>
+      <li class="disabled"><a href="#ungroup">取消分组<span class="shortcut">Ctrl+⇧G</span></a></li>
+      <li class="separator disabled"><a href="#move_front">置最前<span class="shortcut">Ctrl+⇧↑</span></a></li>
+      <li class="disabled"><a href="#move_up">置前<span class="shortcut">Ctrl+↑</span></a></li>
+      <li class="disabled"><a href="#move_down">置后<span class="shortcut">Ctrl+↓</span></a></li>
+      <li class="disabled"><a href="#move_back">置最后<span class="shortcut">Ctrl+⇧↓</span></a></li>
+    </ul>
+    
+    
+    
+    <canvas style="display: none;"></canvas></body></html>

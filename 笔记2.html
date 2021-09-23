@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+        <title>笔记2</title>
+        <script>
+            document.createElement("myHero")
+        </script>
+        <style>
+            myHero {
+                display: block;
+                background-color: #ddd;
+                padding: 50px;
+                font-size: 30px;
+            }
+        </style>
+</head>
+
+<body>
+    <!--视频播放-->
+    <video width="272" height="480" controls>
+        <source src="01.mp4" type="video/mp4">
+        <source src="01.ogg" type="video/ogg">
+        你的浏览器不支持 video 标签。
+    </video>
+    <!--新元素-->
+    <h1>我的第一个标题</h1>
+    <p>我的第一个段落。</p>
+    <myHero>我的第一个新元素</myHero>
+    <!--Canvas - 路径-->
+    <canvas id="myCanvas1" width="200" height="100" style="border:1px solid #d3d3d3;">
+        您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    <script>
+        var c = document.getElementById("myCanvas1");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.moveTo(200, 0);
+        ctx.lineTo(0, 100);
+        ctx.stroke();
+    </script>
+    <script>
+        var c = document.getElementById("myCanvas1");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(100, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+    </script>
+    <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #d3d3d3;">
+        您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    <script>
+        var c = document.getElementById("myCanvas2");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillText("Hello World", 10, 50);
+    </script>
+    <script>
+        var c = document.getElementById("myCanvas2");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.strokeText("Hello World", 10, 50);
+    </script>
+    <canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;">
+        您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    <script>
+        var c = document.getElementById("myCanvas3");
+        var ctx = c.getContext("2d");
+        // 创建渐变
+        var grd = ctx.createLinearGradient(0, 0, 200, 0);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+        // 填充渐变
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 2000, 80);
+    </script>
+    <canvas id="myCanvas4" width="200" height="100" style="border:1px solid #d3d3d3;">
+        您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    <script>
+        var c = document.getElementById("myCanvas4");
+        var ctx = c.getContext("2d");
+        // 创建渐变
+        var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+        // 填充渐变
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 200, 80);
+    </script>
+    <img id="scream" src="img/01.jpg" alt="01" width="200" height="200">
+    <canvas id="myCanvas5" width="250" height="300" style="border:1px solid #d3d3d3;">
+        您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    <script>
+        var c = document.getElementById("myCanvas5");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("scream");
+        img.onload = function() {
+            ctx.drawImage(img, 10, 10);
+        }
+    </script>
+    <!--内联 SVG-->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+    <polygon points="100,10 40,180 190,60 10,60 160,180"
+    style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
+    </svg>
+    <!--MathML-->
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow>            
+           <mrow>
+              <msup>
+                 <mi>x</mi>
+                 <mn>2</mn>
+              </msup>
+              <mo>+</mo>
+              <mrow>
+                 <mn>4</mn>
+                 <mo>⁢</mo>
+                 <mi>x</mi>
+              </mrow>
+              <mo>+</mo>
+              <mn>4</mn> 
+           </mrow>
+           <mo>=</mo>
+           <mn>0</mn>
+        </mrow>
+     </math>
+    <!--拖放（Drag 和 Drop）-->
+
+</body>
+
+</html>

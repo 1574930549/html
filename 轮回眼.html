@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>轮回眼</title>
+</head>
+
+<body>
+    <svg width="14cm" height="14cm" viewBox="0 0 400 400" version="1.1">
+    <rect x="1" y="1" width="398" height="398"fill="none" stroke="blue" />
+    <defs>
+        <path id="Triangle"d="M 20 20 A 10 10 0 0 0 20 40 A 10 10 0 0 0 20 20
+        M 25 30 A 50 20 0 0 0 17 10z" fill="black" stroke="none"/>
+        <radialGradient id="grad1" cx="50%" cy="50%" r="40%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:yellow;stop-opacity:0" />
+            <stop offset="100%" style="stop-color:red;stop-opacity:1" />
+        </radialGradient>
+    </defs>
+    <g fill-rule="nonzero" fill="red" stroke="black" stroke-width="3" ><!--evenodd-->
+    <path d="M 200,40 A 160,160 0 0 1 200,360 A 160,160 0 0,1 200,40 
+    M 200,80 A 120,120 0 0 1 200,320 A 120,120 0 0,1 200,80 
+    M 200,120 A 80,80 0 0 1 200,280 A 80,80 0 0,1 200,120 
+    M 200,160 A 40,40 0 0 1 200,240 A 40,40 0 0,1 200,160 z"fill="url(#grad1)" />
+    <path d="M 200 190 A 10 10 0 0 0 200 210 A 10 10 0 0 0 200 190 z"fill="black" stroke="none" />
+    <use xlink:href="#Triangle" transform="translate(210,220) rotate(60) translate(40,0) rotate(90)" overflow="visible"  />
+    <use xlink:href="#Triangle" transform="translate(180,195) rotate(180) translate(40,0) rotate(90)" overflow="visible"  />
+    <use xlink:href="#Triangle" transform="translate(215,180) rotate(300) translate(40,0) rotate(90)" overflow="visible"  />
+    <use xlink:href="#Triangle" transform="translate(190,140) rotate(240) translate(40,0) rotate(90)" overflow="visible"  />
+    <use xlink:href="#Triangle" transform="translate(255,225) rotate(0) translate(40,0) rotate(90)" overflow="visible"  />
+    <use xlink:href="#Triangle" transform="translate(155,240) rotate(120) translate(40,0) rotate(90)" overflow="visible"  />
+    <use xlink:href="#Triangle" transform="translate(210,300) rotate(60) translate(40,0) rotate(90)" overflow="visible"  />
+    <use xlink:href="#Triangle" transform="translate(115,145) rotate(180) translate(40,0) rotate(90)" overflow="visible"  />
+    <use xlink:href="#Triangle" transform="translate(275,130) rotate(300) translate(40,0) rotate(90)" overflow="visible"  />
+</svg>
+</body>
+
+</html>

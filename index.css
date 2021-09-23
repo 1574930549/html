@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* CSS Document */
+#top {
+	font-size: 12px;
+	color: #666;
+}
+#top a {
+	text-decoration: none;
+	color: #666;
+}
+#top a:hover {
+	text-decoration: underline;
+}
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-size: 15px;
+	background: #FFF;
+	line-height: 1.8em;
+	min-width: 320px;
+	max-width: 720px;
+	font-family: "微软雅黑";
+}
+.all {
+	margin: 5px;
+}
+#head {
+	margin-bottom: 10px;
+}
+.reply {
+	text-indent: 30px;
+	padding-left:10px;
+}
+.img-width {
+	max-width: 100%;
+	min-width: 320px;
+}
+.width-img img {
+	max-width: 100%;
+}
+.top-title {
+	background: url('https://img.alicdn.com/imgextra/i4/188060530/TB2ogkVfpXXXXcdXpXXXXXXXXXX_!!188060530.gif') repeat-x;
+	border: 1px #c8dcff solid;
+	padding: 10px 5px;
+	font-size: 16px;
+	margin-top: 10px;
+}
+.subtitle {
+	font-size: 13px;
+	color: #666;
+}
+.right {
+	float: right;
+}
+.sub-title {
+	font-size: 15px;
+	border: 1px #eee solid;
+	background: #eee;
+	color: #333;
+	height: 40px;
+	padding: 10px;
+}
+.name {
+	font-size: 15px;
+	color: #333;
+	padding: 5px 10px;
+}
+.head-img {
+	width: 40px;
+	height: 40px;
+	border-top-left-radius: 23px;
+	border-top-right-radius: 23px;
+	border-bottom-left-radius: 23px;
+	border-bottom-right-radius: 23px;
+	border-radius: 50%;
+	float: left;
+	margin-right: 10px;
+}
+.anony {
+	font-size: 12px;
+	line-height: 180%;
+	color: #999;
+	padding-left:10px;
+}
+.right-text {
+	float: right;
+	padding-right: 10px;
+}
+.right-text a {
+	text-decoration: none;
+	font-size: 12px;
+	color: #0579c6;
+}
+.right-text a:hover {
+	color: #0579c6;
+	text-decoration: underline;
+}
+.share {
+	margin: 10px auto;
+	border: 1px #f7c600 solid;
+	text-align: center;
+	border-radius: 5px;
+	background: #fffff7;
+	width: 50px;
+	padding-top: 10px;
+}
+.share a {
+	text-decoration: none;
+	font-size: 13px;
+	color: #f7c600;
+	line-height: 180%;
+}
+.hight-mode a {
+	font-size: 12px;
+	color: #ccc;
+	float: right;
+	padding-right: 10px;
+	text-decoration: none;
+}
+.hight-mode a:hover {
+	text-decoration: underline;
+	color: #06C;
+}
+.post {
+	font-size: 12px;
+}
+.post a {
+	text-decoration: none;
+	color: #06C;
+}
+.post a:hover {
+	text-decoration: underline;
+	color: #f00;
+}
+.left-text {
+	clear: both;
+	margin: 10px auto;
+	font-size: 12px;
+	border-top: 1px solid #c8dcff;
+	padding-top: 5px;
+	width: 100%;
+	float: left;
+}
+.left-text a {
+	text-decoration: none;color: #444;
+}
+.left-text a:hover {
+	color: #06C;
+}.nail a {
+	text-decoration: none;
+	color: #03C;
+	border-bottom: 1px solid #03c;
+}
+.yellow-bak {
+	background: #FF3;
+}
+#replay {
+	margin: 5px 0;
+	border: 1px #c8dcff solid;
+	padding: 5px;
+}
+.end-title {
+	font-size: 13px;
+	color: #666;
+}
+.end-title a {
+	text-decoration: none;
+	color: #0099cc;
+}
+.copyright {
+	font-size: 12px;
+	padding: 20px 0px;
+	color: #999;
+	text-align: center;
+	margin-top:30px;
+}
+.copyright a {
+	font-size: 12px;
+	color: #999;
+	text-decoration: none;
+}
+.copyright a:hover {
+	color: #333;
+	text-decoration: none;
+}
+.clear {
+	clear: both;
+}
+.hrs {
+	clear: both;
+	height: 0;
+	border: none;
+	border-top: 1px solid #d3e8f2;
+}
+.note{font-size:13px; color:#666;}
